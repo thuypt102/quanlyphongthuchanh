@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A787DBE8-5110-4870-BC33-D073DD5467E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLPHONGTHUCHANH</RootNamespace>
+    <AssemblyName>QLPHONGTHUCHANH</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCapNhatGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCapNhatGV.Designer.cs">
+      <DependentUpon>fCapNhatGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCapNhatLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCapNhatLop.Designer.cs">
+      <DependentUpon>fCapNhatLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCapNhatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCapNhatPhong.Designer.cs">
+      <DependentUpon>fCapNhatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGiangVien.Designer.cs">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhoLuuTru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhoLuuTru.Designer.cs">
+      <DependentUpon>fKhoLuuTru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQLmatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLmatKhau.Designer.cs">
+      <DependentUpon>fQLmatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLy.Designer.cs">
+      <DependentUpon>fQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSearch.Designer.cs">
+      <DependentUpon>fSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTaiTep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTaiTep.Designer.cs">
+      <DependentUpon>fTaiTep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemGiangVien.Designer.cs">
+      <DependentUpon>fThemGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemLop.Designer.cs">
+      <DependentUpon>fThemLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThemPhong.Designer.cs">
+      <DependentUpon>fThemPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongBao.Designer.cs">
+      <DependentUpon>fThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCapNhatGV.resx">
+      <DependentUpon>fCapNhatGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCapNhatLop.resx">
+      <DependentUpon>fCapNhatLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCapNhatPhong.resx">
+      <DependentUpon>fCapNhatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGiangVien.resx">
+      <DependentUpon>fGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhoLuuTru.resx">
+      <DependentUpon>fKhoLuuTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLmatKhau.resx">
+      <DependentUpon>fQLmatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLy.resx">
+      <DependentUpon>fQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSearch.resx">
+      <DependentUpon>fSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTaiTep.resx">
+      <DependentUpon>fTaiTep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemGiangVien.resx">
+      <DependentUpon>fThemGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemLop.resx">
+      <DependentUpon>fThemLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThemPhong.resx">
+      <DependentUpon>fThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongBao.resx">
+      <DependentUpon>fThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
