@@ -1,6 +1,6 @@
 ﻿namespace QLPHONGTHUCHANH
 {
-    partial class fKhoLuuTru
+    partial class fKhoLuuTruLop
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // fKhoLuuTru
+            // fKhoLuuTruLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "fKhoLuuTru";
+            this.Name = "fKhoLuuTruLop";
             this.Text = "Kho lưu trữ";
             this.ResumeLayout(false);
 

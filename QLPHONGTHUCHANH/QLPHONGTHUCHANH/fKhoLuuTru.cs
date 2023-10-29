@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLPHONGTHUCHANH
 {
-    public partial class fKhoLuuTru : Form
+    public partial class fKhoLuuTruLop : Form
     {
-        public fKhoLuuTru()
+        public fKhoLuuTruLop()
         {
             InitializeComponent();
         }
