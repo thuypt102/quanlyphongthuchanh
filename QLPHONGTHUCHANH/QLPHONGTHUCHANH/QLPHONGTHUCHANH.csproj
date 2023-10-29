@@ -76,11 +76,11 @@
     <Compile Include="fGiangVien.Designer.cs">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="fKhoLuuTru.cs">
+    <Compile Include="fKhoLuuTruLop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fKhoLuuTru.Designer.cs">
-      <DependentUpon>fKhoLuuTru.cs</DependentUpon>
+    <Compile Include="fKhoLuuTruLop.Designer.cs">
+      <DependentUpon>fKhoLuuTruLop.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="fGiangVien.resx">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fKhoLuuTru.resx">
-      <DependentUpon>fKhoLuuTru.cs</DependentUpon>
+    <EmbeddedResource Include="fKhoLuuTruLop.resx">
+      <DependentUpon>fKhoLuuTruLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
