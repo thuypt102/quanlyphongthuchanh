@@ -1,6 +1,6 @@
 ﻿namespace QLPHONGTHUCHANH
 {
-    partial class fKhoLuuTruLop
+    partial class fKhoLuuTruGiangVien
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.lbTieuDe = new System.Windows.Forms.Label();
+            this.dtaGiangVien = new System.Windows.Forms.DataGridView();
             this.btnKhoiPhuc = new System.Windows.Forms.Button();
-            this.dtaLop = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dtaLop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtaGiangVien)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTieuDe
@@ -44,10 +44,19 @@
             this.lbTieuDe.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbTieuDe.Location = new System.Drawing.Point(275, 22);
             this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(351, 33);
-            this.lbTieuDe.TabIndex = 0;
-            this.lbTieuDe.Text = "Kho lưu trữ thông tin lớp";
+            this.lbTieuDe.Size = new System.Drawing.Size(449, 33);
+            this.lbTieuDe.TabIndex = 1;
+            this.lbTieuDe.Text = "Kho lưu trữ thông tin giảng viên";
             this.lbTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtaGiangVien
+            // 
+            this.dtaGiangVien.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtaGiangVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtaGiangVien.Location = new System.Drawing.Point(76, 137);
+            this.dtaGiangVien.Name = "dtaGiangVien";
+            this.dtaGiangVien.Size = new System.Drawing.Size(766, 273);
+            this.dtaGiangVien.TabIndex = 3;
             // 
             // btnKhoiPhuc
             // 
@@ -58,32 +67,23 @@
             this.btnKhoiPhuc.Location = new System.Drawing.Point(395, 428);
             this.btnKhoiPhuc.Name = "btnKhoiPhuc";
             this.btnKhoiPhuc.Size = new System.Drawing.Size(131, 40);
-            this.btnKhoiPhuc.TabIndex = 1;
+            this.btnKhoiPhuc.TabIndex = 4;
             this.btnKhoiPhuc.Text = "Khôi Phục";
             this.btnKhoiPhuc.UseVisualStyleBackColor = false;
             // 
-            // dtaLop
-            // 
-            this.dtaLop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtaLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtaLop.Location = new System.Drawing.Point(76, 137);
-            this.dtaLop.Name = "dtaLop";
-            this.dtaLop.Size = new System.Drawing.Size(766, 273);
-            this.dtaLop.TabIndex = 2;
-            // 
-            // fKhoLuuTruLop
+            // fKhoLuuTruGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::QLPHONGTHUCHANH.Properties.Resources.d46a39dac513124d4b02;
+            this.BackgroundImage = global::QLPHONGTHUCHANH.Properties.Resources.d46a39dac513124d4b022;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(918, 480);
-            this.Controls.Add(this.dtaLop);
             this.Controls.Add(this.btnKhoiPhuc);
+            this.Controls.Add(this.dtaGiangVien);
             this.Controls.Add(this.lbTieuDe);
-            this.Name = "fKhoLuuTruLop";
+            this.Name = "fKhoLuuTruGiangVien";
             this.Text = "Kho lưu trữ";
-            ((System.ComponentModel.ISupportInitialize)(this.dtaLop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtaGiangVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,7 +92,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbTieuDe;
+        private System.Windows.Forms.DataGridView dtaGiangVien;
         private System.Windows.Forms.Button btnKhoiPhuc;
-        private System.Windows.Forms.DataGridView dtaLop;
     }
 }
