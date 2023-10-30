@@ -78,11 +78,23 @@
     <Compile Include="fGiangVien.Designer.cs">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="fKhoLuuTru.cs">
+    <Compile Include="fKhoLuuTruGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fKhoLuuTru.Designer.cs">
-      <DependentUpon>fKhoLuuTru.cs</DependentUpon>
+    <Compile Include="fKhoLuuTruGiangVien.Designer.cs">
+      <DependentUpon>fKhoLuuTruGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhoLuuTruLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhoLuuTruLop.Designer.cs">
+      <DependentUpon>fKhoLuuTruLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhoLuuTruPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhoLuuTruPhong.Designer.cs">
+      <DependentUpon>fKhoLuuTruPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -161,8 +173,14 @@
     <EmbeddedResource Include="fGiangVien.resx">
       <DependentUpon>fGiangVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fKhoLuuTru.resx">
-      <DependentUpon>fKhoLuuTru.cs</DependentUpon>
+    <EmbeddedResource Include="fKhoLuuTruGiangVien.resx">
+      <DependentUpon>fKhoLuuTruGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhoLuuTruLop.resx">
+      <DependentUpon>fKhoLuuTruLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhoLuuTruPhong.resx">
+      <DependentUpon>fKhoLuuTruPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -199,6 +217,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -212,6 +231,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d46a39dac513124d4b02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d46a39dac513124d4b021.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d46a39dac513124d4b022.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
