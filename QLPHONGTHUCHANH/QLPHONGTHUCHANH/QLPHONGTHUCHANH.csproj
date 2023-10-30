@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +89,12 @@
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
     <Compile Include="fQLmatKhau.cs">
       <SubType>Form</SubType>

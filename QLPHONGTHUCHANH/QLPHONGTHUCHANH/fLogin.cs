@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPHONGTHUCHANH.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,36 @@ namespace QLPHONGTHUCHANH
         public fLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool kiemTra(string user, string pass)
+        {
+            return TaiKhoanDAL.Khoitao.kiemTra(user, pass);
+            //return TaiKhoanBUS.Khoitao.kiemTra(user, pass);
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txbTenDangNhap.Text;
+            string pass = txbMatKhau.Text;
+            if (kiemTra(username, pass))
+            {
+                fMain f = new fMain();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Thông báo");
         }
     }
 }
