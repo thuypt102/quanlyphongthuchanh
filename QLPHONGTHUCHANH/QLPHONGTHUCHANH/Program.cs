@@ -16,7 +16,7 @@ namespace QLPHONGTHUCHANH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fKhoLuuTruLop());
+            Application.Run(new fLogin());
         }
     }
 }
