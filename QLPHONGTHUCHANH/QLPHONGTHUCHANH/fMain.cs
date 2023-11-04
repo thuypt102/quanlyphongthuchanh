@@ -16,5 +16,15 @@ namespace QLPHONGTHUCHANH
         {
             InitializeComponent();
         }
+        void loadDStaikhoan()
+        {
+            //dsTaiKhoan.DataSource = TaiKhoanBUS.Khoitao.layDStaikhoan();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            lbTieuDe.Hide();
+            dataGridView1.Show();
+        }
     }
 }

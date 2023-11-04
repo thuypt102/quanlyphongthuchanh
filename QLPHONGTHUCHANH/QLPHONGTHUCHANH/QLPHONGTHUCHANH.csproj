@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\LichDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
