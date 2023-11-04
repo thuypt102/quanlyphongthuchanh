@@ -64,6 +64,7 @@ namespace QLPHONGTHUCHANH
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
+            
             string username = txbTenDangNhap.Text;
             string pass = txbMatKhau.Text;
             if (kiemTra(username, pass))

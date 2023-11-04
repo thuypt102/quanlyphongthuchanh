@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\QLPHONGTHUCHANH",
-    "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH"
+    "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH",
+    "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH\\DAL"
   ],
-  "SelectedNode": "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH\\Program.cs",
+  "SelectedNode": "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH.sln",
   "PreviewInSolutionExplorer": false
 }
