@@ -9,27 +9,77 @@ namespace QLPHONGTHUCHANH.DTO
 {
     public class Lich
     {
-        private int maloaimon;
-        private string tenloai;
-        public int Maloaimon
+        private int id;
+        private int idCaThucHanh;
+        private string idLop;
+        private string idPhong;
+        private string idGiangVien;
+        private string namHoc;
+        private int kiHoc;
+        private string thu;
+
+        public int Id
         {
-            get { return maloaimon; }
-            set { maloaimon = value; }
+            get { return id; }
+            set { id = value; }
         }
-        public string Tenloai
+        public int IdCaThucHanh
         {
-            get { return tenloai; }
-            set { tenloai = value; }
+            get { return idCaThucHanh; }
+            set { idCaThucHanh = value; }
         }
-        public Lich(int maloai, string tenloai)
+        public string IdLop
         {
-            this.maloaimon = maloai;
-            this.tenloai = tenloai;
+            get { return idLop; }
+            set { idLop = value; }
         }
+        public string IdPhong
+        {
+            get { return idPhong; }
+            set { idPhong = value; }
+        }
+        public string IdGiangVien
+        {
+            get { return idGiangVien; }
+            set { idGiangVien = value; }
+        }
+        public string NamHoc
+        {
+            get { return namHoc; }
+            set { namHoc = value; }
+        }
+        public int KiHoc
+        {
+            get { return kiHoc; }
+            set { kiHoc = value; }
+        }
+        public string Thu
+        {
+            get { return thu; }
+            set { thu = value; }
+        }
+        public Lich(int id, int idcath, string idlop, string idphong, string idgv, string namhoc, int kihoc, string thu)
+        {
+            this.id = id;
+            this.idCaThucHanh = idcath;
+            this.idLop = idlop;
+            this.idPhong = idphong;
+            this.idGiangVien = idgv;
+            this.namHoc = namhoc;
+            this.kiHoc = kihoc;
+            this.thu = thu;
+        }
+
         public Lich(DataRow row)
         {
-            this.maloaimon = (int)row["maloaimon"];
-            this.tenloai = row["tenloaimon"].ToString();
+            this.id = (int)row["id"];
+            this.idCaThucHanh = (int)row["idCaThucHanh"];
+            this.idLop = row["idLop"].ToString();
+            this.idPhong = row["idPhong"].ToString();
+            this.idGiangVien = row["idGiangVien"].ToString(); ;
+            this.namHoc = row["namHoc"].ToString();
+            this.kiHoc = (int)row["kiHoc"];
+            this.thu = row["thu"].ToString();
         }
     }
 }

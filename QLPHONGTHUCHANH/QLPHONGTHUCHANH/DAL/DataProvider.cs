@@ -25,7 +25,7 @@ namespace QLPHONGTHUCHANH.DAL
 
         private DataProvider() { }
 
-        private string connstr = @"Data Source=LAPTOP-EEDVT48D\SQLEXPRESS01;Initial Catalog=QLPTH;Integrated Security=True";
+        private string connstr = @"Data Source=THUYPT-LAPTOP\THUYPT;Initial Catalog=QLPTH;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] thamSo = null)
         {

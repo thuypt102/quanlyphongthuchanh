@@ -49,6 +49,7 @@
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\LichDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DTO\Lich.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,8 +249,6 @@
   <ItemGroup>
     <None Include="Resources\d46a39dac513124d4b022.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
