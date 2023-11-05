@@ -13,6 +13,10 @@ namespace QLPHONGTHUCHANH
 {
     public partial class fLogin : Form
     {
+        // Khai báo biến toàn cục để lưu thông tin đăng nhập
+        public static string LoggedInUsername = "";
+        public static string LoggedInPassword = "";
+        //public static int LoggedInUserID = -1; // Khởi tạo giá trị mặc định -1
         public fLogin()
         {
             InitializeComponent();
@@ -81,6 +85,10 @@ namespace QLPHONGTHUCHANH
                 }
                 else
                 {
+                    // Gán thông tin đăng nhập vào biến toàn cục
+                    LoggedInUsername = username;
+                    LoggedInPassword = pass;
+
                     this.Hide();
                     fGV.ShowDialog();
                     this.Show();
