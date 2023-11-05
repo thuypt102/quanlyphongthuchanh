@@ -102,3 +102,5 @@ D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debu
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.CoreCompileInputs.cache
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.exe
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.pdb
+E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fMainGV.resources
+E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.ResolveComReference.cache

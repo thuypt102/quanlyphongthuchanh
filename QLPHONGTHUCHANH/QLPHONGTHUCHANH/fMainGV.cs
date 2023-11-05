@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,9 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QLPHONGTHUCHANH
 {
-    public partial class fMain : Form
+    public partial class fMainGV : Form
     {
-        public fMain()
+        public fMainGV()
         {
             InitializeComponent();
             loadNamHoc();
@@ -32,7 +33,7 @@ namespace QLPHONGTHUCHANH
             string nam = cmbNamHoc.Text.ToString();
             if (tukhoa == "" && selectedValue != "Tất cả")
             {
-                MessageBox.Show("Vui lòng nhập từ khóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng nhập từ khóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
