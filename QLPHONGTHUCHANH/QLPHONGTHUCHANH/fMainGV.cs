@@ -126,5 +126,14 @@ namespace QLPHONGTHUCHANH
                 }
             }
         }
+
+        private void mniQuanLy_Click(object sender, EventArgs e)
+        {
+            fGiangVien fgv = new fGiangVien();
+            //f2.taikhoannow = Taikhoandn;
+            this.Hide();
+            fgv.ShowDialog();
+            this.Show();
+        }
     }
 }

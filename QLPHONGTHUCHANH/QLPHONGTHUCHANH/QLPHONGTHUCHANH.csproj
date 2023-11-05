@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\CaDAL.cs" />
+    <Compile Include="DTO\CaThucHanh.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\LichDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />

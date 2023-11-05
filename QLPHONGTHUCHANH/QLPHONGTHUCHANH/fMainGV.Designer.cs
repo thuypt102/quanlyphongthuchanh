@@ -79,6 +79,7 @@
             this.mniQuanLy.Name = "mniQuanLy";
             this.mniQuanLy.Size = new System.Drawing.Size(96, 25);
             this.mniQuanLy.Text = "Chức năng";
+            this.mniQuanLy.Click += new System.EventHandler(this.mniQuanLy_Click);
             // 
             // mniThongTin
             // 

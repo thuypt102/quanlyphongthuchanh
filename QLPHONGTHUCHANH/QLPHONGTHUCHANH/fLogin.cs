@@ -37,7 +37,14 @@ namespace QLPHONGTHUCHANH
         {
             return TaiKhoanDAL.Khoitao.getType(user, pass);
         }
-
+        private void formLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát khỏi ứng dụng?", "Thông báo", MessageBoxButtons.OKCancel)
+                != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txbTenDangNhap.Text;
@@ -74,7 +81,7 @@ namespace QLPHONGTHUCHANH
             if (kiemTra(username, pass))
             {
                 fMain f = new fMain();
-                fGiangVien fGV = new fGiangVien();
+                fMainGV fGV = new fMainGV();
                 bool isAd = getType(username, pass); // Kiểm tra loại tài khoản
 
                 if (isAd)

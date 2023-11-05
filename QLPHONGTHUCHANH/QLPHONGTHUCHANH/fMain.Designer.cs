@@ -79,6 +79,7 @@
             this.mniQuanLy.Name = "mniQuanLy";
             this.mniQuanLy.Size = new System.Drawing.Size(76, 25);
             this.mniQuanLy.Text = "Quản lý";
+            this.mniQuanLy.Click += new System.EventHandler(this.mniQuanLy_Click);
             // 
             // mniThongTin
             // 
@@ -179,6 +180,7 @@
             // dtgLich
             // 
             this.dtgLich.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgLich.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgLich.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgLich.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,

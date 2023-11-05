@@ -1,4 +1,5 @@
 ﻿using QLPHONGTHUCHANH.DAL;
+using QLPHONGTHUCHANH.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,16 +17,14 @@ namespace QLPHONGTHUCHANH
         public fGiangVien()
         {
             InitializeComponent();
+            loadCa();
         }
 
-        private void btnGuiBaoCao_Click(object sender, EventArgs e)
+        void loadCa()
         {
-
-        }
-
-        private void txtBCSC_Click(object sender, EventArgs e)
-        {
-
+            List<CaThucHanh> ca = CaDAL.Khoitao.loadCa();
+            cbxCaThucHanh.DataSource = ca;
+            cbxCaThucHanh.DisplayMember = "tenCaThucHanh";
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,21 +48,6 @@ namespace QLPHONGTHUCHANH
                     txbEmail.Text = giangVienInfo.Rows[0]["email"].ToString();
                 }
             }
-        }
-
-        private void txbTenLop_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbTenGV_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbKhoa_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
