@@ -144,6 +144,7 @@
             this.btnDangKyLBS.Text = "Đăng ký";
             this.btnDangKyLBS.TextColor = System.Drawing.Color.White;
             this.btnDangKyLBS.UseVisualStyleBackColor = false;
+            this.btnDangKyLBS.Click += new System.EventHandler(this.btnDangKyLBS_Click);
             // 
             // lbTenLop
             // 
@@ -219,6 +220,7 @@
             this.btnGuiBaoCao.Text = "Gửi";
             this.btnGuiBaoCao.TextColor = System.Drawing.Color.White;
             this.btnGuiBaoCao.UseVisualStyleBackColor = false;
+            this.btnGuiBaoCao.Click += new System.EventHandler(this.btnGuiBaoCao_Click);
             // 
             // grbBCSC
             // 
@@ -241,7 +243,7 @@
             this.txtBCSC.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtBCSC.Size = new System.Drawing.Size(686, 284);
             this.txtBCSC.TabIndex = 0;
-            this.txtBCSC.Text = "Vui lòng nhập thông tin sự cố!";
+            this.txtBCSC.Click += new System.EventHandler(this.txtBCSC_Click);
             // 
             // label1
             // 
