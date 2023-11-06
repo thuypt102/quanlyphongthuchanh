@@ -57,10 +57,10 @@
             this.tc.Controls.Add(this.tabThongBao);
             this.tc.Controls.Add(this.tabThongTin);
             this.tc.Location = new System.Drawing.Point(0, 0);
-            this.tc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tc.Margin = new System.Windows.Forms.Padding(2);
             this.tc.Name = "tc";
             this.tc.SelectedIndex = 0;
-            this.tc.Size = new System.Drawing.Size(1065, 789);
+            this.tc.Size = new System.Drawing.Size(1375, 754);
             this.tc.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tc.TabIndex = 0;
             // 
@@ -77,10 +77,10 @@
             this.tabQLLop.Controls.Add(this.btnThemLop);
             this.tabQLLop.Controls.Add(this.dtaLop);
             this.tabQLLop.Location = new System.Drawing.Point(4, 22);
-            this.tabQLLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLLop.Margin = new System.Windows.Forms.Padding(2);
             this.tabQLLop.Name = "tabQLLop";
-            this.tabQLLop.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabQLLop.Size = new System.Drawing.Size(1057, 763);
+            this.tabQLLop.Padding = new System.Windows.Forms.Padding(2);
+            this.tabQLLop.Size = new System.Drawing.Size(1367, 728);
             this.tabQLLop.TabIndex = 1;
             this.tabQLLop.Text = "Quản lý lớp";
             this.tabQLLop.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             // txbTimKiemLop
             // 
             this.txbTimKiemLop.Location = new System.Drawing.Point(630, 637);
-            this.txbTimKiemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTimKiemLop.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiemLop.Name = "txbTimKiemLop";
             this.txbTimKiemLop.Size = new System.Drawing.Size(234, 20);
             this.txbTimKiemLop.TabIndex = 12;
@@ -115,7 +115,7 @@
             this.btnKhoLuuTruLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhoLuuTruLop.ForeColor = System.Drawing.Color.White;
             this.btnKhoLuuTruLop.Location = new System.Drawing.Point(230, 689);
-            this.btnKhoLuuTruLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKhoLuuTruLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoLuuTruLop.Name = "btnKhoLuuTruLop";
             this.btnKhoLuuTruLop.Size = new System.Drawing.Size(112, 32);
             this.btnKhoLuuTruLop.TabIndex = 5;
@@ -135,7 +135,7 @@
             this.btnXoaLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaLop.ForeColor = System.Drawing.Color.White;
             this.btnXoaLop.Location = new System.Drawing.Point(41, 689);
-            this.btnXoaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaLop.Name = "btnXoaLop";
             this.btnXoaLop.Size = new System.Drawing.Size(112, 32);
             this.btnXoaLop.TabIndex = 6;
@@ -154,7 +154,7 @@
             this.btnTimKiemLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiemLop.ForeColor = System.Drawing.Color.White;
             this.btnTimKiemLop.Location = new System.Drawing.Point(884, 630);
-            this.btnTimKiemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiemLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemLop.Name = "btnTimKiemLop";
             this.btnTimKiemLop.Size = new System.Drawing.Size(112, 32);
             this.btnTimKiemLop.TabIndex = 7;
@@ -174,7 +174,7 @@
             this.btnTaiLenLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaiLenLop.ForeColor = System.Drawing.Color.White;
             this.btnTaiLenLop.Location = new System.Drawing.Point(230, 630);
-            this.btnTaiLenLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaiLenLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaiLenLop.Name = "btnTaiLenLop";
             this.btnTaiLenLop.Size = new System.Drawing.Size(112, 32);
             this.btnTaiLenLop.TabIndex = 8;
@@ -193,7 +193,7 @@
             this.btnLuuTruLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuuTruLop.ForeColor = System.Drawing.Color.White;
             this.btnLuuTruLop.Location = new System.Drawing.Point(230, 573);
-            this.btnLuuTruLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuuTruLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuuTruLop.Name = "btnLuuTruLop";
             this.btnLuuTruLop.Size = new System.Drawing.Size(112, 32);
             this.btnLuuTruLop.TabIndex = 9;
@@ -212,7 +212,7 @@
             this.btnSuaLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuaLop.ForeColor = System.Drawing.Color.White;
             this.btnSuaLop.Location = new System.Drawing.Point(41, 630);
-            this.btnSuaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaLop.Name = "btnSuaLop";
             this.btnSuaLop.Size = new System.Drawing.Size(112, 32);
             this.btnSuaLop.TabIndex = 10;
@@ -231,7 +231,7 @@
             this.btnThemLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemLop.ForeColor = System.Drawing.Color.White;
             this.btnThemLop.Location = new System.Drawing.Point(41, 573);
-            this.btnThemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(112, 32);
             this.btnThemLop.TabIndex = 11;
@@ -245,20 +245,20 @@
             this.dtaLop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtaLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtaLop.Location = new System.Drawing.Point(0, 5);
-            this.dtaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtaLop.Location = new System.Drawing.Point(-22, 0);
+            this.dtaLop.Margin = new System.Windows.Forms.Padding(2);
             this.dtaLop.Name = "dtaLop";
             this.dtaLop.RowHeadersWidth = 51;
             this.dtaLop.RowTemplate.Height = 24;
-            this.dtaLop.Size = new System.Drawing.Size(1380, 530);
+            this.dtaLop.Size = new System.Drawing.Size(1385, 552);
             this.dtaLop.TabIndex = 4;
             // 
             // tabQLPhong
             // 
             this.tabQLPhong.Location = new System.Drawing.Point(4, 22);
-            this.tabQLPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLPhong.Margin = new System.Windows.Forms.Padding(2);
             this.tabQLPhong.Name = "tabQLPhong";
-            this.tabQLPhong.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLPhong.Padding = new System.Windows.Forms.Padding(2);
             this.tabQLPhong.Size = new System.Drawing.Size(1057, 763);
             this.tabQLPhong.TabIndex = 2;
             this.tabQLPhong.Text = "Quản lý phòng";
@@ -267,9 +267,9 @@
             // tabQLGV
             // 
             this.tabQLGV.Location = new System.Drawing.Point(4, 22);
-            this.tabQLGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLGV.Margin = new System.Windows.Forms.Padding(2);
             this.tabQLGV.Name = "tabQLGV";
-            this.tabQLGV.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLGV.Padding = new System.Windows.Forms.Padding(2);
             this.tabQLGV.Size = new System.Drawing.Size(1057, 763);
             this.tabQLGV.TabIndex = 3;
             this.tabQLGV.Text = "Quản lý giảng viên";
@@ -278,9 +278,9 @@
             // tabThongBao
             // 
             this.tabThongBao.Location = new System.Drawing.Point(4, 22);
-            this.tabThongBao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabThongBao.Margin = new System.Windows.Forms.Padding(2);
             this.tabThongBao.Name = "tabThongBao";
-            this.tabThongBao.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabThongBao.Padding = new System.Windows.Forms.Padding(2);
             this.tabThongBao.Size = new System.Drawing.Size(1057, 763);
             this.tabThongBao.TabIndex = 4;
             this.tabThongBao.Text = "Thông báo";
@@ -289,9 +289,9 @@
             // tabThongTin
             // 
             this.tabThongTin.Location = new System.Drawing.Point(4, 22);
-            this.tabThongTin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.tabThongTin.Name = "tabThongTin";
-            this.tabThongTin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabThongTin.Padding = new System.Windows.Forms.Padding(2);
             this.tabThongTin.Size = new System.Drawing.Size(1057, 763);
             this.tabThongTin.TabIndex = 5;
             this.tabThongTin.Text = "Thông tin";
@@ -301,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.tc);
             this.Name = "fQuanLy";
             this.Text = "Hệ thống quản lý phòng thực hành tin ";

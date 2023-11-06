@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPHONGTHUCHANH.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,33 @@ namespace QLPHONGTHUCHANH
         public fKhoLuuTruPhong()
         {
             InitializeComponent();
+            loadDSPhong();
+        }
+
+        public void loadDSPhong()
+        {
+            dtaPhongMay.DataSource = PhongDAL.Khoitao.getDSPhong();
+        }
+
+        private void btnKhoiPhuc_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn khôi phục phòng?", "Thông báo",
+                MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                int i;
+                i = dtaPhongMay.CurrentRow.Index;
+
+                string maP = dtaPhongMay.Rows[i].Cells[0].Value.ToString();
+                if (PhongDAL.Khoitao.khoiPhucPhong(maP))
+                {
+                    MessageBox.Show("Khôi phục phòng thành công!", "Thông báo");
+                    loadDSPhong();
+                }
+                else
+                {
+                    MessageBox.Show("Khôi phục phòng không thành công!", "Thông báo");
+                }
+            }
         }
     }
 }

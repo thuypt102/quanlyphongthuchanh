@@ -2301,7 +2301,7 @@ TRƯỜNG ĐẠI HỌC QUY NHƠN</value>
     <value>235, 20</value>
   </data>
   <data name="txbMatKhau.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txbMatKhau.Name" xml:space="preserve">
     <value>txbMatKhau</value>

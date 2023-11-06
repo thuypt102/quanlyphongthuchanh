@@ -36,7 +36,6 @@
             this.lbCaLT = new System.Windows.Forms.Label();
             this.lbSlSV = new System.Windows.Forms.Label();
             this.lbLoai = new System.Windows.Forms.Label();
-            this.vbButton1 = new QLPHONGTHUCHANH.VBButton();
             this.txbMaLop = new System.Windows.Forms.TextBox();
             this.txbTenLop = new System.Windows.Forms.TextBox();
             this.txbKhoa = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.txbCaLT = new System.Windows.Forms.TextBox();
             this.txbSlSV = new System.Windows.Forms.TextBox();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
+            this.vbButton1 = new QLPHONGTHUCHANH.VBButton();
             this.SuspendLayout();
             // 
             // lbTieuDe
@@ -51,9 +51,9 @@
             this.lbTieuDe.AutoSize = true;
             this.lbTieuDe.Location = new System.Drawing.Point(411, 42);
             this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(105, 16);
+            this.lbTieuDe.Size = new System.Drawing.Size(109, 16);
             this.lbTieuDe.TabIndex = 0;
-            this.lbTieuDe.Text = "Thêm tin lớp mới";
+            this.lbTieuDe.Text = "Thông tin lớp mới";
             // 
             // lbMaLop
             // 
@@ -118,24 +118,6 @@
             this.lbLoai.TabIndex = 1;
             this.lbLoai.Text = "Loại thực hành";
             // 
-            // vbButton1
-            // 
-            this.vbButton1.BackColor = System.Drawing.Color.Blue;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.Blue;
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 20;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(387, 484);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(150, 40);
-            this.vbButton1.TabIndex = 2;
-            this.vbButton1.Text = "Thêm lớp";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
-            // 
             // txbMaLop
             // 
             this.txbMaLop.Location = new System.Drawing.Point(354, 109);
@@ -180,16 +162,42 @@
             // 
             // cmbLoai
             // 
+            this.cmbLoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbLoai.FormattingEnabled = true;
+            this.cmbLoai.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
             this.cmbLoai.Location = new System.Drawing.Point(354, 419);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(233, 24);
             this.cmbLoai.TabIndex = 4;
             // 
+            // vbButton1
+            // 
+            this.vbButton1.BackColor = System.Drawing.Color.Blue;
+            this.vbButton1.BackgroundColor = System.Drawing.Color.Blue;
+            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton1.BorderRadius = 20;
+            this.vbButton1.BorderSize = 0;
+            this.vbButton1.FlatAppearance.BorderSize = 0;
+            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton1.ForeColor = System.Drawing.Color.White;
+            this.vbButton1.Location = new System.Drawing.Point(387, 484);
+            this.vbButton1.Name = "vbButton1";
+            this.vbButton1.Size = new System.Drawing.Size(150, 40);
+            this.vbButton1.TabIndex = 2;
+            this.vbButton1.Text = "Thêm lớp";
+            this.vbButton1.TextColor = System.Drawing.Color.White;
+            this.vbButton1.UseVisualStyleBackColor = false;
+            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
+            // 
             // fThemLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QLPHONGTHUCHANH.Properties.Resources.d46a39dac513124d4b02;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.cmbLoai);
             this.Controls.Add(this.txbSlSV);
