@@ -31,6 +31,11 @@
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.dtaPhongMay = new System.Windows.Forms.DataGridView();
             this.btnKhoiPhuc = new System.Windows.Forms.Button();
+            this.maPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongMay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiThucHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtaPhongMay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +59,14 @@
             this.dtaPhongMay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtaPhongMay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtaPhongMay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtaPhongMay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maPhong,
+            this.tenPhong,
+            this.tenKhuVuc,
+            this.soLuongMay,
+            this.loaiThucHanh});
             this.dtaPhongMay.Location = new System.Drawing.Point(44, 89);
             this.dtaPhongMay.Name = "dtaPhongMay";
             this.dtaPhongMay.Size = new System.Drawing.Size(896, 306);
@@ -73,6 +85,37 @@
             this.btnKhoiPhuc.TabIndex = 4;
             this.btnKhoiPhuc.Text = "Khôi Phục";
             this.btnKhoiPhuc.UseVisualStyleBackColor = false;
+            this.btnKhoiPhuc.Click += new System.EventHandler(this.btnKhoiPhuc_Click);
+            // 
+            // maPhong
+            // 
+            this.maPhong.DataPropertyName = "id";
+            this.maPhong.HeaderText = "Mã phòng";
+            this.maPhong.Name = "maPhong";
+            // 
+            // tenPhong
+            // 
+            this.tenPhong.DataPropertyName = "tenPhong";
+            this.tenPhong.HeaderText = "Tên phòng";
+            this.tenPhong.Name = "tenPhong";
+            // 
+            // tenKhuVuc
+            // 
+            this.tenKhuVuc.DataPropertyName = "tenKhuVuc";
+            this.tenKhuVuc.HeaderText = "Tên khu vực";
+            this.tenKhuVuc.Name = "tenKhuVuc";
+            // 
+            // soLuongMay
+            // 
+            this.soLuongMay.DataPropertyName = "soLuongMay";
+            this.soLuongMay.HeaderText = "Số lượng máy";
+            this.soLuongMay.Name = "soLuongMay";
+            // 
+            // loaiThucHanh
+            // 
+            this.loaiThucHanh.DataPropertyName = "loaiThucHanh";
+            this.loaiThucHanh.HeaderText = "Loại thực hành";
+            this.loaiThucHanh.Name = "loaiThucHanh";
             // 
             // fKhoLuuTruPhong
             // 
@@ -98,5 +141,10 @@
         private System.Windows.Forms.Label lbTieuDe;
         private System.Windows.Forms.DataGridView dtaPhongMay;
         private System.Windows.Forms.Button btnKhoiPhuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhuVuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongMay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loaiThucHanh;
     }
 }
