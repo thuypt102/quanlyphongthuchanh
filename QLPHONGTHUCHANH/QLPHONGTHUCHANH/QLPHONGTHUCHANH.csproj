@@ -47,12 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\CaDAL.cs" />
-    <Compile Include="DAL\PhongDAL.cs" />
-    <Compile Include="DTO\CaThucHanh.cs" />
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\GVDAL.cs" />
     <Compile Include="DAL\LichDAL.cs" />
+    <Compile Include="DAL\LopDAL.cs" />
+    <Compile Include="DAL\PhongDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DTO\CaThucHanh.cs" />
+    <Compile Include="DTO\GV.cs" />
     <Compile Include="DTO\Lich.cs" />
+    <Compile Include="DTO\Lop.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,17 +111,17 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMainGV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fMainGV.Designer.cs">
-      <DependentUpon>fMainGV.cs</DependentUpon>
-    </Compile>
     <Compile Include="fMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMainGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMainGV.Designer.cs">
+      <DependentUpon>fMainGV.cs</DependentUpon>
     </Compile>
     <Compile Include="fQLmatKhau.cs">
       <SubType>Form</SubType>
@@ -167,6 +171,7 @@
     <Compile Include="fThongBao.Designer.cs">
       <DependentUpon>fThongBao.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VBButton.cs">
@@ -199,11 +204,11 @@
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMainGV.resx">
-      <DependentUpon>fMainGV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMainGV.resx">
+      <DependentUpon>fMainGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQLmatKhau.resx">
       <DependentUpon>fQLmatKhau.cs</DependentUpon>
@@ -229,6 +234,27 @@
     <EmbeddedResource Include="fThongBao.resx">
       <DependentUpon>fThongBao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fAdmin.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fCapNhatGV.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fCapNhatLop.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fCapNhatPhong.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fGiangVien.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fKhoLuuTru.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fKhoLuuTruGiangVien.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fKhoLuuTruLop.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fKhoLuuTruPhong.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fMain.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fMainGV.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fQLmatKhau.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fQuanLy.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fSearch.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fTaiTep.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fThemGiangVien.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fThemLop.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fThemPhong.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fThongBao.resources" />
+    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -239,6 +265,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\93af590d-38e4-4316-97a9-114bdc9c1621.vsidx" />
+    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\bbf589a0-bff2-4c29-b176-e2a3c29b179b.vsidx" />
+    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\c36842c0-7859-43f7-9451-1eb58dd52296.vsidx" />
+    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\cdef7ad4-e7eb-485b-a534-e4c5caa5eed9.vsidx" />
+    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\fb2af618-bd77-4303-88b9-c20e20a6dabc.vsidx" />
+    <None Include=".vs\QLPHONGTHUCHANH\v17\.wsuo" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="bin\Debug\QLPHONGTHUCHANH.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\QLPHONGTHUCHANH.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\QLPHONGTHUCHANH.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\QLPHONGTHUCHANH.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\QLPHONGTHUCHANH.csproj.ResolveComReference.cache" />
+    <None Include="obj\Debug\QLPHONGTHUCHANH.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="obj\Release\QLPHONGTHUCHANH.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\QLPHONGTHUCHANH.csproj.ResolveComReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -260,6 +305,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\d46a39dac513124d4b022.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\QLPHONGTHUCHANH.exe" />
+    <Content Include="bin\Debug\QLPHONGTHUCHANH.pdb" />
+    <Content Include="obj\Debug\QLPHONGTHUCHANH.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\QLPHONGTHUCHANH.exe" />
+    <Content Include="obj\Debug\QLPHONGTHUCHANH.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
@@ -289,6 +342,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
