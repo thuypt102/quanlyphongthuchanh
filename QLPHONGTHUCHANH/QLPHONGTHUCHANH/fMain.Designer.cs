@@ -35,6 +35,9 @@
             this.mniDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbNamHoc = new System.Windows.Forms.ComboBox();
+            this.btnDoiPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnTimKiem = new QLPHONGTHUCHANH.VBButton();
+            this.btnXuatLich = new QLPHONGTHUCHANH.VBButton();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.lbLoai = new System.Windows.Forms.Label();
             this.txbTimKiem = new System.Windows.Forms.TextBox();
@@ -51,9 +54,6 @@
             this.thu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.lbTieuDe = new System.Windows.Forms.Label();
-            this.btnDoiPhong = new QLPHONGTHUCHANH.VBButton();
-            this.btnTimKiem = new QLPHONGTHUCHANH.VBButton();
-            this.btnXuatLich = new QLPHONGTHUCHANH.VBButton();
             this.mnsQuanLy.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -122,9 +122,68 @@
             this.cmbNamHoc.Size = new System.Drawing.Size(166, 28);
             this.cmbNamHoc.TabIndex = 10;
             // 
+            // btnDoiPhong
+            // 
+            this.btnDoiPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnDoiPhong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnDoiPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDoiPhong.BorderRadius = 8;
+            this.btnDoiPhong.BorderSize = 0;
+            this.btnDoiPhong.FlatAppearance.BorderSize = 0;
+            this.btnDoiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiPhong.ForeColor = System.Drawing.Color.White;
+            this.btnDoiPhong.Location = new System.Drawing.Point(1173, 23);
+            this.btnDoiPhong.Name = "btnDoiPhong";
+            this.btnDoiPhong.Size = new System.Drawing.Size(129, 38);
+            this.btnDoiPhong.TabIndex = 9;
+            this.btnDoiPhong.Text = "Đổi phòng máy";
+            this.btnDoiPhong.TextColor = System.Drawing.Color.White;
+            this.btnDoiPhong.UseVisualStyleBackColor = false;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiem.BorderRadius = 8;
+            this.btnTimKiem.BorderSize = 0;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(836, 23);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(115, 38);
+            this.btnTimKiem.TabIndex = 7;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextColor = System.Drawing.Color.White;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnXuatLich
+            // 
+            this.btnXuatLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnXuatLich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnXuatLich.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXuatLich.BorderRadius = 8;
+            this.btnXuatLich.BorderSize = 0;
+            this.btnXuatLich.FlatAppearance.BorderSize = 0;
+            this.btnXuatLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatLich.ForeColor = System.Drawing.Color.White;
+            this.btnXuatLich.Location = new System.Drawing.Point(1005, 23);
+            this.btnXuatLich.Name = "btnXuatLich";
+            this.btnXuatLich.Size = new System.Drawing.Size(115, 38);
+            this.btnXuatLich.TabIndex = 8;
+            this.btnXuatLich.Text = "Xuất lịch";
+            this.btnXuatLich.TextColor = System.Drawing.Color.White;
+            this.btnXuatLich.UseVisualStyleBackColor = false;
+            this.btnXuatLich.Click += new System.EventHandler(this.btnXuatLich_Click);
+            // 
             // cmbLoai
             // 
-            this.cmbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
             "Tất cả",
@@ -133,7 +192,7 @@
             "Phòng"});
             this.cmbLoai.Location = new System.Drawing.Point(585, 23);
             this.cmbLoai.Name = "cmbLoai";
-            this.cmbLoai.Size = new System.Drawing.Size(191, 32);
+            this.cmbLoai.Size = new System.Drawing.Size(191, 28);
             this.cmbLoai.TabIndex = 5;
             this.cmbLoai.Text = "Tất cả";
             this.cmbLoai.UseWaitCursor = true;
@@ -270,65 +329,6 @@
             this.lbTieuDe.TabIndex = 4;
             this.lbTieuDe.Text = "HỆ THỐNG QUẢN LÝ PHÒNG \r\nTHỰC HÀNH TIN HỌC CỦA\r\nTRƯỜNG ĐẠI HỌC QUY NHƠN";
             this.lbTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnDoiPhong
-            // 
-            this.btnDoiPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnDoiPhong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnDoiPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDoiPhong.BorderRadius = 8;
-            this.btnDoiPhong.BorderSize = 0;
-            this.btnDoiPhong.FlatAppearance.BorderSize = 0;
-            this.btnDoiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoiPhong.ForeColor = System.Drawing.Color.White;
-            this.btnDoiPhong.Location = new System.Drawing.Point(1173, 23);
-            this.btnDoiPhong.Name = "btnDoiPhong";
-            this.btnDoiPhong.Size = new System.Drawing.Size(129, 38);
-            this.btnDoiPhong.TabIndex = 9;
-            this.btnDoiPhong.Text = "Đổi phòng máy";
-            this.btnDoiPhong.TextColor = System.Drawing.Color.White;
-            this.btnDoiPhong.UseVisualStyleBackColor = false;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiem.BorderRadius = 8;
-            this.btnTimKiem.BorderSize = 0;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(836, 23);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(115, 38);
-            this.btnTimKiem.TabIndex = 7;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.TextColor = System.Drawing.Color.White;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // btnXuatLich
-            // 
-            this.btnXuatLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnXuatLich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnXuatLich.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXuatLich.BorderRadius = 8;
-            this.btnXuatLich.BorderSize = 0;
-            this.btnXuatLich.FlatAppearance.BorderSize = 0;
-            this.btnXuatLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuatLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatLich.ForeColor = System.Drawing.Color.White;
-            this.btnXuatLich.Location = new System.Drawing.Point(1005, 23);
-            this.btnXuatLich.Name = "btnXuatLich";
-            this.btnXuatLich.Size = new System.Drawing.Size(115, 38);
-            this.btnXuatLich.TabIndex = 8;
-            this.btnXuatLich.Text = "Xuất lịch";
-            this.btnXuatLich.TextColor = System.Drawing.Color.White;
-            this.btnXuatLich.UseVisualStyleBackColor = false;
-            this.btnXuatLich.Click += new System.EventHandler(this.btnXuatLich_Click);
             // 
             // fMain
             // 
