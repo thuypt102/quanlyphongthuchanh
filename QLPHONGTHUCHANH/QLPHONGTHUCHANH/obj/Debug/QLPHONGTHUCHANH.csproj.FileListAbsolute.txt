@@ -102,3 +102,34 @@ D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debu
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.pdb
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.exe
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.pdb
+E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fMainGV.resources
+E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.ResolveComReference.cache
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe.config
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.pdb
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.AssemblyReference.cache
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.ResolveComReference.cache
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fAdmin.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fCapNhatGV.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fCapNhatLop.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fCapNhatPhong.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fGiangVien.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fKhoLuuTruGiangVien.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fKhoLuuTruLop.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fKhoLuuTruPhong.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fLogin.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fMainGV.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fMain.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fQLmatKhau.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fQuanLy.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fSearch.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fTaiTep.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fThemGiangVien.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fThemLop.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fThemPhong.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fThongBao.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.Properties.Resources.resources
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.GenerateResource.cache
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.CoreCompileInputs.cache
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.exe
+D:\Program Files\Source\Repos\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.pdb
