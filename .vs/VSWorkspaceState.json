@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\QLPHONGTHUCHANH",
+    "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH",
+    "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH\\DAL"
   ],
-  "SelectedNode": "\\QLPHONGTHUCHANH.sln",
+  "SelectedNode": "\\QLPHONGTHUCHANH\\QLPHONGTHUCHANH\\fGiangVien.cs",
   "PreviewInSolutionExplorer": false
 }
