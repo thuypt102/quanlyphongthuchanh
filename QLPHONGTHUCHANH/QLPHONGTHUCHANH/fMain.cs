@@ -26,5 +26,7 @@ namespace QLPHONGTHUCHANH
             lbTieuDe.Hide();
             dataGridView1.Show();
         }
+
+        
     }
 }

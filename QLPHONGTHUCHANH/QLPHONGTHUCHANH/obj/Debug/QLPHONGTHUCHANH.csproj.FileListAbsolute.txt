@@ -75,9 +75,6 @@ E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\ob
 E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.exe
 E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.pdb
 E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fMain.resources
-D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe.config
-D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe
-D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.pdb
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.AssemblyReference.cache
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fAdmin.resources
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fCapNhatGV.resources
@@ -100,5 +97,8 @@ D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debu
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.Properties.Resources.resources
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.GenerateResource.cache
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.CoreCompileInputs.cache
+D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe.config
+D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe
+D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.pdb
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.exe
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.pdb

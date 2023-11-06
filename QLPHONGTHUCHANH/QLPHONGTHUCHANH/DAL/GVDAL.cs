@@ -11,26 +11,27 @@ using System.Windows.Forms;
 
 namespace QLPHONGTHUCHANH.DAL
 {
-    public class LopDAL
+    public class GVDAL
+        
     {
         
-        private static LopDAL khoitao;
-        public static LopDAL Khoitao
+        private static GVDAL khoitao;
+        public static GVDAL Khoitao
         {
             get
             {
                 if (khoitao == null)
-                    khoitao = new LopDAL();
-                return LopDAL.khoitao;
+                    khoitao = new GVDAL();
+                return GVDAL.khoitao;
             }
-            private set { LopDAL.khoitao = value; }
+            private set { GVDAL.khoitao = value; }
         }
 
-        private LopDAL() { }
+        /*private GVDAL() { }
 
         public bool timKiem(string idlop)
         {
-            string query = "Select * from LOP where tenDangNhap = N'" + idlop + "' ";
+            string query = "Select * from  where tenDangNhap = N'" + idlop + "' ";
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
             return kq.Rows.Count > 0;
@@ -100,7 +101,7 @@ namespace QLPHONGTHUCHANH.DAL
             int numberOfRowsDeleted = DataProvider.Khoitao.ExecuteNonQuery(query);
 
             return numberOfRowsDeleted > 0;
-        }
+        }*/
 
     }
 }
