@@ -33,13 +33,11 @@
             this.txbTenLop = new System.Windows.Forms.TextBox();
             this.cbxCaThucHanh = new System.Windows.Forms.ComboBox();
             this.cbxLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.btnDangKyLBS = new QLPHONGTHUCHANH.VBButton();
             this.lbTenLop = new System.Windows.Forms.Label();
             this.lbCaThucHanh = new System.Windows.Forms.Label();
             this.lbLoaiPhong = new System.Windows.Forms.Label();
             this.lbTieuĐeangKyLBS = new System.Windows.Forms.Label();
             this.tabPBCSC = new System.Windows.Forms.TabPage();
-            this.btnGuiBaoCao = new QLPHONGTHUCHANH.VBButton();
             this.grbBCSC = new System.Windows.Forms.GroupBox();
             this.txtBCSC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,6 +53,8 @@
             this.lbTenGV = new System.Windows.Forms.Label();
             this.lbMaGV = new System.Windows.Forms.Label();
             this.lbTieuDeThongTinGV = new System.Windows.Forms.Label();
+            this.btnDangKyLBS = new QLPHONGTHUCHANH.VBButton();
+            this.btnGuiBaoCao = new QLPHONGTHUCHANH.VBButton();
             this.tabControl1.SuspendLayout();
             this.tabPDKLBS.SuspendLayout();
             this.tabPBCSC.SuspendLayout();
@@ -126,25 +126,6 @@
             this.cbxLoaiPhong.TabIndex = 12;
             this.cbxLoaiPhong.Text = "Thực hành thông thường";
             // 
-            // btnDangKyLBS
-            // 
-            this.btnDangKyLBS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnDangKyLBS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnDangKyLBS.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDangKyLBS.BorderRadius = 20;
-            this.btnDangKyLBS.BorderSize = 0;
-            this.btnDangKyLBS.FlatAppearance.BorderSize = 0;
-            this.btnDangKyLBS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKyLBS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKyLBS.ForeColor = System.Drawing.Color.White;
-            this.btnDangKyLBS.Location = new System.Drawing.Point(649, 431);
-            this.btnDangKyLBS.Name = "btnDangKyLBS";
-            this.btnDangKyLBS.Size = new System.Drawing.Size(209, 40);
-            this.btnDangKyLBS.TabIndex = 11;
-            this.btnDangKyLBS.Text = "Đăng ký";
-            this.btnDangKyLBS.TextColor = System.Drawing.Color.White;
-            this.btnDangKyLBS.UseVisualStyleBackColor = false;
-            // 
             // lbTenLop
             // 
             this.lbTenLop.AutoSize = true;
@@ -201,25 +182,6 @@
             this.tabPBCSC.Text = "Báo cáo sự cố";
             this.tabPBCSC.UseVisualStyleBackColor = true;
             // 
-            // btnGuiBaoCao
-            // 
-            this.btnGuiBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnGuiBaoCao.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnGuiBaoCao.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuiBaoCao.BorderRadius = 20;
-            this.btnGuiBaoCao.BorderSize = 0;
-            this.btnGuiBaoCao.FlatAppearance.BorderSize = 0;
-            this.btnGuiBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuiBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuiBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnGuiBaoCao.Location = new System.Drawing.Point(586, 555);
-            this.btnGuiBaoCao.Name = "btnGuiBaoCao";
-            this.btnGuiBaoCao.Size = new System.Drawing.Size(213, 46);
-            this.btnGuiBaoCao.TabIndex = 3;
-            this.btnGuiBaoCao.Text = "Gửi";
-            this.btnGuiBaoCao.TextColor = System.Drawing.Color.White;
-            this.btnGuiBaoCao.UseVisualStyleBackColor = false;
-            // 
             // grbBCSC
             // 
             this.grbBCSC.Controls.Add(this.txtBCSC);
@@ -242,6 +204,7 @@
             this.txtBCSC.Size = new System.Drawing.Size(686, 284);
             this.txtBCSC.TabIndex = 0;
             this.txtBCSC.Text = "Vui lòng nhập thông tin sự cố!";
+            this.txtBCSC.Click += new System.EventHandler(this.txtBCSC_Click);
             // 
             // label1
             // 
@@ -380,6 +343,44 @@
             this.lbTieuDeThongTinGV.Size = new System.Drawing.Size(346, 39);
             this.lbTieuDeThongTinGV.TabIndex = 1;
             this.lbTieuDeThongTinGV.Text = "Thông tin giảng viên";
+            // 
+            // btnDangKyLBS
+            // 
+            this.btnDangKyLBS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnDangKyLBS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnDangKyLBS.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDangKyLBS.BorderRadius = 20;
+            this.btnDangKyLBS.BorderSize = 0;
+            this.btnDangKyLBS.FlatAppearance.BorderSize = 0;
+            this.btnDangKyLBS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKyLBS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKyLBS.ForeColor = System.Drawing.Color.White;
+            this.btnDangKyLBS.Location = new System.Drawing.Point(649, 431);
+            this.btnDangKyLBS.Name = "btnDangKyLBS";
+            this.btnDangKyLBS.Size = new System.Drawing.Size(209, 40);
+            this.btnDangKyLBS.TabIndex = 11;
+            this.btnDangKyLBS.Text = "Đăng ký";
+            this.btnDangKyLBS.TextColor = System.Drawing.Color.White;
+            this.btnDangKyLBS.UseVisualStyleBackColor = false;
+            // 
+            // btnGuiBaoCao
+            // 
+            this.btnGuiBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnGuiBaoCao.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnGuiBaoCao.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuiBaoCao.BorderRadius = 20;
+            this.btnGuiBaoCao.BorderSize = 0;
+            this.btnGuiBaoCao.FlatAppearance.BorderSize = 0;
+            this.btnGuiBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuiBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuiBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btnGuiBaoCao.Location = new System.Drawing.Point(586, 555);
+            this.btnGuiBaoCao.Name = "btnGuiBaoCao";
+            this.btnGuiBaoCao.Size = new System.Drawing.Size(213, 46);
+            this.btnGuiBaoCao.TabIndex = 3;
+            this.btnGuiBaoCao.Text = "Gửi";
+            this.btnGuiBaoCao.TextColor = System.Drawing.Color.White;
+            this.btnGuiBaoCao.UseVisualStyleBackColor = false;
             // 
             // fGiangVien
             // 

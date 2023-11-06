@@ -49,5 +49,10 @@ namespace QLPHONGTHUCHANH
                 }
             }
         }
+
+        private void txtBCSC_Click(object sender, EventArgs e)
+        {
+            txtBCSC.Clear();
+        }
     }
 }
