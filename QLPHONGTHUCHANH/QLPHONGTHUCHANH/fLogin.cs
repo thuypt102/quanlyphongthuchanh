@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLPHONGTHUCHANH
 {
@@ -20,8 +21,15 @@ namespace QLPHONGTHUCHANH
         public fLogin()
         {
             InitializeComponent();
+            
+            //Load += fLogin_Load;
         }
-
+        
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            txbTenDangNhap.Focus();
+        }
+        
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
