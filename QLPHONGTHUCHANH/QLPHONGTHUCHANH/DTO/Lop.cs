@@ -10,6 +10,31 @@ namespace QLPHONGTHUCHANH.DTO
 {
     public class Lop
     {
+<<<<<<< HEAD
+        
+            public string Id { get; set; }
+            public string TenLop { get; set; }
+            public string TenKhoa { get; set; }
+            public string IdGiangVienPhuTrach { get; set; }
+            public string CaLyThuyet { get; set; }
+            public int SoLuongSinhVien { get; set; }
+            public int LoaiThucHanh { get; set; }
+            public bool? LuuTru { get; set; }
+
+            // Constructor
+            public Lop(string id, string tenLop, string tenKhoa, string idGiangVienPhuTrach, string caLyThuyet, int soLuongSinhVien, int loaiThucHanh, bool? luuTru)
+            {
+                Id = id;
+                TenLop = tenLop;
+                TenKhoa = tenKhoa;
+                IdGiangVienPhuTrach = idGiangVienPhuTrach;
+                CaLyThuyet = caLyThuyet;
+                SoLuongSinhVien = soLuongSinhVien;
+                LoaiThucHanh = loaiThucHanh;
+                LuuTru = luuTru;
+            }
+     }
+=======
         private string id;
         private string tenLop;
         private string tenKhoa;
@@ -76,4 +101,5 @@ namespace QLPHONGTHUCHANH.DTO
         }
         
     }
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
 }

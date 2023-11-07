@@ -16,9 +16,13 @@ namespace QLPHONGTHUCHANH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
+            Application.Run(new fQuanLy());
+=======
 
             Application.Run(new fLogin());
 
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
         }
     }
 }

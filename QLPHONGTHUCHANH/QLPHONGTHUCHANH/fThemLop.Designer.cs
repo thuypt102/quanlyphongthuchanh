@@ -49,16 +49,21 @@
             // lbTieuDe
             // 
             this.lbTieuDe.AutoSize = true;
-            this.lbTieuDe.Location = new System.Drawing.Point(411, 42);
+            this.lbTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.lbTieuDe.Location = new System.Drawing.Point(472, 26);
             this.lbTieuDe.Name = "lbTieuDe";
+<<<<<<< HEAD
+            this.lbTieuDe.Size = new System.Drawing.Size(249, 32);
+=======
             this.lbTieuDe.Size = new System.Drawing.Size(109, 16);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.lbTieuDe.TabIndex = 0;
             this.lbTieuDe.Text = "Thông tin lớp mới";
             // 
             // lbMaLop
             // 
             this.lbMaLop.AutoSize = true;
-            this.lbMaLop.Location = new System.Drawing.Point(143, 115);
+            this.lbMaLop.Location = new System.Drawing.Point(326, 100);
             this.lbMaLop.Name = "lbMaLop";
             this.lbMaLop.Size = new System.Drawing.Size(48, 16);
             this.lbMaLop.TabIndex = 1;
@@ -67,7 +72,7 @@
             // lbTenLop
             // 
             this.lbTenLop.AutoSize = true;
-            this.lbTenLop.Location = new System.Drawing.Point(143, 163);
+            this.lbTenLop.Location = new System.Drawing.Point(326, 148);
             this.lbTenLop.Name = "lbTenLop";
             this.lbTenLop.Size = new System.Drawing.Size(53, 16);
             this.lbTenLop.TabIndex = 1;
@@ -76,7 +81,7 @@
             // lbKhoa
             // 
             this.lbKhoa.AutoSize = true;
-            this.lbKhoa.Location = new System.Drawing.Point(143, 213);
+            this.lbKhoa.Location = new System.Drawing.Point(326, 198);
             this.lbKhoa.Name = "lbKhoa";
             this.lbKhoa.Size = new System.Drawing.Size(64, 16);
             this.lbKhoa.TabIndex = 1;
@@ -85,7 +90,7 @@
             // lbIDGV
             // 
             this.lbIDGV.AutoSize = true;
-            this.lbIDGV.Location = new System.Drawing.Point(143, 273);
+            this.lbIDGV.Location = new System.Drawing.Point(326, 258);
             this.lbIDGV.Name = "lbIDGV";
             this.lbIDGV.Size = new System.Drawing.Size(111, 16);
             this.lbIDGV.TabIndex = 1;
@@ -94,7 +99,7 @@
             // lbCaLT
             // 
             this.lbCaLT.AutoSize = true;
-            this.lbCaLT.Location = new System.Drawing.Point(143, 323);
+            this.lbCaLT.Location = new System.Drawing.Point(326, 308);
             this.lbCaLT.Name = "lbCaLT";
             this.lbCaLT.Size = new System.Drawing.Size(75, 16);
             this.lbCaLT.TabIndex = 1;
@@ -103,7 +108,7 @@
             // lbSlSV
             // 
             this.lbSlSV.AutoSize = true;
-            this.lbSlSV.Location = new System.Drawing.Point(143, 369);
+            this.lbSlSV.Location = new System.Drawing.Point(326, 354);
             this.lbSlSV.Name = "lbSlSV";
             this.lbSlSV.Size = new System.Drawing.Size(90, 16);
             this.lbSlSV.TabIndex = 1;
@@ -112,7 +117,7 @@
             // lbLoai
             // 
             this.lbLoai.AutoSize = true;
-            this.lbLoai.Location = new System.Drawing.Point(143, 427);
+            this.lbLoai.Location = new System.Drawing.Point(326, 412);
             this.lbLoai.Name = "lbLoai";
             this.lbLoai.Size = new System.Drawing.Size(92, 16);
             this.lbLoai.TabIndex = 1;
@@ -120,42 +125,68 @@
             // 
             // txbMaLop
             // 
+<<<<<<< HEAD
+            this.txbMaLop.Location = new System.Drawing.Point(537, 94);
+            this.txbMaLop.MaxLength = 12;
+=======
             this.txbMaLop.Location = new System.Drawing.Point(354, 109);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbMaLop.Name = "txbMaLop";
             this.txbMaLop.Size = new System.Drawing.Size(233, 22);
             this.txbMaLop.TabIndex = 3;
             // 
             // txbTenLop
             // 
+<<<<<<< HEAD
+            this.txbTenLop.Location = new System.Drawing.Point(537, 145);
+=======
             this.txbTenLop.Location = new System.Drawing.Point(354, 160);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbTenLop.Name = "txbTenLop";
             this.txbTenLop.Size = new System.Drawing.Size(233, 22);
             this.txbTenLop.TabIndex = 3;
             // 
             // txbKhoa
             // 
+<<<<<<< HEAD
+            this.txbKhoa.Location = new System.Drawing.Point(537, 201);
+=======
             this.txbKhoa.Location = new System.Drawing.Point(354, 216);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbKhoa.Name = "txbKhoa";
             this.txbKhoa.Size = new System.Drawing.Size(233, 22);
             this.txbKhoa.TabIndex = 3;
             // 
             // txbIDGV
             // 
+<<<<<<< HEAD
+            this.txbIDGV.Location = new System.Drawing.Point(537, 252);
+            this.txbIDGV.MaxLength = 10;
+=======
             this.txbIDGV.Location = new System.Drawing.Point(354, 267);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbIDGV.Name = "txbIDGV";
             this.txbIDGV.Size = new System.Drawing.Size(233, 22);
             this.txbIDGV.TabIndex = 3;
             // 
             // txbCaLT
             // 
+<<<<<<< HEAD
+            this.txbCaLT.Location = new System.Drawing.Point(537, 297);
+=======
             this.txbCaLT.Location = new System.Drawing.Point(354, 312);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbCaLT.Name = "txbCaLT";
             this.txbCaLT.Size = new System.Drawing.Size(233, 22);
             this.txbCaLT.TabIndex = 3;
             // 
             // txbSlSV
             // 
+<<<<<<< HEAD
+            this.txbSlSV.Location = new System.Drawing.Point(537, 348);
+=======
             this.txbSlSV.Location = new System.Drawing.Point(354, 363);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbSlSV.Name = "txbSlSV";
             this.txbSlSV.Size = new System.Drawing.Size(233, 22);
             this.txbSlSV.TabIndex = 3;
@@ -169,10 +200,36 @@
             "1",
             "2",
             "3"});
+<<<<<<< HEAD
+            this.cmbLoai.Location = new System.Drawing.Point(537, 404);
+            this.cmbLoai.Name = "cmbLoai";
+            this.cmbLoai.Size = new System.Drawing.Size(233, 24);
+            this.cmbLoai.TabIndex = 4;
+            // 
+            // vbButton1
+            // 
+            this.vbButton1.BackColor = System.Drawing.Color.Blue;
+            this.vbButton1.BackgroundColor = System.Drawing.Color.Blue;
+            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbButton1.BorderRadius = 20;
+            this.vbButton1.BorderSize = 0;
+            this.vbButton1.FlatAppearance.BorderSize = 0;
+            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbButton1.ForeColor = System.Drawing.Color.White;
+            this.vbButton1.Location = new System.Drawing.Point(514, 475);
+            this.vbButton1.Name = "vbButton1";
+            this.vbButton1.Size = new System.Drawing.Size(150, 40);
+            this.vbButton1.TabIndex = 2;
+            this.vbButton1.Text = "Thêm lớp";
+            this.vbButton1.TextColor = System.Drawing.Color.White;
+            this.vbButton1.UseVisualStyleBackColor = false;
+            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
+=======
             this.cmbLoai.Location = new System.Drawing.Point(354, 419);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(233, 24);
             this.cmbLoai.TabIndex = 4;
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             // 
             // vbButton1
             // 
@@ -217,6 +274,7 @@
             this.Controls.Add(this.lbTieuDe);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fThemLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm thông tin lớp";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -56,6 +56,10 @@
             // txbIDGV
             // 
             this.txbIDGV.Location = new System.Drawing.Point(678, 412);
+<<<<<<< HEAD
+            this.txbIDGV.MaxLength = 10;
+=======
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbIDGV.Name = "txbIDGV";
             this.txbIDGV.Size = new System.Drawing.Size(233, 22);
             this.txbIDGV.TabIndex = 16;
@@ -78,6 +82,10 @@
             // 
             this.txbMaLop.Location = new System.Drawing.Point(678, 254);
             this.txbMaLop.Name = "txbMaLop";
+<<<<<<< HEAD
+            this.txbMaLop.ReadOnly = true;
+=======
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbMaLop.Size = new System.Drawing.Size(233, 22);
             this.txbMaLop.TabIndex = 19;
             // 
@@ -95,7 +103,11 @@
             this.vbButton1.Name = "vbButton1";
             this.vbButton1.Size = new System.Drawing.Size(150, 40);
             this.vbButton1.TabIndex = 13;
+<<<<<<< HEAD
+            this.vbButton1.Text = "Cập nhật thông tin lớp";
+=======
             this.vbButton1.Text = "Thêm lớp";
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
             this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
@@ -148,9 +160,16 @@
             // lbTieuDe
             // 
             this.lbTieuDe.AutoSize = true;
+<<<<<<< HEAD
+            this.lbTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
+            this.lbTieuDe.Location = new System.Drawing.Point(492, 156);
+            this.lbTieuDe.Name = "lbTieuDe";
+            this.lbTieuDe.Size = new System.Drawing.Size(371, 32);
+=======
             this.lbTieuDe.Location = new System.Drawing.Point(735, 187);
             this.lbTieuDe.Name = "lbTieuDe";
             this.lbTieuDe.Size = new System.Drawing.Size(159, 16);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.lbTieuDe.TabIndex = 5;
             this.lbTieuDe.Text = "Cập nhật thông tin lớp mới";
             // 
@@ -215,7 +234,11 @@
             this.Controls.Add(this.lbTenLop);
             this.Controls.Add(this.lbMaLop);
             this.Controls.Add(this.lbTieuDe);
+<<<<<<< HEAD
+            this.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.Name = "fCapNhatLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật thông tin lớp";
