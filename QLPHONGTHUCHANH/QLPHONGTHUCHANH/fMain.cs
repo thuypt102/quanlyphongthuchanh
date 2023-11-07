@@ -134,7 +134,5 @@ namespace QLPHONGTHUCHANH
             fql.ShowDialog();
             this.Show();
         }
-
-        
     }
 }
