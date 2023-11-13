@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLPHONGTHUCHANH.DAL;
 
 namespace QLPHONGTHUCHANH
 {
@@ -15,6 +16,25 @@ namespace QLPHONGTHUCHANH
         public fThemPhong()
         {
             InitializeComponent();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string maPhong = txbMaPhong.Text;
+            string tenPhong = txbTenPhong.Text;
+            string tenKhuVuc = txbKhuVuc.Text;
+            int soLuongMay = int.Parse(txbSLPM.Text);
+            int loaiThucHanh = int.Parse(cmbLoai.SelectedItem.ToString());
+            
+
+            if (PhongDAL.Khoitao.themPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
+            {
+                MessageBox.Show("Thêm phòng máy thành công!", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Thêm phòng máy không thành công!", "Thông báo");
+            }
         }
     }
 }

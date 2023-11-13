@@ -18,14 +18,40 @@ namespace QLPHONGTHUCHANH
             InitializeComponent();
         }
 
-<<<<<<< HEAD
+        private bool IsValidInput()
+        {
+            // Kiểm tra giá trị trong TextBox
+            if (string.IsNullOrWhiteSpace(txbIDTaiKhoan.Text))
+            {
+                MessageBox.Show("Vui lòng nhập giá trị vào TextBox.", "Lỗi");
+                return false;
+            }
+
+            // Kiểm tra điều kiện khác (tuỳ theo yêu cầu của bạn)
+            // Ví dụ: Kiểm tra giá trị có phải là số hay không
+            if (!int.TryParse(txbIDTaiKhoan.Text, out int result))
+            {
+                MessageBox.Show("Giá trị nhập vào không hợp lệ.", "Lỗi");
+                return false;
+            }
+
+            // Giá trị nhập vào hợp lệ
+            return true;
+        }
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (IsValidInput())
+            {
+            //int IDTaiKhoan = 1;
             string maGV = txbMaGV.Text;
             string tenGV = txbTenGV.Text;
             string Khoa = txbKhoa.Text;
             string SDT = txbSDT.Text;
-            int IDTaiKhoan = int.Parse(txbIDTaiKhoan.Text);
+            
+                int IDTaiKhoan = int.Parse(txbIDTaiKhoan.Text);
+            
+            
             
 
             if (GVDALL.Khoitao.themGV(maGV, tenGV, Khoa , SDT , IDTaiKhoan))
@@ -36,8 +62,6 @@ namespace QLPHONGTHUCHANH
                 MessageBox.Show("thêm không thành công!", "Thông báo");
 
         }
-=======
-        
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
+        }
     }
 }

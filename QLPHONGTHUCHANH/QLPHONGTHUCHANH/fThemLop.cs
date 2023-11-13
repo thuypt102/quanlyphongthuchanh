@@ -19,7 +19,9 @@ namespace QLPHONGTHUCHANH
             InitializeComponent();
         }
 
-        private void vbButton1_Click(object sender, EventArgs e)
+        
+
+        private void vbThemLop_Click(object sender, EventArgs e)
         {
             string maLop = txbMaLop.Text;
             string tenLop = txbTenLop.Text;

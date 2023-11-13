@@ -128,11 +128,11 @@ namespace QLPHONGTHUCHANH
 
         private void mniQuanLy_Click(object sender, EventArgs e)
         {
-            fQuanLy fql = new fQuanLy();
-            //f2.taikhoannow = Taikhoandn;
+            fQuanLy f = new fQuanLy();
             this.Hide();
-            fql.ShowDialog();
+            f.ShowDialog();
             this.Show();
+            
         }
     }
 }

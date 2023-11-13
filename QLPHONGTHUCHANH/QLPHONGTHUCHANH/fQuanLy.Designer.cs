@@ -342,6 +342,7 @@
             this.dtaPhong.RowTemplate.Height = 24;
             this.dtaPhong.Size = new System.Drawing.Size(1345, 435);
             this.dtaPhong.TabIndex = 14;
+            
             // 
             // btnKhoLuuTruPhong
             // 

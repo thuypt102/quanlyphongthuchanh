@@ -102,7 +102,6 @@ D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debu
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.pdb
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.exe
 D:\BaiTapNhom\Stuff\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.pdb
-<<<<<<< HEAD
 C:\Users\HP\Desktop\Python\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe.config
 C:\Users\HP\Desktop\Python\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.exe
 C:\Users\HP\Desktop\Python\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\bin\Debug\QLPHONGTHUCHANH.pdb
@@ -157,7 +156,5 @@ C:\Users\HP\Desktop\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debu
 C:\Users\HP\Desktop\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.exe
 C:\Users\HP\Desktop\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.pdb
-=======
-E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.ResolveComReference.cache
-E:\STUDY\KÌ THỨ 7\XDHT\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fMainGV.resources
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
+C:\Users\HP\Desktop\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.csproj.ResolveComReference.cache
+C:\Users\HP\Desktop\quanlyphongthuchanh\QLPHONGTHUCHANH\QLPHONGTHUCHANH\obj\Debug\QLPHONGTHUCHANH.fMainGV.resources

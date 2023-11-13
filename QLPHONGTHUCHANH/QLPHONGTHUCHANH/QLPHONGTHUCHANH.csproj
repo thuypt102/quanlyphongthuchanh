@@ -48,21 +48,16 @@
   <ItemGroup>
     <Compile Include="DAL\CaDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
-    <Compile Include="DAL\GVDAL.cs" />
     <Compile Include="DAL\LichDAL.cs" />
-<<<<<<< HEAD
     <Compile Include="DAL\GVDALL.cs" />
-    <Compile Include="DAL\LopDAL.cs" />
-    <Compile Include="DAL\TaiKhoanDAL.cs" />
-=======
     <Compile Include="DAL\LopDAL.cs" />
     <Compile Include="DAL\PhongDAL.cs" />
     <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DTO\CaThucHanh.cs" />
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
     <Compile Include="DTO\GV.cs" />
     <Compile Include="DTO\Lich.cs" />
     <Compile Include="DTO\Lop.cs" />
+    <Compile Include="DTO\Phong.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,7 +246,6 @@
     <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fKhoLuuTruPhong.resources" />
     <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fLogin.resources" />
     <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fMain.resources" />
-    <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fMainGV.resources" />
     <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fQLmatKhau.resources" />
     <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fQuanLy.resources" />
     <EmbeddedResource Include="obj\Debug\QLPHONGTHUCHANH.fSearch.resources" />
@@ -271,15 +265,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include=".vs\ProjectSettings.json" />
-    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\93af590d-38e4-4316-97a9-114bdc9c1621.vsidx" />
-    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\bbf589a0-bff2-4c29-b176-e2a3c29b179b.vsidx" />
-    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\c36842c0-7859-43f7-9451-1eb58dd52296.vsidx" />
-    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\cdef7ad4-e7eb-485b-a534-e4c5caa5eed9.vsidx" />
-    <None Include=".vs\QLPHONGTHUCHANH\FileContentIndex\fb2af618-bd77-4303-88b9-c20e20a6dabc.vsidx" />
-    <None Include=".vs\QLPHONGTHUCHANH\v17\.wsuo" />
-    <None Include=".vs\slnx.sqlite" />
-    <None Include=".vs\VSWorkspaceState.json" />
     <None Include="bin\Debug\QLPHONGTHUCHANH.exe.config" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -289,7 +274,6 @@
     <None Include="obj\Debug\QLPHONGTHUCHANH.csproj.ResolveComReference.cache" />
     <None Include="obj\Debug\QLPHONGTHUCHANH.csproj.SuggestedBindingRedirects.cache" />
     <None Include="obj\Release\QLPHONGTHUCHANH.csproj.AssemblyReference.cache" />
-    <None Include="obj\Release\QLPHONGTHUCHANH.csproj.ResolveComReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -312,17 +296,6 @@
   <ItemGroup>
     <None Include="Resources\d46a39dac513124d4b022.jpg" />
   </ItemGroup>
-<<<<<<< HEAD
-  <ItemGroup />
-=======
-  <ItemGroup>
-    <Content Include="bin\Debug\QLPHONGTHUCHANH.exe" />
-    <Content Include="bin\Debug\QLPHONGTHUCHANH.pdb" />
-    <Content Include="obj\Debug\QLPHONGTHUCHANH.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\QLPHONGTHUCHANH.exe" />
-    <Content Include="obj\Debug\QLPHONGTHUCHANH.pdb" />
-    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
-  </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
@@ -336,7 +309,7 @@
     <COMReference Include="Microsoft.Office.Interop.Excel">
       <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
+      <VersionMinor>7</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
@@ -353,8 +326,15 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\QLPHONGTHUCHANH.exe" />
+    <Content Include="bin\Debug\QLPHONGTHUCHANH.pdb" />
+    <Content Include="obj\Debug\QLPHONGTHUCHANH.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\QLPHONGTHUCHANH.exe" />
+    <Content Include="obj\Debug\QLPHONGTHUCHANH.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="bin\Release\" />
   </ItemGroup>
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

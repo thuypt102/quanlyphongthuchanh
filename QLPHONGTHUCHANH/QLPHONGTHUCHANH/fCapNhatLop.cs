@@ -32,7 +32,8 @@ namespace QLPHONGTHUCHANH
         }
        
 
-        private void vbButton1_Click(object sender, EventArgs e)
+        
+        private void vbButtonCapNhatLop(object sender, EventArgs e)
         {
             string maLop = txbMaLop.Text;
             string tenLop = txbTenLop.Text;

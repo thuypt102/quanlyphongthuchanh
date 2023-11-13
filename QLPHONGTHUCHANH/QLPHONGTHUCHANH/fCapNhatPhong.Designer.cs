@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnThem = new QLPHONGTHUCHANH.VBButton();
+            this.btnCapNhat = new QLPHONGTHUCHANH.VBButton();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
             this.txbSLPM = new System.Windows.Forms.TextBox();
             this.txbKhuVuc = new System.Windows.Forms.TextBox();
@@ -42,23 +42,24 @@
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnThem
+            // btnCapNhat
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Blue;
-            this.btnThem.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 20;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(467, 433);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(150, 40);
-            this.btnThem.TabIndex = 32;
-            this.btnThem.Text = "Thêm phòng";
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnCapNhat.BackColor = System.Drawing.Color.Blue;
+            this.btnCapNhat.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnCapNhat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCapNhat.BorderRadius = 20;
+            this.btnCapNhat.BorderSize = 0;
+            this.btnCapNhat.FlatAppearance.BorderSize = 0;
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.Location = new System.Drawing.Point(467, 433);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(150, 40);
+            this.btnCapNhat.TabIndex = 6;
+            this.btnCapNhat.Text = "Cập Nhật Thông Tin Phòng";
+            this.btnCapNhat.TextColor = System.Drawing.Color.White;
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // cmbLoai
             // 
@@ -72,28 +73,28 @@
             this.cmbLoai.Location = new System.Drawing.Point(522, 361);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(233, 24);
-            this.cmbLoai.TabIndex = 31;
+            this.cmbLoai.TabIndex = 5;
             // 
             // txbSLPM
             // 
             this.txbSLPM.Location = new System.Drawing.Point(522, 305);
             this.txbSLPM.Name = "txbSLPM";
             this.txbSLPM.Size = new System.Drawing.Size(233, 22);
-            this.txbSLPM.TabIndex = 27;
+            this.txbSLPM.TabIndex = 4;
             // 
             // txbKhuVuc
             // 
             this.txbKhuVuc.Location = new System.Drawing.Point(522, 254);
             this.txbKhuVuc.Name = "txbKhuVuc";
             this.txbKhuVuc.Size = new System.Drawing.Size(233, 22);
-            this.txbKhuVuc.TabIndex = 28;
+            this.txbKhuVuc.TabIndex = 3;
             // 
             // txbTenPhong
             // 
             this.txbTenPhong.Location = new System.Drawing.Point(522, 198);
             this.txbTenPhong.Name = "txbTenPhong";
             this.txbTenPhong.Size = new System.Drawing.Size(233, 22);
-            this.txbTenPhong.TabIndex = 29;
+            this.txbTenPhong.TabIndex = 2;
             // 
             // txbMaPhong
             // 
@@ -102,7 +103,7 @@
             this.txbMaPhong.Name = "txbMaPhong";
             this.txbMaPhong.ReadOnly = true;
             this.txbMaPhong.Size = new System.Drawing.Size(233, 22);
-            this.txbMaPhong.TabIndex = 30;
+            this.txbMaPhong.TabIndex = 1;
             // 
             // lbLoai
             // 
@@ -165,7 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QLPHONGTHUCHANH.Properties.Resources.d46a39dac513124d4b02;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.cmbLoai);
             this.Controls.Add(this.txbSLPM);
             this.Controls.Add(this.txbKhuVuc);
@@ -177,7 +178,7 @@
             this.Controls.Add(this.lbTenPhong);
             this.Controls.Add(this.lbMaPhong);
             this.Controls.Add(this.lbTieuDe);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fCapNhatPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật thông tin phòng";
@@ -188,7 +189,7 @@
 
         #endregion
 
-        private VBButton btnThem;
+        private VBButton btnCapNhat;
         private System.Windows.Forms.ComboBox cmbLoai;
         private System.Windows.Forms.TextBox txbSLPM;
         private System.Windows.Forms.TextBox txbKhuVuc;

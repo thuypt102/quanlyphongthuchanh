@@ -35,8 +35,8 @@
             this.txbMatKhau = new System.Windows.Forms.TextBox();
             this.lbTenDangNhap = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogin = new QLPHONGTHUCHANH.VBButton();
             this.txbTenDangNhap = new System.Windows.Forms.TextBox();
+            this.btnLogin = new QLPHONGTHUCHANH.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,11 @@
             this.panel1.Controls.Add(this.lbMatKhau);
             this.panel1.Name = "panel1";
             // 
+            // txbTenDangNhap
+            // 
+            resources.ApplyResources(this.txbTenDangNhap, "txbTenDangNhap");
+            this.txbTenDangNhap.Name = "txbTenDangNhap";
+            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
@@ -100,11 +105,6 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
-            // txbTenDangNhap
-            // 
-            resources.ApplyResources(this.txbTenDangNhap, "txbTenDangNhap");
-            this.txbTenDangNhap.Name = "txbTenDangNhap";
-            // 
             // fLogin
             // 
             resources.ApplyResources(this, "$this");
@@ -113,7 +113,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "fLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

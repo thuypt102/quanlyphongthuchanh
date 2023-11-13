@@ -43,7 +43,7 @@
             this.txbCaLT = new System.Windows.Forms.TextBox();
             this.txbSlSV = new System.Windows.Forms.TextBox();
             this.cmbLoai = new System.Windows.Forms.ComboBox();
-            this.vbButton1 = new QLPHONGTHUCHANH.VBButton();
+            this.vbThem = new QLPHONGTHUCHANH.VBButton();
             this.SuspendLayout();
             // 
             // lbTieuDe
@@ -52,11 +52,7 @@
             this.lbTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.lbTieuDe.Location = new System.Drawing.Point(472, 26);
             this.lbTieuDe.Name = "lbTieuDe";
-<<<<<<< HEAD
             this.lbTieuDe.Size = new System.Drawing.Size(249, 32);
-=======
-            this.lbTieuDe.Size = new System.Drawing.Size(109, 16);
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.lbTieuDe.TabIndex = 0;
             this.lbTieuDe.Text = "Thông tin lớp mới";
             // 
@@ -125,71 +121,47 @@
             // 
             // txbMaLop
             // 
-<<<<<<< HEAD
             this.txbMaLop.Location = new System.Drawing.Point(537, 94);
             this.txbMaLop.MaxLength = 12;
-=======
-            this.txbMaLop.Location = new System.Drawing.Point(354, 109);
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbMaLop.Name = "txbMaLop";
             this.txbMaLop.Size = new System.Drawing.Size(233, 22);
-            this.txbMaLop.TabIndex = 3;
+            this.txbMaLop.TabIndex = 1;
             // 
             // txbTenLop
             // 
-<<<<<<< HEAD
             this.txbTenLop.Location = new System.Drawing.Point(537, 145);
-=======
-            this.txbTenLop.Location = new System.Drawing.Point(354, 160);
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbTenLop.Name = "txbTenLop";
             this.txbTenLop.Size = new System.Drawing.Size(233, 22);
-            this.txbTenLop.TabIndex = 3;
+            this.txbTenLop.TabIndex = 2;
             // 
             // txbKhoa
             // 
-<<<<<<< HEAD
             this.txbKhoa.Location = new System.Drawing.Point(537, 201);
-=======
-            this.txbKhoa.Location = new System.Drawing.Point(354, 216);
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbKhoa.Name = "txbKhoa";
             this.txbKhoa.Size = new System.Drawing.Size(233, 22);
             this.txbKhoa.TabIndex = 3;
             // 
             // txbIDGV
             // 
-<<<<<<< HEAD
             this.txbIDGV.Location = new System.Drawing.Point(537, 252);
             this.txbIDGV.MaxLength = 10;
-=======
-            this.txbIDGV.Location = new System.Drawing.Point(354, 267);
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbIDGV.Name = "txbIDGV";
             this.txbIDGV.Size = new System.Drawing.Size(233, 22);
-            this.txbIDGV.TabIndex = 3;
+            this.txbIDGV.TabIndex = 4;
             // 
             // txbCaLT
             // 
-<<<<<<< HEAD
             this.txbCaLT.Location = new System.Drawing.Point(537, 297);
-=======
-            this.txbCaLT.Location = new System.Drawing.Point(354, 312);
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbCaLT.Name = "txbCaLT";
             this.txbCaLT.Size = new System.Drawing.Size(233, 22);
-            this.txbCaLT.TabIndex = 3;
+            this.txbCaLT.TabIndex = 5;
             // 
             // txbSlSV
             // 
-<<<<<<< HEAD
             this.txbSlSV.Location = new System.Drawing.Point(537, 348);
-=======
-            this.txbSlSV.Location = new System.Drawing.Point(354, 363);
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
             this.txbSlSV.Name = "txbSlSV";
             this.txbSlSV.Size = new System.Drawing.Size(233, 22);
-            this.txbSlSV.TabIndex = 3;
+            this.txbSlSV.TabIndex = 6;
             // 
             // cmbLoai
             // 
@@ -200,55 +172,29 @@
             "1",
             "2",
             "3"});
-<<<<<<< HEAD
             this.cmbLoai.Location = new System.Drawing.Point(537, 404);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(233, 24);
-            this.cmbLoai.TabIndex = 4;
+            this.cmbLoai.TabIndex = 7;
             // 
-            // vbButton1
+            // vbThem
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.Blue;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.Blue;
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 20;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(514, 475);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(150, 40);
-            this.vbButton1.TabIndex = 2;
-            this.vbButton1.Text = "Thêm lớp";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
-            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
-=======
-            this.cmbLoai.Location = new System.Drawing.Point(354, 419);
-            this.cmbLoai.Name = "cmbLoai";
-            this.cmbLoai.Size = new System.Drawing.Size(233, 24);
-            this.cmbLoai.TabIndex = 4;
->>>>>>> e13c9cb09764832ec7b94430f23bca1cafd3a438
-            // 
-            // vbButton1
-            // 
-            this.vbButton1.BackColor = System.Drawing.Color.Blue;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.Blue;
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 20;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(387, 484);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(150, 40);
-            this.vbButton1.TabIndex = 2;
-            this.vbButton1.Text = "Thêm lớp";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
-            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
+            this.vbThem.BackColor = System.Drawing.Color.Blue;
+            this.vbThem.BackgroundColor = System.Drawing.Color.Blue;
+            this.vbThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.vbThem.BorderRadius = 20;
+            this.vbThem.BorderSize = 0;
+            this.vbThem.FlatAppearance.BorderSize = 0;
+            this.vbThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vbThem.ForeColor = System.Drawing.Color.White;
+            this.vbThem.Location = new System.Drawing.Point(514, 475);
+            this.vbThem.Name = "vbThem";
+            this.vbThem.Size = new System.Drawing.Size(150, 40);
+            this.vbThem.TabIndex = 8;
+            this.vbThem.Text = "Thêm lớp";
+            this.vbThem.TextColor = System.Drawing.Color.White;
+            this.vbThem.UseVisualStyleBackColor = false;
+            this.vbThem.Click += new System.EventHandler(this.vbThemLop_Click);
             // 
             // fThemLop
             // 
@@ -263,7 +209,7 @@
             this.Controls.Add(this.txbKhoa);
             this.Controls.Add(this.txbTenLop);
             this.Controls.Add(this.txbMaLop);
-            this.Controls.Add(this.vbButton1);
+            this.Controls.Add(this.vbThem);
             this.Controls.Add(this.lbLoai);
             this.Controls.Add(this.lbSlSV);
             this.Controls.Add(this.lbCaLT);
@@ -291,7 +237,7 @@
         private System.Windows.Forms.Label lbCaLT;
         private System.Windows.Forms.Label lbSlSV;
         private System.Windows.Forms.Label lbLoai;
-        private VBButton vbButton1;
+        private VBButton vbThem;
         private System.Windows.Forms.TextBox txbMaLop;
         private System.Windows.Forms.TextBox txbTenLop;
         private System.Windows.Forms.TextBox txbKhoa;
