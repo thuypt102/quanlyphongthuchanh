@@ -23,7 +23,7 @@ namespace QLPHONGTHUCHANH
             // Kiểm tra giá trị trong TextBox
             if (string.IsNullOrWhiteSpace(txbIDTaiKhoan.Text))
             {
-                MessageBox.Show("Vui lòng nhập giá trị vào TextBox.", "Lỗi");
+                MessageBox.Show("Vui lòng nhập đầy giá trị vào ", "Lỗi");
                 return false;
             }
 
@@ -43,25 +43,43 @@ namespace QLPHONGTHUCHANH
         {
             if (IsValidInput())
             {
-            //int IDTaiKhoan = 1;
-            string maGV = txbMaGV.Text;
-            string tenGV = txbTenGV.Text;
-            string Khoa = txbKhoa.Text;
-            string SDT = txbSDT.Text;
             
+            
+                string maGV = txbMaGV.Text;
+                string tenGV = txbTenGV.Text;
+                string Khoa = txbKhoa.Text;
+                string SDT = txbSDT.Text;
+                string Email = txbEmail.Text;
                 int IDTaiKhoan = int.Parse(txbIDTaiKhoan.Text);
-            
-            
-            
 
-            if (GVDALL.Khoitao.themGV(maGV, tenGV, Khoa , SDT , IDTaiKhoan))
+
+            if (GVDALL.Khoitao.timKiem(maGV))
             {
-                MessageBox.Show("thêm thành công!", "Thông báo");
+                MessageBox.Show("Mã giảng viên đã tồn tại. Vui lòng nhập mã khác.");
+
             }
             else
-                MessageBox.Show("thêm không thành công!", "Thông báo");
+            {
+                if (!TaiKhoanDAL.Khoitao.kiemTraID(IDTaiKhoan))
+                {
+                    MessageBox.Show("Mã tài khoản giảng viên không tồn tại. Vui lòng nhập mã khác.");
 
-        }
+                }
+
+                else
+                {
+
+
+                    if (GVDALL.Khoitao.themGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
+                    {
+                        MessageBox.Show("thêm thành công!", "Thông báo");
+                    }
+                    else
+                        MessageBox.Show("thêm không thành công!", "Thông báo");
+                    }
+              }
+
+            }
         }
     }
 }

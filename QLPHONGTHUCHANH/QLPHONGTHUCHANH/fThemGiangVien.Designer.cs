@@ -41,11 +41,13 @@
             this.lbMaGV = new System.Windows.Forms.Label();
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.btnThem = new QLPHONGTHUCHANH.VBButton();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.txbEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txbIDTaiKhoan
             // 
-            this.txbIDTaiKhoan.Location = new System.Drawing.Point(512, 364);
+            this.txbIDTaiKhoan.Location = new System.Drawing.Point(512, 417);
             this.txbIDTaiKhoan.Name = "txbIDTaiKhoan";
             this.txbIDTaiKhoan.Size = new System.Drawing.Size(233, 22);
             this.txbIDTaiKhoan.TabIndex = 5;
@@ -83,7 +85,7 @@
             // lbIDTaiKhoan
             // 
             this.lbIDTaiKhoan.AutoSize = true;
-            this.lbIDTaiKhoan.Location = new System.Drawing.Point(301, 370);
+            this.lbIDTaiKhoan.Location = new System.Drawing.Point(301, 423);
             this.lbIDTaiKhoan.Name = "lbIDTaiKhoan";
             this.lbIDTaiKhoan.Size = new System.Drawing.Size(76, 16);
             this.lbIDTaiKhoan.TabIndex = 7;
@@ -145,7 +147,7 @@
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(477, 414);
+            this.btnThem.Location = new System.Drawing.Point(472, 468);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(150, 40);
             this.btnThem.TabIndex = 10;
@@ -154,6 +156,22 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Location = new System.Drawing.Point(301, 373);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(41, 16);
+            this.lbEmail.TabIndex = 7;
+            this.lbEmail.Text = "Email";
+            // 
+            // txbEmail
+            // 
+            this.txbEmail.Location = new System.Drawing.Point(512, 367);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(233, 22);
+            this.txbEmail.TabIndex = 5;
+            // 
             // fThemGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -161,10 +179,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.txbIDTaiKhoan);
             this.Controls.Add(this.txbSDT);
             this.Controls.Add(this.txbKhoa);
             this.Controls.Add(this.txbTenGV);
+            this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.txbMaGV);
             this.Controls.Add(this.lbIDTaiKhoan);
             this.Controls.Add(this.lbSDT);
@@ -194,5 +214,7 @@
         private System.Windows.Forms.Label lbMaGV;
         private System.Windows.Forms.Label lbTieuDe;
         private VBButton btnThem;
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.TextBox txbEmail;
     }
 }

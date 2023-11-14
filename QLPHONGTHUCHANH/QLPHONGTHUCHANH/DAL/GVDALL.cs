@@ -30,7 +30,7 @@ namespace QLPHONGTHUCHANH.DAL
 
         public bool timKiem(string idGV)
         {
-            string query = "Select * from GIANGVIEN where tenDangNhap = N'" + idGV + "' ";
+            string query = "Select * from GIANGVIEN where id = N'" + idGV + "' ";
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
             return kq.Rows.Count > 0;
@@ -49,10 +49,11 @@ namespace QLPHONGTHUCHANH.DAL
                 string tenGV = row["tenGiangVien"].ToString();
                 string tenKhoa = row["khoa"].ToString();
                 string sdt = row["sdt"].ToString();
+                string email = row["email"].ToString();
                 int idTaiKhoan = int.Parse(row["idTaiKhoan"].ToString());
                 bool? luuTru = row["luuTru"].ToString() == string.Empty ? null : (bool?)row["luuTru"];
 
-                GV GV = new GV(id,tenGV, tenKhoa ,  sdt,idTaiKhoan,  luuTru );
+                GV GV = new GV(id,tenGV, tenKhoa ,  sdt,email, idTaiKhoan,  luuTru );
                 listGV.Add(GV);
             }
 
@@ -60,14 +61,14 @@ namespace QLPHONGTHUCHANH.DAL
         }
 
 
-        public bool themGV(string id, string tenGV, string tenKhoa ,string sdt,int idTaiKhoan)
+        public bool themGV(string id, string tenGV, string tenKhoa ,string sdt,string email,int idTaiKhoan)
         {
             
 
             bool luuTru = false;
 
 
-            string query = "INSERT INTO GIANGVIEN values ('"+ id +"', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '"
+            string query = "INSERT INTO GIANGVIEN values ('"+ id +"', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '" + email + "', '"
                 +   luuTru + "', '" + idTaiKhoan + "')";
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
@@ -94,6 +95,17 @@ namespace QLPHONGTHUCHANH.DAL
 
             return numberOfRowsDeleted > 0;
         }
+
+
+        public bool KTtenGV(string id)
+        {
+
+            string query = "SELECT * FROM [dbo].[GIANGVIEN] WHERE [id] = "+ id;
+            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+            return kq.Rows.Count > 0;
+        }
+
+        
 
     }
 }

@@ -183,11 +183,12 @@ namespace QLPHONGTHUCHANH
             string tenGV = dtaGV.Rows[i].Cells[1].Value.ToString();
             string Khoa = dtaGV.Rows[i].Cells[2].Value.ToString();
             string sdt = dtaGV.Rows[i].Cells[3].Value.ToString();
-            string luuTru = dtaGV.Rows[i].Cells[4].Value.ToString();
-            int idtaikhoan = int.Parse(dtaGV.Rows[i].Cells[5].Value.ToString());
+            string email = dtaGV.Rows[i].Cells[4].Value.ToString();
+            string luuTru = dtaGV.Rows[i].Cells[5].Value.ToString();
+            int idtaikhoan = int.Parse(dtaGV.Rows[i].Cells[6].Value.ToString());
 
 
-            GV a = new GV(maGV, tenGV, Khoa, sdt, idtaikhoan, false);
+            GV a = new GV(maGV, tenGV, Khoa, sdt,email, idtaikhoan, false);
 
             fCapNhatGV f = new fCapNhatGV(a);
             this.Hide();

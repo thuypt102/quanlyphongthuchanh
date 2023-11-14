@@ -63,6 +63,14 @@ namespace QLPHONGTHUCHANH.DAL
             return DataProvider.Khoitao.ExecuteQuery(query);
         }
 
+        public bool kiemTraID(int id)
+        {
+            string query = "Select * from TAIKHOAN where id = N'" + id + "' ";
+
+            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+            return kq.Rows.Count > 0;
+        }
+
     }
 }
 
