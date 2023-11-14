@@ -102,5 +102,16 @@ namespace QLPHONGTHUCHANH.DAL
             return numberOfRowsDeleted > 0;
         }
 
+        public DataTable getDSLop()
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenLop, tenKhoa, idGiangVienPhuTrach, caLyThuyet, soLuongSinhVien, loaiThucHanh from LOP where luuTru = 1");
+        }
+        public bool khoiPhucLop(string id)
+        {
+            string query = string.Format("UPDATE LOP SET luuTru = 0 WHERE id = " + id);
+            int result = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }
