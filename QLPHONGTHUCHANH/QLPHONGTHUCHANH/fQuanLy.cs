@@ -255,16 +255,6 @@ namespace QLPHONGTHUCHANH
             XemGV();
         }
 
-        private void btnLuuTruLop_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLuuTruGV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
+       
     }
 }
