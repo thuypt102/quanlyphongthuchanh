@@ -51,7 +51,7 @@ namespace QLPHONGTHUCHANH.DAL
                 string idGiangVienPhuTrach = row["idGiangVienPhuTrach"].ToString();
                 string caLyThuyet = row["caLyThuyet"].ToString();
                 int soLuongSinhVien = int.Parse(row["soLuongSinhVien"].ToString());
-                int loaiThucHanh =int.Parse(row["loaiThucHanh"].ToString());
+                string loaiThucHanh = row["loaiThucHanh"].ToString();
                 bool? luuTru = row["luuTru"].ToString() == string.Empty ? null : (bool?)row["luuTru"];
 
                 Lop lop = new Lop(id,tenlop, tenKhoa , idGiangVienPhuTrach , caLyThuyet,
@@ -64,7 +64,7 @@ namespace QLPHONGTHUCHANH.DAL
 
 
         public bool themLop(string id, string tenlop, string tenKhoa, string idGiangVienPhuTrach ,
-        string caLyThuyet, int soLuongSinhVien, int loaiThucHanh)
+        string caLyThuyet, int soLuongSinhVien, string loaiThucHanh)
         {
             
 
@@ -79,15 +79,13 @@ namespace QLPHONGTHUCHANH.DAL
             return kq!=null;
         }
         public bool capNhatLop(string id, string tenlop, string tenKhoa, string idGiangVienPhuTrach,
-        string caLyThuyet, int soLuongSinhVien, int loaiThucHanh)
+        string caLyThuyet, int soLuongSinhVien, string loaiThucHanh)
         {
-            
-
-            string query = "UPDATE LOP SET tenLop = '" + tenlop + "', tenKhoa = '" + tenKhoa +
-       "', idGiangVienPhuTrach = '" + idGiangVienPhuTrach + "', caLyThuyet = '"
-       + caLyThuyet + "', soLuongSinhVien = " + soLuongSinhVien +
-       ", loaiThucHanh ='" + loaiThucHanh + "' WHERE id = " + id;
-
+            string query = "UPDATE LOP SET tenLop = '" + tenlop +
+                "', tenKhoa = '" + tenKhoa + "', idGiangVienPhuTrach = '" + 
+                idGiangVienPhuTrach + "', caLyThuyet = '" + caLyThuyet + 
+                "', soLuongSinhVien = " + soLuongSinhVien +
+                ", loaiThucHanh ='" + loaiThucHanh + "' WHERE id = " + id;
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 

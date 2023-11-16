@@ -77,7 +77,7 @@ namespace QLPHONGTHUCHANH
             string IDGV = dtaLop.Rows[i].Cells[3].Value.ToString();
             string caLT = dtaLop.Rows[i].Cells[4].Value.ToString();
             int SLSV = int.Parse(dtaLop.Rows[i].Cells[5].Value.ToString());
-            int Loai = int.Parse(dtaLop.Rows[i].Cells[6].Value.ToString());
+            string Loai = dtaLop.Rows[i].Cells[6].Value.ToString();
 
             Lop a = new Lop(maLop, tenLop, tenKhoa, IDGV, caLT, SLSV, Loai, false);
 

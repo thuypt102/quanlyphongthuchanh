@@ -169,9 +169,9 @@
             this.cmbLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
+            "Thực hành thông thường",
+            "Thực hành lắp ráp",
+            "Thực hành mạng"});
             this.cmbLoai.Location = new System.Drawing.Point(537, 404);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(233, 24);

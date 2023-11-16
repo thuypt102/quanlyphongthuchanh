@@ -41,7 +41,7 @@ namespace QLPHONGTHUCHANH
             string IDGV = txbIDGV.Text;
             string caLT = txbCaLT.Text;
             int SLSV = int.Parse(txbSlSV.Text);
-            int Loai = int.Parse(cmbLoai.SelectedItem.ToString());
+            string Loai = cmbLoai.SelectedItem.ToString();
 
             if (LopDAL.Khoitao.capNhatLop(maLop, tenLop, tenKhoa, IDGV, caLT, SLSV, Loai))
             {

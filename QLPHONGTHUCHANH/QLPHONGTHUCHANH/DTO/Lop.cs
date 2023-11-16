@@ -15,11 +15,11 @@ namespace QLPHONGTHUCHANH.DTO
             public string IdGiangVienPhuTrach { get; set; }
             public string CaLyThuyet { get; set; }
             public int SoLuongSinhVien { get; set; }
-            public int LoaiThucHanh { get; set; }
+            public string LoaiThucHanh { get; set; }
             public bool? LuuTru { get; set; }
 
             // Constructor
-            public Lop(string id, string tenLop, string tenKhoa, string idGiangVienPhuTrach, string caLyThuyet, int soLuongSinhVien, int loaiThucHanh, bool? luuTru)
+            public Lop(string id, string tenLop, string tenKhoa, string idGiangVienPhuTrach, string caLyThuyet, int soLuongSinhVien, string loaiThucHanh, bool? luuTru)
             {
                 Id = id;
                 TenLop = tenLop;
