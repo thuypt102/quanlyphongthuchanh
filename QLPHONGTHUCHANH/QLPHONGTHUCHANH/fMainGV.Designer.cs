@@ -87,6 +87,7 @@
             this.mniThongTin.Name = "mniThongTin";
             this.mniThongTin.Size = new System.Drawing.Size(146, 25);
             this.mniThongTin.Text = "Thông tin cá nhân";
+            this.mniThongTin.Click += new System.EventHandler(this.mniThongTin_Click);
             // 
             // mniDangXuat
             // 

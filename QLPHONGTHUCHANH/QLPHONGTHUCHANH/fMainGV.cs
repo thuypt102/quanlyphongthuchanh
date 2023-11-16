@@ -135,5 +135,13 @@ namespace QLPHONGTHUCHANH
             fgv.ShowDialog();
             this.Show();
         }
+
+        private void mniThongTin_Click(object sender, EventArgs e)
+        {
+            fThongTinGiangVien ftvgv = new fThongTinGiangVien();
+            this.Hide();
+            ftvgv.ShowDialog();
+            this.Show();
+        }
     }
 }
