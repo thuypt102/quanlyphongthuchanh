@@ -134,5 +134,13 @@ namespace QLPHONGTHUCHANH
             this.Show();
             
         }
+
+        private void mniThongTin_Click(object sender, EventArgs e)
+        {
+            fThongTinQuanLy fttql = new fThongTinQuanLy();
+            this.Hide();
+            fttql.ShowDialog();
+            this.Show();
+        }
     }
 }

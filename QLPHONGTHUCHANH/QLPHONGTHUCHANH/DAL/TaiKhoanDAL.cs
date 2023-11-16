@@ -54,21 +54,14 @@ namespace QLPHONGTHUCHANH.DAL
 
             return DataProvider.Khoitao.ExecuteQuery(query);
         }
-        public DataTable GetGiangVienInfo_2(string user, string pass)
+
+        public DataTable getNguoiQuanLyInfo(string user, string pass)
         {
-            string query = "SELECT G.id, G.tenGiangVien, G.khoa, G.sdt, G.email FROM TAIKHOAN AS T"
-                + " JOIN GIANGVIEN AS G ON T.id = G.idTaiKhoan"
+            string query = "SELECT NQ.id, NQ.hoTen, NQ.chucVu, NQ.sdt, NQ.email FROM TAIKHOAN AS T"
+                + " JOIN NGUOIQUANLY AS NQ ON T.id = NQ.idTaiKhoan"
                 + " WHERE T.tenDangNhap = N'" + user + "' AND T.matKhau = N'" + pass + "'";
 
             return DataProvider.Khoitao.ExecuteQuery(query);
-        }
-
-        public bool kiemTraID(int id)
-        {
-            string query = "Select * from TAIKHOAN where id = N'" + id + "' ";
-
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
-            return kq.Rows.Count > 0;
         }
 
     }

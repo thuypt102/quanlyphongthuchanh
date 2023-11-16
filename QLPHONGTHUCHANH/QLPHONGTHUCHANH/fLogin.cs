@@ -94,6 +94,10 @@ namespace QLPHONGTHUCHANH
 
                 if (isAd)
                 {
+                    // Gán thông tin đăng nhập vào biến toàn cục
+                    LoggedInUsername = username;
+                    LoggedInPassword = pass;
+
                     this.Hide();
                     f.ShowDialog();
                     this.Show();
