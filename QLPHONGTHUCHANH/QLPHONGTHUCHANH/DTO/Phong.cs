@@ -13,10 +13,10 @@ namespace QLPHONGTHUCHANH.DTO
             public string TenPhong { get; set; }
             public string TenKhuVuc { get; set; }
             public int SoLuongMay { get; set; }
-            public int LoaiThucHanh { get; set; }
+            public string  LoaiThucHanh { get; set; }
             public bool? LuuTru { get; set; }
 
-            public Phong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, int loaiThucHanh, bool? luuTru)
+            public Phong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string loaiThucHanh, bool? luuTru)
             {
                 Id = id;
                 TenPhong = tenPhong;

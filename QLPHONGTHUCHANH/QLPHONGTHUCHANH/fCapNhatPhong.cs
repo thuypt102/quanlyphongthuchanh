@@ -20,14 +20,16 @@ namespace QLPHONGTHUCHANH
             hienThi(Phong);
         }
 
+        
+
         private void hienThi(Phong Phong)
         {
             txbMaPhong.Text = Phong.Id;
             txbTenPhong.Text = Phong.TenPhong;
             txbKhuVuc.Text = Phong.TenKhuVuc;
             txbSLPM.Text = Phong.SoLuongMay.ToString();
-            cmbLoai.SelectedItem = Phong.LoaiThucHanh.ToString();
-            
+            cmbLoai.Text = Phong.LoaiThucHanh;
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -36,8 +38,8 @@ namespace QLPHONGTHUCHANH
             string tenPhong = txbTenPhong.Text;
             string tenKhuVuc = txbKhuVuc.Text;
             int soLuongMay = int.Parse(txbSLPM.Text);
-            int loaiThucHanh = int.Parse(cmbLoai.SelectedItem.ToString());
             
+            string loaiThucHanh = cmbLoai.Text;
 
             if (PhongDAL.Khoitao.capNhatPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
             {

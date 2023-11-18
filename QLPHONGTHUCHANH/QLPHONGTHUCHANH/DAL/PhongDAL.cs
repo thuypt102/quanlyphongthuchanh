@@ -46,7 +46,7 @@ namespace QLPHONGTHUCHANH.DAL
                 string tenPhong = row["tenPhong"].ToString();
                 string tenKhuVuc = row["tenKhuVuc"].ToString();
                 int soLuongMay = int.Parse(row["soLuongMay"].ToString());
-                int loaiThucHanh = int.Parse(row["loaiThucHanh"].ToString());
+                string  loaiThucHanh = row["loaiThucHanh"].ToString();
                 bool? luuTru = row["luuTru"].ToString() == string.Empty ? null : (bool?)row["luuTru"];
 
                 Phong Phong = new Phong(id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh, luuTru);
@@ -56,7 +56,7 @@ namespace QLPHONGTHUCHANH.DAL
             return listPhong;
         }
 
-        public bool themPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, int loaiThucHanh)
+        public bool themPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string loaiThucHanh)
         {
             bool luuTru = false;
 
@@ -68,11 +68,12 @@ namespace QLPHONGTHUCHANH.DAL
                 return kq != null;
         }
 
-        public bool capNhatPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, int loaiThucHanh)
+        public bool capNhatPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string  loaiThucHanh)
         {
-            string query = "UPDATE PHONGMAY SET tenPhong = '" + tenPhong + "', tenKhuVuc = '" + tenKhuVuc +
-                "', soLuongMay = " + soLuongMay + ", loaiThucHanh = " + loaiThucHanh + " WHERE id = '" + id + "'";
+            string query = "UPDATE PHONGMAY SET tenPhong = N'" + tenPhong + "', tenKhuVuc = '" + tenKhuVuc +
+                "', soLuongMay = '" + soLuongMay + "', loaiThucHanh = '" + loaiThucHanh + "' WHERE id = '" + id + "'";
 
+            //string query = "UPDATE PHONGMAY SET tenPhong = @TenPhong, tenKhuVuc = @TenKhuVuc, soLuongMay = @SoLuongMay, loaiThucHanh = @LoaiThucHanh WHERE id = @ID";
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
             return kq != null;

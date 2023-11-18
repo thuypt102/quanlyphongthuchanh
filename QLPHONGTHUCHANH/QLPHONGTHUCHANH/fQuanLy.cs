@@ -1,6 +1,7 @@
 ﻿using QLPHONGTHUCHANH.DAL;
 using QLPHONGTHUCHANH.DTO;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
@@ -94,8 +95,8 @@ namespace QLPHONGTHUCHANH
 
         private void btnXoaLop_Click(object sender, EventArgs e)
         {
-
-            DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+            
+                DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
 
             // Kiểm tra kết quả từ người dùng
             if (result == DialogResult.Yes)
@@ -110,7 +111,11 @@ namespace QLPHONGTHUCHANH
                     MessageBox.Show("xóa thành công!", "Thông báo");
                 }
                 else
+                {
                     MessageBox.Show("xóa không thành công!", "Thông báo");
+
+                }
+
 
             }
             else if (result == DialogResult.No)
@@ -156,7 +161,7 @@ namespace QLPHONGTHUCHANH
             string tenPhong = dtaPhong.Rows[i].Cells[1].Value.ToString();
             string tenKhuVuc = dtaPhong.Rows[i].Cells[2].Value.ToString();
             int soLuongMay = int.Parse(dtaPhong.Rows[i].Cells[3].Value.ToString());
-            int loaiThucHanh = int.Parse(dtaPhong.Rows[i].Cells[4].Value.ToString());
+            string  loaiThucHanh = dtaPhong.Rows[i].Cells[4].Value.ToString();
             bool luuTru = bool.Parse(dtaPhong.Rows[i].Cells[5].Value.ToString());
 
             Phong Phong = new Phong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh, luuTru);
@@ -245,7 +250,15 @@ namespace QLPHONGTHUCHANH
                     MessageBox.Show("xóa thành công!", "Thông báo");
                 }
                 else
-                    MessageBox.Show("xóa không thành công!", "Thông báo");
+                {
+                    if (GVDALL.Khoitao.KTLienKet(maGV))
+                    {
+                        MessageBox.Show("Không thể xóa vì có liên quan đến các bảng khác.", "Thông báo");
+                    }
+                    else
+                        MessageBox.Show("xóa không thành công!", "Thông báo");
+
+                }
 
             }
             else if (result == DialogResult.No)

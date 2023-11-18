@@ -36,7 +36,7 @@ namespace QLPHONGTHUCHANH
             // Kiểm tra giá trị trong TextBox
             if (string.IsNullOrWhiteSpace(txbIDTaiKhoan.Text))
             {
-                MessageBox.Show("Vui lòng nhập giá trị vào TextBox.", "Lỗi");
+                MessageBox.Show("Vui lòng nhập giá trị vào.", "Lỗi");
                 return false;
             }
 
@@ -62,14 +62,25 @@ namespace QLPHONGTHUCHANH
                 string tengv = txbTenGV.Text;
                 string tenKhoa = txbKhoa.Text;
                 string sdt = txbSDT.Text;
-                int idtaikhoan = int.Parse(txbIDTaiKhoan.Text);
+                
+                int IDTaiKhoan = int.Parse(txbIDTaiKhoan.Text);
 
-                if (GVDALL.Khoitao.capNhatGV(magv, tengv, tenKhoa, sdt, idtaikhoan))
+                if (!TaiKhoanDAL.Khoitao.kiemTraID(IDTaiKhoan))
                 {
-                    MessageBox.Show("cập nhật thành công!", "Thông báo");
+                    MessageBox.Show("Mã tài khoản giảng viên không tồn tại. Vui lòng nhập mã khác.");
+
                 }
+
                 else
-                    MessageBox.Show("cập nhật không thành công!", "Thông báo");
+                {
+
+                    if (GVDALL.Khoitao.capNhatGV(magv, tengv, tenKhoa, sdt, IDTaiKhoan))
+                    {
+                        MessageBox.Show("cập nhật thành công!", "Thông báo");
+                    }
+                    else
+                        MessageBox.Show("cập nhật không thành công!", "Thông báo");
+                }
             }
         }
 

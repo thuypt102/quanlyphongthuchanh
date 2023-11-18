@@ -90,10 +90,46 @@ namespace QLPHONGTHUCHANH.DAL
 
         public bool xoaGV(string id)
         {
-            string query = "DELETE FROM GIANGVIEN WHERE id = " + id;
-            int numberOfRowsDeleted = DataProvider.Khoitao.ExecuteNonQuery(query);
 
-            return numberOfRowsDeleted > 0;
+            try
+            {
+                string query = "DELETE FROM GIANGVIEN WHERE id = " + id;
+                int numberOfRowsDeleted = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+                return numberOfRowsDeleted > 0;
+            }
+            
+            catch (Exception ex)
+            {
+                // Xử lý các ngoại lệ khác (nếu có)
+                return false;
+            }
+
+        }
+
+        public bool KTLienKet(string id)
+        {
+
+            try
+            {
+                string query = "DELETE FROM GIANGVIEN WHERE id = " + id;
+                int numberOfRowsDeleted = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+                return numberOfRowsDeleted > 0;
+            }
+
+            catch (SqlException ex)
+            {
+                if (ex.Number == 547)
+                {
+                    return true;   
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
         }
 
 

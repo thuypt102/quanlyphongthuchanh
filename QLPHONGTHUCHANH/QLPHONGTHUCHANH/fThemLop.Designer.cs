@@ -152,6 +152,7 @@
             // txbCaLT
             // 
             this.txbCaLT.Location = new System.Drawing.Point(537, 297);
+            this.txbCaLT.MaxLength = 2;
             this.txbCaLT.Name = "txbCaLT";
             this.txbCaLT.Size = new System.Drawing.Size(233, 22);
             this.txbCaLT.TabIndex = 5;

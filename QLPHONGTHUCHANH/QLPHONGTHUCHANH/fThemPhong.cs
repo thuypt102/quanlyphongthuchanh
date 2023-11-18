@@ -18,22 +18,32 @@ namespace QLPHONGTHUCHANH
             InitializeComponent();
         }
 
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
             string maPhong = txbMaPhong.Text;
             string tenPhong = txbTenPhong.Text;
             string tenKhuVuc = txbKhuVuc.Text;
             int soLuongMay = int.Parse(txbSLPM.Text);
-            int loaiThucHanh = int.Parse(cmbLoai.SelectedItem.ToString());
-            
+            //string loaiThucHanh = cmbLoai.SelectedItem.ToString();
+            string loaiThucHanh = cmbLoai.Text;
 
-            if (PhongDAL.Khoitao.themPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
+            if (PhongDAL.Khoitao.timKiem(maPhong))
             {
-                MessageBox.Show("Thêm phòng máy thành công!", "Thông báo");
+                MessageBox.Show("Mã phòng đã tồn tại. Vui lòng nhập mã khác.");
+
             }
             else
             {
-                MessageBox.Show("Thêm phòng máy không thành công!", "Thông báo");
+                if (PhongDAL.Khoitao.themPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
+                {
+                    MessageBox.Show("Thêm phòng máy thành công!", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm phòng máy không thành công!", "Thông báo");
+                    
+                }
             }
         }
     }

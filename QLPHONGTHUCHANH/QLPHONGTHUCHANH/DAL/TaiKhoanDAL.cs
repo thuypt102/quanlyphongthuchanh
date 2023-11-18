@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -63,7 +64,13 @@ namespace QLPHONGTHUCHANH.DAL
 
             return DataProvider.Khoitao.ExecuteQuery(query);
         }
+        public bool kiemTraID(int id)
+        {
+            string query = "Select * from TAIKHOAN where id = N'" + id + "' ";
 
+            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+            return kq.Rows.Count > 0;
+        }
     }
 }
 

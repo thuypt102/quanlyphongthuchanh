@@ -49,6 +49,7 @@
             // txbCaLT
             // 
             this.txbCaLT.Location = new System.Drawing.Point(678, 457);
+            this.txbCaLT.MaxLength = 2;
             this.txbCaLT.Name = "txbCaLT";
             this.txbCaLT.Size = new System.Drawing.Size(233, 22);
             this.txbCaLT.TabIndex = 5;
@@ -170,7 +171,6 @@
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(233, 24);
             this.cmbLoai.TabIndex = 7;
-            this.cmbLoai.Text = "Thực hành thông thường";
             // 
             // lbLoai
             // 

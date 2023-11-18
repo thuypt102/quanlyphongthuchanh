@@ -84,8 +84,8 @@ namespace QLPHONGTHUCHANH.DAL
             string query = "UPDATE LOP SET tenLop = '" + tenlop +
                 "', tenKhoa = '" + tenKhoa + "', idGiangVienPhuTrach = '" + 
                 idGiangVienPhuTrach + "', caLyThuyet = '" + caLyThuyet + 
-                "', soLuongSinhVien = " + soLuongSinhVien +
-                ", loaiThucHanh ='" + loaiThucHanh + "' WHERE id = " + id;
+                "', soLuongSinhVien = '" + soLuongSinhVien +
+                "', loaiThucHanh ='" + loaiThucHanh + "' WHERE id = " + id;
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
