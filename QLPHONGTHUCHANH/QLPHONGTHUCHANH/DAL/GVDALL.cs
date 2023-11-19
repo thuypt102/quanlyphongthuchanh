@@ -75,9 +75,14 @@ namespace QLPHONGTHUCHANH.DAL
 
             return kq!=null;
         }
+
+        public DataTable getDSgv()
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenGiangVien, khoa, sdt, email, idTaiKhoan from GIANGVIEN where luuTru = 1");
+        }
+
         public bool capNhatGV(string id, string tenGV, string tenKhoa, string sdt, int idTaiKhoan)
         {
-            
 
             string query = "UPDATE GIANGVIEN SET tenGiangVien = '" + tenGV + "', khoa = '" + tenKhoa +
        "', sdt = '" + sdt + "', idTaiKhoan = '"+ idTaiKhoan +  "' WHERE id = " + id;
@@ -132,6 +137,13 @@ namespace QLPHONGTHUCHANH.DAL
 
         }
 
+        public bool khoiPhucGiangVien(string id)
+        {
+            string query = string.Format("UPDATE GIANGVIEN SET luuTru = 0 WHERE id = " + id);
+            int result = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
 
         public bool KTtenGV(string id)
         {

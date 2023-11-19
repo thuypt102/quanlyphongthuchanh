@@ -269,6 +269,20 @@ namespace QLPHONGTHUCHANH
             XemGV();
         }
 
-       
+        private void btnKhoLuuTruPhong_Click(object sender, EventArgs e)
+        {
+            fKhoLuuTruPhong f = new fKhoLuuTruPhong();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnKhoLuuTruGV_Click(object sender, EventArgs e)
+        {
+            fKhoLuuTruGiangVien f = new fKhoLuuTruGiangVien();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

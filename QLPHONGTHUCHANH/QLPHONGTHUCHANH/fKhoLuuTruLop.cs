@@ -17,6 +17,7 @@ namespace QLPHONGTHUCHANH
         {
             InitializeComponent();
             loadDSLop();
+            showKhoiPhuc();
         }
 
         public void loadDSLop()
@@ -24,6 +25,13 @@ namespace QLPHONGTHUCHANH
             dtaLop.DataSource = LopDAL.Khoitao.getDSLop();
         }
 
+        public void showKhoiPhuc()
+        {
+            if (dtaLop.Rows.Count == 1)
+            {
+                btnKhoiPhuc.Enabled = false;
+            }
+        }
         private void btnKhoiPhuc_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn muốn khôi phục lớp?", "Thông báo",
@@ -33,14 +41,16 @@ namespace QLPHONGTHUCHANH
                 i = dtaLop.CurrentRow.Index;
 
                 string maL = dtaLop.Rows[i].Cells[0].Value.ToString();
+
                 if (LopDAL.Khoitao.khoiPhucLop(maL))
                 {
-                    MessageBox.Show("Khôi phục phòng thành công!", "Thông báo");
+                    MessageBox.Show("Khôi phục lớp thành công!", "Thông báo");
                     loadDSLop();
+                    showKhoiPhuc();
                 }
                 else
                 {
-                    MessageBox.Show("Khôi phục phòng không thành công!", "Thông báo");
+                    MessageBox.Show("Khôi phục lớp không thành công!", "Thông báo");
                 }
             }
         }

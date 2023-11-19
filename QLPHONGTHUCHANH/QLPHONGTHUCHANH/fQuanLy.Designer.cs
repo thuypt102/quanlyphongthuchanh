@@ -81,7 +81,7 @@
             this.tabThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.tabThongTin.Name = "tabThongTin";
             this.tabThongTin.Padding = new System.Windows.Forms.Padding(2);
-            this.tabThongTin.Size = new System.Drawing.Size(1005, 747);
+            this.tabThongTin.Size = new System.Drawing.Size(1372, 747);
             this.tabThongTin.TabIndex = 5;
             this.tabThongTin.Text = "Thông tin";
             this.tabThongTin.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             this.tabThongBao.Margin = new System.Windows.Forms.Padding(2);
             this.tabThongBao.Name = "tabThongBao";
             this.tabThongBao.Padding = new System.Windows.Forms.Padding(2);
-            this.tabThongBao.Size = new System.Drawing.Size(1005, 747);
+            this.tabThongBao.Size = new System.Drawing.Size(1372, 747);
             this.tabThongBao.TabIndex = 4;
             this.tabThongBao.Text = "Thông báo";
             this.tabThongBao.UseVisualStyleBackColor = true;
@@ -170,6 +170,7 @@
             this.btnKhoLuuTruGV.Text = "Kho Lưu Trữ";
             this.btnKhoLuuTruGV.TextColor = System.Drawing.Color.White;
             this.btnKhoLuuTruGV.UseVisualStyleBackColor = false;
+            this.btnKhoLuuTruGV.Click += new System.EventHandler(this.btnKhoLuuTruGV_Click);
             // 
             // btnXoaGV
             // 
@@ -388,6 +389,7 @@
             this.btnKhoLuuTruPhong.Text = "Kho Lưu Trữ";
             this.btnKhoLuuTruPhong.TextColor = System.Drawing.Color.White;
             this.btnKhoLuuTruPhong.UseVisualStyleBackColor = false;
+            this.btnKhoLuuTruPhong.Click += new System.EventHandler(this.btnKhoLuuTruPhong_Click);
             // 
             // btnXoaPhong
             // 

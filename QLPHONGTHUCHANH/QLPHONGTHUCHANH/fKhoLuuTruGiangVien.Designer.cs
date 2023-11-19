@@ -31,6 +31,12 @@
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.dtaGiangVien = new System.Windows.Forms.DataGridView();
             this.btnKhoiPhuc = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenGiangVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtaGiangVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +60,15 @@
             this.dtaGiangVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtaGiangVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtaGiangVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtaGiangVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.tenGiangVien,
+            this.khoa,
+            this.sdt,
+            this.email,
+            this.idTaiKhoan});
             this.dtaGiangVien.Location = new System.Drawing.Point(56, 68);
             this.dtaGiangVien.Name = "dtaGiangVien";
             this.dtaGiangVien.Size = new System.Drawing.Size(881, 311);
@@ -73,6 +87,43 @@
             this.btnKhoiPhuc.TabIndex = 4;
             this.btnKhoiPhuc.Text = "Khôi Phục";
             this.btnKhoiPhuc.UseVisualStyleBackColor = false;
+            this.btnKhoiPhuc.Click += new System.EventHandler(this.btnKhoiPhuc_Click);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Mã giảng viên";
+            this.id.Name = "id";
+            // 
+            // tenGiangVien
+            // 
+            this.tenGiangVien.DataPropertyName = "tenGiangVien";
+            this.tenGiangVien.HeaderText = "Tên giảng viên";
+            this.tenGiangVien.Name = "tenGiangVien";
+            // 
+            // khoa
+            // 
+            this.khoa.DataPropertyName = "khoa";
+            this.khoa.HeaderText = "Khoa";
+            this.khoa.Name = "khoa";
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sdt";
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            // 
+            // idTaiKhoan
+            // 
+            this.idTaiKhoan.DataPropertyName = "idTaiKhoan";
+            this.idTaiKhoan.HeaderText = "Mã tài khoản";
+            this.idTaiKhoan.Name = "idTaiKhoan";
             // 
             // fKhoLuuTruGiangVien
             // 
@@ -97,5 +148,11 @@
         private System.Windows.Forms.Label lbTieuDe;
         private System.Windows.Forms.DataGridView dtaGiangVien;
         private System.Windows.Forms.Button btnKhoiPhuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenGiangVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTaiKhoan;
     }
 }

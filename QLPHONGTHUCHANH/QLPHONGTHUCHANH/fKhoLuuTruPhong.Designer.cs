@@ -30,12 +30,12 @@
         {
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.dtaPhongMay = new System.Windows.Forms.DataGridView();
-            this.btnKhoiPhuc = new System.Windows.Forms.Button();
             this.maPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongMay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loaiThucHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnKhoiPhuc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtaPhongMay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,23 +69,9 @@
             this.loaiThucHanh});
             this.dtaPhongMay.Location = new System.Drawing.Point(44, 89);
             this.dtaPhongMay.Name = "dtaPhongMay";
+            this.dtaPhongMay.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dtaPhongMay.Size = new System.Drawing.Size(896, 306);
             this.dtaPhongMay.TabIndex = 3;
-            // 
-            // btnKhoiPhuc
-            // 
-            this.btnKhoiPhuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKhoiPhuc.BackColor = System.Drawing.Color.Blue;
-            this.btnKhoiPhuc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhoiPhuc.ForeColor = System.Drawing.Color.White;
-            this.btnKhoiPhuc.Location = new System.Drawing.Point(430, 419);
-            this.btnKhoiPhuc.Name = "btnKhoiPhuc";
-            this.btnKhoiPhuc.Size = new System.Drawing.Size(131, 40);
-            this.btnKhoiPhuc.TabIndex = 4;
-            this.btnKhoiPhuc.Text = "Khôi Phục";
-            this.btnKhoiPhuc.UseVisualStyleBackColor = false;
-            this.btnKhoiPhuc.Click += new System.EventHandler(this.btnKhoiPhuc_Click);
             // 
             // maPhong
             // 
@@ -116,6 +102,21 @@
             this.loaiThucHanh.DataPropertyName = "loaiThucHanh";
             this.loaiThucHanh.HeaderText = "Loại thực hành";
             this.loaiThucHanh.Name = "loaiThucHanh";
+            // 
+            // btnKhoiPhuc
+            // 
+            this.btnKhoiPhuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKhoiPhuc.BackColor = System.Drawing.Color.Blue;
+            this.btnKhoiPhuc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhoiPhuc.ForeColor = System.Drawing.Color.White;
+            this.btnKhoiPhuc.Location = new System.Drawing.Point(430, 419);
+            this.btnKhoiPhuc.Name = "btnKhoiPhuc";
+            this.btnKhoiPhuc.Size = new System.Drawing.Size(131, 40);
+            this.btnKhoiPhuc.TabIndex = 4;
+            this.btnKhoiPhuc.Text = "Khôi Phục";
+            this.btnKhoiPhuc.UseVisualStyleBackColor = false;
+            this.btnKhoiPhuc.Click += new System.EventHandler(this.btnKhoiPhuc_Click);
             // 
             // fKhoLuuTruPhong
             // 

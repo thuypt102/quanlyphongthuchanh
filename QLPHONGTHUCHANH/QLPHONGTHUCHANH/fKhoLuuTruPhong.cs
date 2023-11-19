@@ -17,11 +17,20 @@ namespace QLPHONGTHUCHANH
         {
             InitializeComponent();
             loadDSPhong();
+            showKhoiPhuc();
         }
 
         public void loadDSPhong()
         {
             dtaPhongMay.DataSource = PhongDAL.Khoitao.getDSPhong();
+        }
+
+        public void showKhoiPhuc()
+        {
+            if (dtaPhongMay.Rows.Count == 1)
+            {
+                btnKhoiPhuc.Enabled = false;
+            }
         }
 
         private void btnKhoiPhuc_Click(object sender, EventArgs e)
@@ -37,6 +46,7 @@ namespace QLPHONGTHUCHANH
                 {
                     MessageBox.Show("Khôi phục phòng thành công!", "Thông báo");
                     loadDSPhong();
+                    showKhoiPhuc();
                 }
                 else
                 {
