@@ -30,38 +30,16 @@ namespace QLPHONGTHUCHANH.DAL
 
         public bool timKiem(string idlop)
         {
-            string query = "Select * from LOP where tenDangNhap = N'" + idlop + "' ";
+            string query = "Select * from LOP where id = '" + idlop + "' ";
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
             return kq.Rows.Count > 0;
         }
-        public List<Lop> hienThiLop()
+        
+        public DataTable hienThiLop()
         {
-            List<Lop> listlop = new List<Lop>();
-
-            string query = "Select * from LOP ";
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
-
-            foreach (DataRow row in kq.Rows)
-            {
-                
-                string id = row["id"].ToString();
-                string tenlop = row["tenLop"].ToString();
-                string tenKhoa = row["tenKhoa"].ToString();
-                string idGiangVienPhuTrach = row["idGiangVienPhuTrach"].ToString();
-                string caLyThuyet = row["caLyThuyet"].ToString();
-                int soLuongSinhVien = int.Parse(row["soLuongSinhVien"].ToString());
-                string loaiThucHanh = row["loaiThucHanh"].ToString();
-                bool? luuTru = row["luuTru"].ToString() == string.Empty ? null : (bool?)row["luuTru"];
-
-                Lop lop = new Lop(id,tenlop, tenKhoa , idGiangVienPhuTrach , caLyThuyet,
-                    soLuongSinhVien, loaiThucHanh , luuTru );
-                listlop.Add(lop);
-            }
-
-            return listlop;
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenLop, tenKhoa, idGiangVienPhuTrach, caLyThuyet, soLuongSinhVien, loaiThucHanh from LOP where luuTru =0");
         }
-
 
         public bool themLop(string id, string tenlop, string tenKhoa, string idGiangVienPhuTrach ,
         string caLyThuyet, int soLuongSinhVien, string loaiThucHanh)
@@ -71,13 +49,15 @@ namespace QLPHONGTHUCHANH.DAL
             bool luuTru = false;
 
 
-            string query = "INSERT INTO LOP values ('"+ id +"', '" + tenlop + "', '" + tenKhoa + "', '" + idGiangVienPhuTrach + "', '"
-                + caLyThuyet + "', '" + soLuongSinhVien + "', '" + loaiThucHanh + "', '" + luuTru + "')";
+            string query = "INSERT INTO LOP values ('" + id + "', '" + tenlop + "', '" + tenKhoa + "', '" + idGiangVienPhuTrach + "', '"
+                + caLyThuyet + "', '" + soLuongSinhVien + "', N'" + loaiThucHanh + "', '" + luuTru + "')";
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
             return kq!=null;
         }
+        
+        
         public bool capNhatLop(string id, string tenlop, string tenKhoa, string idGiangVienPhuTrach,
         string caLyThuyet, int soLuongSinhVien, string loaiThucHanh)
         {
@@ -85,7 +65,7 @@ namespace QLPHONGTHUCHANH.DAL
                 "', tenKhoa = '" + tenKhoa + "', idGiangVienPhuTrach = '" + 
                 idGiangVienPhuTrach + "', caLyThuyet = '" + caLyThuyet + 
                 "', soLuongSinhVien = '" + soLuongSinhVien +
-                "', loaiThucHanh ='" + loaiThucHanh + "' WHERE id = " + id;
+                "', loaiThucHanh =N'" + loaiThucHanh + "' WHERE id = " + id;
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 

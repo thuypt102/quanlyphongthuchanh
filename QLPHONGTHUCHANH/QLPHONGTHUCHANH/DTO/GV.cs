@@ -19,7 +19,7 @@ namespace QLPHONGTHUCHANH.DTO
         public int IdTaiKhoan { get; set; }
 
         // Constructor
-        public GV(string id, string tenGiangVien, string khoa, string sdt, string Email, int idTaiKhoan, bool? luuTru)
+        public GV(string id, string tenGiangVien, string khoa, string sdt, string Email, int idTaiKhoan/*, bool? luuTru*/)
         {
             Id = id;
             TenGiangVien = tenGiangVien;
@@ -27,7 +27,7 @@ namespace QLPHONGTHUCHANH.DTO
             Sdt = sdt;
             email = Email;
             IdTaiKhoan = idTaiKhoan;
-            LuuTru = luuTru;
+            /*LuuTru = luuTru;*/
         }
     }
 }

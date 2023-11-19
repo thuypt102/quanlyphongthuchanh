@@ -35,30 +35,12 @@ namespace QLPHONGTHUCHANH.DAL
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
             return kq.Rows.Count > 0;
         }
-        public List<GV> hienThiGV()
+
+        public DataTable hienThiGV()
         {
-            List<GV> listGV = new List<GV>();
-
-            string query = "Select * from GIANGVIEN ";
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
-
-            foreach (DataRow row in kq.Rows)
-            {
-                
-                string id = row["id"].ToString();
-                string tenGV = row["tenGiangVien"].ToString();
-                string tenKhoa = row["khoa"].ToString();
-                string sdt = row["sdt"].ToString();
-                string email = row["email"].ToString();
-                int idTaiKhoan = int.Parse(row["idTaiKhoan"].ToString());
-                bool? luuTru = row["luuTru"].ToString() == string.Empty ? null : (bool?)row["luuTru"];
-
-                GV GV = new GV(id,tenGV, tenKhoa ,  sdt,email, idTaiKhoan,  luuTru );
-                listGV.Add(GV);
-            }
-
-            return listGV;
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenGiangVien, khoa, sdt, email, idTaiKhoan from GIANGVIEN where luuTru = 0");
         }
+        
 
 
         public bool themGV(string id, string tenGV, string tenKhoa ,string sdt,string email,int idTaiKhoan)
@@ -66,11 +48,17 @@ namespace QLPHONGTHUCHANH.DAL
             
 
             bool luuTru = false;
-
-
-            string query = "INSERT INTO GIANGVIEN values ('"+ id +"', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '" + email + "', '"
+            string query = "";
+            if (idTaiKhoan != -1)
+            {
+                 query = "INSERT INTO GIANGVIEN values ('"+ id +"', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '" + email + "', '"
                 +   luuTru + "', '" + idTaiKhoan + "')";
-
+            }
+            else
+            {
+                 query = "INSERT INTO GIANGVIEN values ('" + id + "', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '" + email + "', '"
+                + luuTru + "')";
+            }
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
             return kq!=null;

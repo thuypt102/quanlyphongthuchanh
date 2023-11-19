@@ -33,27 +33,9 @@ namespace QLPHONGTHUCHANH.DAL
                 return kq.Rows.Count > 0;
             }
 
-        public List<Phong> hienThiPhong()
+        public DataTable hienThiPhong()
         {
-            List<Phong> listPhong = new List<Phong>();
-
-            string query = "SELECT * FROM PHONGMAY";
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
-
-            foreach (DataRow row in kq.Rows)
-            {
-                string id = row["id"].ToString();
-                string tenPhong = row["tenPhong"].ToString();
-                string tenKhuVuc = row["tenKhuVuc"].ToString();
-                int soLuongMay = int.Parse(row["soLuongMay"].ToString());
-                string  loaiThucHanh = row["loaiThucHanh"].ToString();
-                bool? luuTru = row["luuTru"].ToString() == string.Empty ? null : (bool?)row["luuTru"];
-
-                Phong Phong = new Phong(id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh, luuTru);
-                listPhong.Add(Phong);
-            }
-
-            return listPhong;
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh from PHONGMAY where luuTru = 0");
         }
 
         public bool themPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string loaiThucHanh)
@@ -61,7 +43,7 @@ namespace QLPHONGTHUCHANH.DAL
             bool luuTru = false;
 
             string query = "INSERT INTO PHONGMAY VALUES ('" + id + "', '" + tenPhong + 
-                "', '" + tenKhuVuc + "', '" + soLuongMay + "', '" + loaiThucHanh + "', '" + luuTru + "')";
+                "', '" + tenKhuVuc + "', '" + soLuongMay + "', N'" + loaiThucHanh + "', '" + luuTru + "')";
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
@@ -71,7 +53,8 @@ namespace QLPHONGTHUCHANH.DAL
         public bool capNhatPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string  loaiThucHanh)
         {
             string query = "UPDATE PHONGMAY SET tenPhong = N'" + tenPhong + "', tenKhuVuc = '" + tenKhuVuc +
-                "', soLuongMay = '" + soLuongMay + "', loaiThucHanh = '" + loaiThucHanh + "' WHERE id = '" + id + "'";
+                "', soLuongMay = '" + soLuongMay + "', loaiThucHanh = N'"
+ + loaiThucHanh + "' WHERE id = '" + id + "'";
 
             //string query = "UPDATE PHONGMAY SET tenPhong = @TenPhong, tenKhuVuc = @TenKhuVuc, soLuongMay = @SoLuongMay, loaiThucHanh = @LoaiThucHanh WHERE id = @ID";
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);

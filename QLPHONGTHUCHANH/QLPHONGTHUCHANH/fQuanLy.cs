@@ -165,9 +165,9 @@ namespace QLPHONGTHUCHANH
             string tenKhuVuc = dtaPhong.Rows[i].Cells[2].Value.ToString();
             int soLuongMay = int.Parse(dtaPhong.Rows[i].Cells[3].Value.ToString());
             string  loaiThucHanh = dtaPhong.Rows[i].Cells[4].Value.ToString();
-            bool luuTru = bool.Parse(dtaPhong.Rows[i].Cells[5].Value.ToString());
+            //bool luuTru = bool.Parse(dtaPhong.Rows[i].Cells[5].Value.ToString());
 
-            Phong Phong = new Phong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh, luuTru);
+            Phong Phong = new Phong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh/*, luuTru*/);
 
             fCapNhatPhong f = new fCapNhatPhong(Phong);
             this.Hide();
@@ -192,11 +192,11 @@ namespace QLPHONGTHUCHANH
             string Khoa = dtaGV.Rows[i].Cells[2].Value.ToString();
             string sdt = dtaGV.Rows[i].Cells[3].Value.ToString();
             string email = dtaGV.Rows[i].Cells[4].Value.ToString();
-            string luuTru = dtaGV.Rows[i].Cells[5].Value.ToString();
-            int idtaikhoan = int.Parse(dtaGV.Rows[i].Cells[6].Value.ToString());
+            //string luuTru = dtaGV.Rows[i].Cells[5].Value.ToString();
+            int idtaikhoan = int.Parse(dtaGV.Rows[i].Cells[5].Value.ToString());
 
 
-            GV a = new GV(maGV, tenGV, Khoa, sdt,email, idtaikhoan, false);
+            GV a = new GV(maGV, tenGV, Khoa, sdt,email, idtaikhoan/*, false*/);
 
             fCapNhatGV f = new fCapNhatGV(a);
             this.Hide();
