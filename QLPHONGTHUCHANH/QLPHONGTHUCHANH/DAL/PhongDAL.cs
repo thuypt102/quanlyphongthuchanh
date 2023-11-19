@@ -100,6 +100,13 @@ namespace QLPHONGTHUCHANH.DAL
             return result > 0;
         }
 
+        public bool luuTruPhong(string id)
+        {
+            string query = string.Format("UPDATE PHONGMAY SET luuTru = 1 WHERE id = " + id);
+            int result = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }
 

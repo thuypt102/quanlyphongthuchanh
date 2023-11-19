@@ -137,14 +137,6 @@ namespace QLPHONGTHUCHANH.DAL
 
         }
 
-        public bool khoiPhucGiangVien(string id)
-        {
-            string query = string.Format("UPDATE GIANGVIEN SET luuTru = 0 WHERE id = " + id);
-            int result = DataProvider.Khoitao.ExecuteNonQuery(query);
-
-            return result > 0;
-        }
-
         public bool KTtenGV(string id)
         {
 
@@ -153,7 +145,20 @@ namespace QLPHONGTHUCHANH.DAL
             return kq.Rows.Count > 0;
         }
 
-        
+        public bool khoiPhucGiangVien(string id)
+        {
+            string query = string.Format("UPDATE GIANGVIEN SET luuTru = 0 WHERE id = " + id);
+            int result = DataProvider.Khoitao.ExecuteNonQuery(query);
 
+            return result > 0;
+        }
+
+        public bool luuTruGiangVien(string id)
+        {
+            string query = string.Format("UPDATE GIANGVIEN SET luuTru = 1 WHERE id = " + id);
+            int result = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

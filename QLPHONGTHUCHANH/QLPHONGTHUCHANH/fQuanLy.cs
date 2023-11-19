@@ -16,7 +16,10 @@ namespace QLPHONGTHUCHANH
             XemLop();
             XemPhong();
             XemGV();
-            
+
+            showLuuTruLop();
+            showLuuTruPhong();
+            showLuuTruGV();
         }
 
         void XemLop()
@@ -283,6 +286,98 @@ namespace QLPHONGTHUCHANH
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        public void showLuuTruLop()
+        {
+            if (dtaLop.Rows.Count == 1)
+            {
+                btnLuuTruLop.Enabled = false;
+            }
+        }
+
+        public void showLuuTruPhong()
+        {
+            if (dtaPhong.Rows.Count == 1)
+            {
+                btnLuuTruPhong.Enabled = false;
+            }
+        }
+
+        public void showLuuTruGV()
+        {
+            if (dtaGV.Rows.Count == 1)
+            {
+                btnLuuTruGV.Enabled = false;
+            }
+        }
+        private void btnLuuTruLop_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn lưu trữ lớp?", "Thông báo",
+                MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                int i;
+                i = dtaLop.CurrentRow.Index;
+
+                string maL = dtaLop.Rows[i].Cells[0].Value.ToString();
+
+                if (LopDAL.Khoitao.luuTruLop(maL))
+                {
+                    MessageBox.Show("Lưu trữ lớp thành công!", "Thông báo");
+                    XemLop();
+                    showLuuTruLop();
+                }
+                else
+                {
+                    MessageBox.Show("Lưu trữ lớp không thành công!", "Thông báo");
+                }
+            }
+        }
+
+        private void btnLuuTruPhong_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn lưu trữ phòng?", "Thông báo",
+                MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                int i;
+                i = dtaPhong.CurrentRow.Index;
+
+                string maP = dtaPhong.Rows[i].Cells[0].Value.ToString();
+
+                if (PhongDAL.Khoitao.luuTruPhong(maP))
+                {
+                    MessageBox.Show("Lưu trữ phòng thành công!", "Thông báo");
+                    XemPhong();
+                    showLuuTruPhong();
+                }
+                else
+                {
+                    MessageBox.Show("Lưu trữ lớp không thành công!", "Thông báo");
+                }
+            }
+        }
+
+        private void btnLuuTruGV_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn lưu trữ giảng viên?", "Thông báo",
+                MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                int i;
+                i = dtaGV.CurrentRow.Index;
+
+                string maGV = dtaGV.Rows[i].Cells[0].Value.ToString();
+
+                if (GVDALL.Khoitao.luuTruGiangVien(maGV))
+                {
+                    MessageBox.Show("Lưu trữ giảng viên thành công!", "Thông báo");
+                    XemGV();
+                    showLuuTruGV();
+                }
+                else
+                {
+                    MessageBox.Show("Lưu trữ giảng viên không thành công!", "Thông báo");
+                }
+            }
         }
     }
 }

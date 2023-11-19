@@ -34,29 +34,17 @@
             this.lbDienGV = new System.Windows.Forms.Label();
             this.tbTimKiemGV = new System.Windows.Forms.TextBox();
             this.dtaGV = new System.Windows.Forms.DataGridView();
-            this.btnKhoLuuTruGV = new QLPHONGTHUCHANH.VBButton();
-            this.btnXoaGV = new QLPHONGTHUCHANH.VBButton();
-            this.btnTimKiemGV = new QLPHONGTHUCHANH.VBButton();
-            this.btnTaiLenGV = new QLPHONGTHUCHANH.VBButton();
-            this.btnLuuTruGV = new QLPHONGTHUCHANH.VBButton();
-            this.btnSuaGV = new QLPHONGTHUCHANH.VBButton();
-            this.btnThemGV = new QLPHONGTHUCHANH.VBButton();
             this.tabQLPhong = new System.Windows.Forms.TabPage();
             this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.lbLoaiPhong = new System.Windows.Forms.Label();
             this.lbDienPhong = new System.Windows.Forms.Label();
             this.tbTimKiemPhong = new System.Windows.Forms.TextBox();
             this.dtaPhong = new System.Windows.Forms.DataGridView();
-            this.btnKhoLuuTruPhong = new QLPHONGTHUCHANH.VBButton();
-            this.btnXoaPhong = new QLPHONGTHUCHANH.VBButton();
-            this.btnTimKiemPhong = new QLPHONGTHUCHANH.VBButton();
-            this.btnTaiLenPhong = new QLPHONGTHUCHANH.VBButton();
-            this.btnLuuTruPhong = new QLPHONGTHUCHANH.VBButton();
-            this.btnSuaPhong = new QLPHONGTHUCHANH.VBButton();
-            this.btnThemPhong = new QLPHONGTHUCHANH.VBButton();
             this.tabQLLop = new System.Windows.Forms.TabPage();
             this.lbDienLop = new System.Windows.Forms.Label();
             this.txbTimKiemLop = new System.Windows.Forms.TextBox();
+            this.dtaLop = new System.Windows.Forms.DataGridView();
+            this.tc = new System.Windows.Forms.TabControl();
             this.btnKhoLuuTruLop = new QLPHONGTHUCHANH.VBButton();
             this.btnXoaLop = new QLPHONGTHUCHANH.VBButton();
             this.btnTimKiemLop = new QLPHONGTHUCHANH.VBButton();
@@ -64,8 +52,20 @@
             this.btnLuuTruLop = new QLPHONGTHUCHANH.VBButton();
             this.btnSuaLop = new QLPHONGTHUCHANH.VBButton();
             this.btnThemLop = new QLPHONGTHUCHANH.VBButton();
-            this.dtaLop = new System.Windows.Forms.DataGridView();
-            this.tc = new System.Windows.Forms.TabControl();
+            this.btnKhoLuuTruPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnXoaPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnTimKiemPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnTaiLenPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnLuuTruPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnSuaPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnThemPhong = new QLPHONGTHUCHANH.VBButton();
+            this.btnKhoLuuTruGV = new QLPHONGTHUCHANH.VBButton();
+            this.btnXoaGV = new QLPHONGTHUCHANH.VBButton();
+            this.btnTimKiemGV = new QLPHONGTHUCHANH.VBButton();
+            this.btnTaiLenGV = new QLPHONGTHUCHANH.VBButton();
+            this.btnLuuTruGV = new QLPHONGTHUCHANH.VBButton();
+            this.btnSuaGV = new QLPHONGTHUCHANH.VBButton();
+            this.btnThemGV = new QLPHONGTHUCHANH.VBButton();
             this.tabQLGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtaGV)).BeginInit();
             this.tabQLPhong.SuspendLayout();
@@ -151,150 +151,6 @@
             this.dtaGV.Size = new System.Drawing.Size(1712, 435);
             this.dtaGV.TabIndex = 14;
             // 
-            // btnKhoLuuTruGV
-            // 
-            this.btnKhoLuuTruGV.BackColor = System.Drawing.Color.Blue;
-            this.btnKhoLuuTruGV.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnKhoLuuTruGV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnKhoLuuTruGV.BorderRadius = 8;
-            this.btnKhoLuuTruGV.BorderSize = 0;
-            this.btnKhoLuuTruGV.FlatAppearance.BorderSize = 0;
-            this.btnKhoLuuTruGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhoLuuTruGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnKhoLuuTruGV.ForeColor = System.Drawing.Color.White;
-            this.btnKhoLuuTruGV.Location = new System.Drawing.Point(400, 587);
-            this.btnKhoLuuTruGV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnKhoLuuTruGV.Name = "btnKhoLuuTruGV";
-            this.btnKhoLuuTruGV.Size = new System.Drawing.Size(158, 39);
-            this.btnKhoLuuTruGV.TabIndex = 15;
-            this.btnKhoLuuTruGV.Text = "Kho Lưu Trữ";
-            this.btnKhoLuuTruGV.TextColor = System.Drawing.Color.White;
-            this.btnKhoLuuTruGV.UseVisualStyleBackColor = false;
-            this.btnKhoLuuTruGV.Click += new System.EventHandler(this.btnKhoLuuTruGV_Click);
-            // 
-            // btnXoaGV
-            // 
-            this.btnXoaGV.BackColor = System.Drawing.Color.Blue;
-            this.btnXoaGV.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnXoaGV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoaGV.BorderRadius = 8;
-            this.btnXoaGV.BorderSize = 0;
-            this.btnXoaGV.FlatAppearance.BorderSize = 0;
-            this.btnXoaGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnXoaGV.ForeColor = System.Drawing.Color.White;
-            this.btnXoaGV.Location = new System.Drawing.Point(128, 587);
-            this.btnXoaGV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoaGV.Name = "btnXoaGV";
-            this.btnXoaGV.Size = new System.Drawing.Size(158, 39);
-            this.btnXoaGV.TabIndex = 16;
-            this.btnXoaGV.Text = "Xóa";
-            this.btnXoaGV.TextColor = System.Drawing.Color.White;
-            this.btnXoaGV.UseVisualStyleBackColor = false;
-            this.btnXoaGV.Click += new System.EventHandler(this.btnXoaGV_Click);
-            // 
-            // btnTimKiemGV
-            // 
-            this.btnTimKiemGV.BackColor = System.Drawing.Color.Blue;
-            this.btnTimKiemGV.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnTimKiemGV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiemGV.BorderRadius = 8;
-            this.btnTimKiemGV.BorderSize = 0;
-            this.btnTimKiemGV.FlatAppearance.BorderSize = 0;
-            this.btnTimKiemGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTimKiemGV.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiemGV.Location = new System.Drawing.Point(1069, 533);
-            this.btnTimKiemGV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTimKiemGV.Name = "btnTimKiemGV";
-            this.btnTimKiemGV.Size = new System.Drawing.Size(158, 39);
-            this.btnTimKiemGV.TabIndex = 17;
-            this.btnTimKiemGV.Text = "Tìm Kiếm";
-            this.btnTimKiemGV.TextColor = System.Drawing.Color.White;
-            this.btnTimKiemGV.UseVisualStyleBackColor = false;
-            // 
-            // btnTaiLenGV
-            // 
-            this.btnTaiLenGV.BackColor = System.Drawing.Color.Blue;
-            this.btnTaiLenGV.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnTaiLenGV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTaiLenGV.BorderRadius = 8;
-            this.btnTaiLenGV.BorderSize = 0;
-            this.btnTaiLenGV.FlatAppearance.BorderSize = 0;
-            this.btnTaiLenGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiLenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTaiLenGV.ForeColor = System.Drawing.Color.White;
-            this.btnTaiLenGV.Location = new System.Drawing.Point(400, 533);
-            this.btnTaiLenGV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTaiLenGV.Name = "btnTaiLenGV";
-            this.btnTaiLenGV.Size = new System.Drawing.Size(158, 39);
-            this.btnTaiLenGV.TabIndex = 18;
-            this.btnTaiLenGV.Text = "Tải Lên";
-            this.btnTaiLenGV.TextColor = System.Drawing.Color.White;
-            this.btnTaiLenGV.UseVisualStyleBackColor = false;
-            // 
-            // btnLuuTruGV
-            // 
-            this.btnLuuTruGV.BackColor = System.Drawing.Color.Blue;
-            this.btnLuuTruGV.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnLuuTruGV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLuuTruGV.BorderRadius = 8;
-            this.btnLuuTruGV.BorderSize = 0;
-            this.btnLuuTruGV.FlatAppearance.BorderSize = 0;
-            this.btnLuuTruGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuuTruGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLuuTruGV.ForeColor = System.Drawing.Color.White;
-            this.btnLuuTruGV.Location = new System.Drawing.Point(400, 480);
-            this.btnLuuTruGV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLuuTruGV.Name = "btnLuuTruGV";
-            this.btnLuuTruGV.Size = new System.Drawing.Size(158, 39);
-            this.btnLuuTruGV.TabIndex = 19;
-            this.btnLuuTruGV.Text = "Lưu Trữ";
-            this.btnLuuTruGV.TextColor = System.Drawing.Color.White;
-            this.btnLuuTruGV.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaGV
-            // 
-            this.btnSuaGV.BackColor = System.Drawing.Color.Blue;
-            this.btnSuaGV.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnSuaGV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSuaGV.BorderRadius = 8;
-            this.btnSuaGV.BorderSize = 0;
-            this.btnSuaGV.FlatAppearance.BorderSize = 0;
-            this.btnSuaGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSuaGV.ForeColor = System.Drawing.Color.White;
-            this.btnSuaGV.Location = new System.Drawing.Point(128, 533);
-            this.btnSuaGV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSuaGV.Name = "btnSuaGV";
-            this.btnSuaGV.Size = new System.Drawing.Size(158, 39);
-            this.btnSuaGV.TabIndex = 20;
-            this.btnSuaGV.Text = "Sửa";
-            this.btnSuaGV.TextColor = System.Drawing.Color.White;
-            this.btnSuaGV.UseVisualStyleBackColor = false;
-            this.btnSuaGV.Click += new System.EventHandler(this.btnSuaGV_Click);
-            // 
-            // btnThemGV
-            // 
-            this.btnThemGV.BackColor = System.Drawing.Color.Blue;
-            this.btnThemGV.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnThemGV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThemGV.BorderRadius = 8;
-            this.btnThemGV.BorderSize = 0;
-            this.btnThemGV.FlatAppearance.BorderSize = 0;
-            this.btnThemGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnThemGV.ForeColor = System.Drawing.Color.White;
-            this.btnThemGV.Location = new System.Drawing.Point(128, 480);
-            this.btnThemGV.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThemGV.Name = "btnThemGV";
-            this.btnThemGV.Size = new System.Drawing.Size(158, 39);
-            this.btnThemGV.TabIndex = 21;
-            this.btnThemGV.Text = "Thêm";
-            this.btnThemGV.TextColor = System.Drawing.Color.White;
-            this.btnThemGV.UseVisualStyleBackColor = false;
-            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
-            // 
             // tabQLPhong
             // 
             this.tabQLPhong.Controls.Add(this.cbLoaiPhong);
@@ -370,150 +226,6 @@
             this.dtaPhong.Size = new System.Drawing.Size(1345, 435);
             this.dtaPhong.TabIndex = 14;
             // 
-            // btnKhoLuuTruPhong
-            // 
-            this.btnKhoLuuTruPhong.BackColor = System.Drawing.Color.Blue;
-            this.btnKhoLuuTruPhong.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnKhoLuuTruPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnKhoLuuTruPhong.BorderRadius = 8;
-            this.btnKhoLuuTruPhong.BorderSize = 0;
-            this.btnKhoLuuTruPhong.FlatAppearance.BorderSize = 0;
-            this.btnKhoLuuTruPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhoLuuTruPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnKhoLuuTruPhong.ForeColor = System.Drawing.Color.White;
-            this.btnKhoLuuTruPhong.Location = new System.Drawing.Point(400, 587);
-            this.btnKhoLuuTruPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnKhoLuuTruPhong.Name = "btnKhoLuuTruPhong";
-            this.btnKhoLuuTruPhong.Size = new System.Drawing.Size(158, 39);
-            this.btnKhoLuuTruPhong.TabIndex = 15;
-            this.btnKhoLuuTruPhong.Text = "Kho Lưu Trữ";
-            this.btnKhoLuuTruPhong.TextColor = System.Drawing.Color.White;
-            this.btnKhoLuuTruPhong.UseVisualStyleBackColor = false;
-            this.btnKhoLuuTruPhong.Click += new System.EventHandler(this.btnKhoLuuTruPhong_Click);
-            // 
-            // btnXoaPhong
-            // 
-            this.btnXoaPhong.BackColor = System.Drawing.Color.Blue;
-            this.btnXoaPhong.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnXoaPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoaPhong.BorderRadius = 8;
-            this.btnXoaPhong.BorderSize = 0;
-            this.btnXoaPhong.FlatAppearance.BorderSize = 0;
-            this.btnXoaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnXoaPhong.ForeColor = System.Drawing.Color.White;
-            this.btnXoaPhong.Location = new System.Drawing.Point(128, 587);
-            this.btnXoaPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoaPhong.Name = "btnXoaPhong";
-            this.btnXoaPhong.Size = new System.Drawing.Size(158, 39);
-            this.btnXoaPhong.TabIndex = 16;
-            this.btnXoaPhong.Text = "Xóa";
-            this.btnXoaPhong.TextColor = System.Drawing.Color.White;
-            this.btnXoaPhong.UseVisualStyleBackColor = false;
-            this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
-            // 
-            // btnTimKiemPhong
-            // 
-            this.btnTimKiemPhong.BackColor = System.Drawing.Color.Blue;
-            this.btnTimKiemPhong.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnTimKiemPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiemPhong.BorderRadius = 8;
-            this.btnTimKiemPhong.BorderSize = 0;
-            this.btnTimKiemPhong.FlatAppearance.BorderSize = 0;
-            this.btnTimKiemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTimKiemPhong.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiemPhong.Location = new System.Drawing.Point(1069, 533);
-            this.btnTimKiemPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTimKiemPhong.Name = "btnTimKiemPhong";
-            this.btnTimKiemPhong.Size = new System.Drawing.Size(158, 39);
-            this.btnTimKiemPhong.TabIndex = 17;
-            this.btnTimKiemPhong.Text = "Tìm Kiếm";
-            this.btnTimKiemPhong.TextColor = System.Drawing.Color.White;
-            this.btnTimKiemPhong.UseVisualStyleBackColor = false;
-            // 
-            // btnTaiLenPhong
-            // 
-            this.btnTaiLenPhong.BackColor = System.Drawing.Color.Blue;
-            this.btnTaiLenPhong.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnTaiLenPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTaiLenPhong.BorderRadius = 8;
-            this.btnTaiLenPhong.BorderSize = 0;
-            this.btnTaiLenPhong.FlatAppearance.BorderSize = 0;
-            this.btnTaiLenPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiLenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTaiLenPhong.ForeColor = System.Drawing.Color.White;
-            this.btnTaiLenPhong.Location = new System.Drawing.Point(400, 533);
-            this.btnTaiLenPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTaiLenPhong.Name = "btnTaiLenPhong";
-            this.btnTaiLenPhong.Size = new System.Drawing.Size(158, 39);
-            this.btnTaiLenPhong.TabIndex = 18;
-            this.btnTaiLenPhong.Text = "Tải Lên";
-            this.btnTaiLenPhong.TextColor = System.Drawing.Color.White;
-            this.btnTaiLenPhong.UseVisualStyleBackColor = false;
-            // 
-            // btnLuuTruPhong
-            // 
-            this.btnLuuTruPhong.BackColor = System.Drawing.Color.Blue;
-            this.btnLuuTruPhong.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnLuuTruPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLuuTruPhong.BorderRadius = 8;
-            this.btnLuuTruPhong.BorderSize = 0;
-            this.btnLuuTruPhong.FlatAppearance.BorderSize = 0;
-            this.btnLuuTruPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuuTruPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLuuTruPhong.ForeColor = System.Drawing.Color.White;
-            this.btnLuuTruPhong.Location = new System.Drawing.Point(400, 480);
-            this.btnLuuTruPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLuuTruPhong.Name = "btnLuuTruPhong";
-            this.btnLuuTruPhong.Size = new System.Drawing.Size(158, 39);
-            this.btnLuuTruPhong.TabIndex = 19;
-            this.btnLuuTruPhong.Text = "Lưu Trữ";
-            this.btnLuuTruPhong.TextColor = System.Drawing.Color.White;
-            this.btnLuuTruPhong.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaPhong
-            // 
-            this.btnSuaPhong.BackColor = System.Drawing.Color.Blue;
-            this.btnSuaPhong.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnSuaPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSuaPhong.BorderRadius = 8;
-            this.btnSuaPhong.BorderSize = 0;
-            this.btnSuaPhong.FlatAppearance.BorderSize = 0;
-            this.btnSuaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSuaPhong.ForeColor = System.Drawing.Color.White;
-            this.btnSuaPhong.Location = new System.Drawing.Point(128, 533);
-            this.btnSuaPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSuaPhong.Name = "btnSuaPhong";
-            this.btnSuaPhong.Size = new System.Drawing.Size(158, 39);
-            this.btnSuaPhong.TabIndex = 20;
-            this.btnSuaPhong.Text = "Sửa";
-            this.btnSuaPhong.TextColor = System.Drawing.Color.White;
-            this.btnSuaPhong.UseVisualStyleBackColor = false;
-            this.btnSuaPhong.Click += new System.EventHandler(this.btnSuaPhong_Click);
-            // 
-            // btnThemPhong
-            // 
-            this.btnThemPhong.BackColor = System.Drawing.Color.Blue;
-            this.btnThemPhong.BackgroundColor = System.Drawing.Color.Blue;
-            this.btnThemPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThemPhong.BorderRadius = 8;
-            this.btnThemPhong.BorderSize = 0;
-            this.btnThemPhong.FlatAppearance.BorderSize = 0;
-            this.btnThemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnThemPhong.ForeColor = System.Drawing.Color.White;
-            this.btnThemPhong.Location = new System.Drawing.Point(128, 480);
-            this.btnThemPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThemPhong.Name = "btnThemPhong";
-            this.btnThemPhong.Size = new System.Drawing.Size(158, 39);
-            this.btnThemPhong.TabIndex = 21;
-            this.btnThemPhong.Text = "Thêm";
-            this.btnThemPhong.TextColor = System.Drawing.Color.White;
-            this.btnThemPhong.UseVisualStyleBackColor = false;
-            this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
-            // 
             // tabQLLop
             // 
             this.tabQLLop.Controls.Add(this.lbDienLop);
@@ -553,6 +265,39 @@
             this.txbTimKiemLop.Name = "txbTimKiemLop";
             this.txbTimKiemLop.Size = new System.Drawing.Size(251, 26);
             this.txbTimKiemLop.TabIndex = 12;
+            // 
+            // dtaLop
+            // 
+            this.dtaLop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtaLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtaLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtaLop.Location = new System.Drawing.Point(4, 0);
+            this.dtaLop.Margin = new System.Windows.Forms.Padding(2);
+            this.dtaLop.Name = "dtaLop";
+            this.dtaLop.RowHeadersWidth = 51;
+            this.dtaLop.RowTemplate.Height = 24;
+            this.dtaLop.Size = new System.Drawing.Size(1808, 427);
+            this.dtaLop.TabIndex = 4;
+            // 
+            // tc
+            // 
+            this.tc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tc.Controls.Add(this.tabQLLop);
+            this.tc.Controls.Add(this.tabQLPhong);
+            this.tc.Controls.Add(this.tabQLGV);
+            this.tc.Controls.Add(this.tabThongBao);
+            this.tc.Controls.Add(this.tabThongTin);
+            this.tc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tc.Location = new System.Drawing.Point(1, 1);
+            this.tc.Margin = new System.Windows.Forms.Padding(2);
+            this.tc.Name = "tc";
+            this.tc.SelectedIndex = 0;
+            this.tc.Size = new System.Drawing.Size(1380, 780);
+            this.tc.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tc.TabIndex = 0;
             // 
             // btnKhoLuuTruLop
             // 
@@ -656,6 +401,7 @@
             this.btnLuuTruLop.Text = "Lưu Trữ";
             this.btnLuuTruLop.TextColor = System.Drawing.Color.White;
             this.btnLuuTruLop.UseVisualStyleBackColor = false;
+            this.btnLuuTruLop.Click += new System.EventHandler(this.btnLuuTruLop_Click);
             // 
             // btnSuaLop
             // 
@@ -673,7 +419,7 @@
             this.btnSuaLop.Name = "btnSuaLop";
             this.btnSuaLop.Size = new System.Drawing.Size(158, 39);
             this.btnSuaLop.TabIndex = 10;
-            this.btnSuaLop.Text = "Sửa";
+            this.btnSuaLop.Text = "Cập nhật";
             this.btnSuaLop.TextColor = System.Drawing.Color.White;
             this.btnSuaLop.UseVisualStyleBackColor = false;
             this.btnSuaLop.Click += new System.EventHandler(this.btnSuaLop_Click);
@@ -699,38 +445,295 @@
             this.btnThemLop.UseVisualStyleBackColor = false;
             this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
             // 
-            // dtaLop
+            // btnKhoLuuTruPhong
             // 
-            this.dtaLop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtaLop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtaLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtaLop.Location = new System.Drawing.Point(4, 0);
-            this.dtaLop.Margin = new System.Windows.Forms.Padding(2);
-            this.dtaLop.Name = "dtaLop";
-            this.dtaLop.RowHeadersWidth = 51;
-            this.dtaLop.RowTemplate.Height = 24;
-            this.dtaLop.Size = new System.Drawing.Size(1808, 427);
-            this.dtaLop.TabIndex = 4;
+            this.btnKhoLuuTruPhong.BackColor = System.Drawing.Color.Blue;
+            this.btnKhoLuuTruPhong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnKhoLuuTruPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnKhoLuuTruPhong.BorderRadius = 8;
+            this.btnKhoLuuTruPhong.BorderSize = 0;
+            this.btnKhoLuuTruPhong.FlatAppearance.BorderSize = 0;
+            this.btnKhoLuuTruPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoLuuTruPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnKhoLuuTruPhong.ForeColor = System.Drawing.Color.White;
+            this.btnKhoLuuTruPhong.Location = new System.Drawing.Point(400, 587);
+            this.btnKhoLuuTruPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKhoLuuTruPhong.Name = "btnKhoLuuTruPhong";
+            this.btnKhoLuuTruPhong.Size = new System.Drawing.Size(158, 39);
+            this.btnKhoLuuTruPhong.TabIndex = 15;
+            this.btnKhoLuuTruPhong.Text = "Kho Lưu Trữ";
+            this.btnKhoLuuTruPhong.TextColor = System.Drawing.Color.White;
+            this.btnKhoLuuTruPhong.UseVisualStyleBackColor = false;
+            this.btnKhoLuuTruPhong.Click += new System.EventHandler(this.btnKhoLuuTruPhong_Click);
             // 
-            // tc
+            // btnXoaPhong
             // 
-            this.tc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tc.Controls.Add(this.tabQLLop);
-            this.tc.Controls.Add(this.tabQLPhong);
-            this.tc.Controls.Add(this.tabQLGV);
-            this.tc.Controls.Add(this.tabThongBao);
-            this.tc.Controls.Add(this.tabThongTin);
-            this.tc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.tc.Location = new System.Drawing.Point(1, 1);
-            this.tc.Margin = new System.Windows.Forms.Padding(2);
-            this.tc.Name = "tc";
-            this.tc.SelectedIndex = 0;
-            this.tc.Size = new System.Drawing.Size(1380, 780);
-            this.tc.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tc.TabIndex = 0;
+            this.btnXoaPhong.BackColor = System.Drawing.Color.Blue;
+            this.btnXoaPhong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnXoaPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoaPhong.BorderRadius = 8;
+            this.btnXoaPhong.BorderSize = 0;
+            this.btnXoaPhong.FlatAppearance.BorderSize = 0;
+            this.btnXoaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnXoaPhong.ForeColor = System.Drawing.Color.White;
+            this.btnXoaPhong.Location = new System.Drawing.Point(128, 587);
+            this.btnXoaPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoaPhong.Name = "btnXoaPhong";
+            this.btnXoaPhong.Size = new System.Drawing.Size(158, 39);
+            this.btnXoaPhong.TabIndex = 16;
+            this.btnXoaPhong.Text = "Xóa";
+            this.btnXoaPhong.TextColor = System.Drawing.Color.White;
+            this.btnXoaPhong.UseVisualStyleBackColor = false;
+            this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
+            // 
+            // btnTimKiemPhong
+            // 
+            this.btnTimKiemPhong.BackColor = System.Drawing.Color.Blue;
+            this.btnTimKiemPhong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnTimKiemPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiemPhong.BorderRadius = 8;
+            this.btnTimKiemPhong.BorderSize = 0;
+            this.btnTimKiemPhong.FlatAppearance.BorderSize = 0;
+            this.btnTimKiemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTimKiemPhong.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiemPhong.Location = new System.Drawing.Point(1069, 533);
+            this.btnTimKiemPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimKiemPhong.Name = "btnTimKiemPhong";
+            this.btnTimKiemPhong.Size = new System.Drawing.Size(158, 39);
+            this.btnTimKiemPhong.TabIndex = 17;
+            this.btnTimKiemPhong.Text = "Tìm Kiếm";
+            this.btnTimKiemPhong.TextColor = System.Drawing.Color.White;
+            this.btnTimKiemPhong.UseVisualStyleBackColor = false;
+            // 
+            // btnTaiLenPhong
+            // 
+            this.btnTaiLenPhong.BackColor = System.Drawing.Color.Blue;
+            this.btnTaiLenPhong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnTaiLenPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTaiLenPhong.BorderRadius = 8;
+            this.btnTaiLenPhong.BorderSize = 0;
+            this.btnTaiLenPhong.FlatAppearance.BorderSize = 0;
+            this.btnTaiLenPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiLenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTaiLenPhong.ForeColor = System.Drawing.Color.White;
+            this.btnTaiLenPhong.Location = new System.Drawing.Point(400, 533);
+            this.btnTaiLenPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTaiLenPhong.Name = "btnTaiLenPhong";
+            this.btnTaiLenPhong.Size = new System.Drawing.Size(158, 39);
+            this.btnTaiLenPhong.TabIndex = 18;
+            this.btnTaiLenPhong.Text = "Tải Lên";
+            this.btnTaiLenPhong.TextColor = System.Drawing.Color.White;
+            this.btnTaiLenPhong.UseVisualStyleBackColor = false;
+            // 
+            // btnLuuTruPhong
+            // 
+            this.btnLuuTruPhong.BackColor = System.Drawing.Color.Blue;
+            this.btnLuuTruPhong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnLuuTruPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLuuTruPhong.BorderRadius = 8;
+            this.btnLuuTruPhong.BorderSize = 0;
+            this.btnLuuTruPhong.FlatAppearance.BorderSize = 0;
+            this.btnLuuTruPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuuTruPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLuuTruPhong.ForeColor = System.Drawing.Color.White;
+            this.btnLuuTruPhong.Location = new System.Drawing.Point(400, 480);
+            this.btnLuuTruPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLuuTruPhong.Name = "btnLuuTruPhong";
+            this.btnLuuTruPhong.Size = new System.Drawing.Size(158, 39);
+            this.btnLuuTruPhong.TabIndex = 19;
+            this.btnLuuTruPhong.Text = "Lưu Trữ";
+            this.btnLuuTruPhong.TextColor = System.Drawing.Color.White;
+            this.btnLuuTruPhong.UseVisualStyleBackColor = false;
+            this.btnLuuTruPhong.Click += new System.EventHandler(this.btnLuuTruPhong_Click);
+            // 
+            // btnSuaPhong
+            // 
+            this.btnSuaPhong.BackColor = System.Drawing.Color.Blue;
+            this.btnSuaPhong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnSuaPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSuaPhong.BorderRadius = 8;
+            this.btnSuaPhong.BorderSize = 0;
+            this.btnSuaPhong.FlatAppearance.BorderSize = 0;
+            this.btnSuaPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSuaPhong.ForeColor = System.Drawing.Color.White;
+            this.btnSuaPhong.Location = new System.Drawing.Point(128, 533);
+            this.btnSuaPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSuaPhong.Name = "btnSuaPhong";
+            this.btnSuaPhong.Size = new System.Drawing.Size(158, 39);
+            this.btnSuaPhong.TabIndex = 20;
+            this.btnSuaPhong.Text = "Cập nhật";
+            this.btnSuaPhong.TextColor = System.Drawing.Color.White;
+            this.btnSuaPhong.UseVisualStyleBackColor = false;
+            this.btnSuaPhong.Click += new System.EventHandler(this.btnSuaPhong_Click);
+            // 
+            // btnThemPhong
+            // 
+            this.btnThemPhong.BackColor = System.Drawing.Color.Blue;
+            this.btnThemPhong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnThemPhong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThemPhong.BorderRadius = 8;
+            this.btnThemPhong.BorderSize = 0;
+            this.btnThemPhong.FlatAppearance.BorderSize = 0;
+            this.btnThemPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThemPhong.ForeColor = System.Drawing.Color.White;
+            this.btnThemPhong.Location = new System.Drawing.Point(128, 480);
+            this.btnThemPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThemPhong.Name = "btnThemPhong";
+            this.btnThemPhong.Size = new System.Drawing.Size(158, 39);
+            this.btnThemPhong.TabIndex = 21;
+            this.btnThemPhong.Text = "Thêm";
+            this.btnThemPhong.TextColor = System.Drawing.Color.White;
+            this.btnThemPhong.UseVisualStyleBackColor = false;
+            this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
+            // 
+            // btnKhoLuuTruGV
+            // 
+            this.btnKhoLuuTruGV.BackColor = System.Drawing.Color.Blue;
+            this.btnKhoLuuTruGV.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnKhoLuuTruGV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnKhoLuuTruGV.BorderRadius = 8;
+            this.btnKhoLuuTruGV.BorderSize = 0;
+            this.btnKhoLuuTruGV.FlatAppearance.BorderSize = 0;
+            this.btnKhoLuuTruGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoLuuTruGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnKhoLuuTruGV.ForeColor = System.Drawing.Color.White;
+            this.btnKhoLuuTruGV.Location = new System.Drawing.Point(400, 587);
+            this.btnKhoLuuTruGV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKhoLuuTruGV.Name = "btnKhoLuuTruGV";
+            this.btnKhoLuuTruGV.Size = new System.Drawing.Size(158, 39);
+            this.btnKhoLuuTruGV.TabIndex = 15;
+            this.btnKhoLuuTruGV.Text = "Kho Lưu Trữ";
+            this.btnKhoLuuTruGV.TextColor = System.Drawing.Color.White;
+            this.btnKhoLuuTruGV.UseVisualStyleBackColor = false;
+            this.btnKhoLuuTruGV.Click += new System.EventHandler(this.btnKhoLuuTruGV_Click);
+            // 
+            // btnXoaGV
+            // 
+            this.btnXoaGV.BackColor = System.Drawing.Color.Blue;
+            this.btnXoaGV.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnXoaGV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoaGV.BorderRadius = 8;
+            this.btnXoaGV.BorderSize = 0;
+            this.btnXoaGV.FlatAppearance.BorderSize = 0;
+            this.btnXoaGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnXoaGV.ForeColor = System.Drawing.Color.White;
+            this.btnXoaGV.Location = new System.Drawing.Point(128, 587);
+            this.btnXoaGV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoaGV.Name = "btnXoaGV";
+            this.btnXoaGV.Size = new System.Drawing.Size(158, 39);
+            this.btnXoaGV.TabIndex = 16;
+            this.btnXoaGV.Text = "Xóa";
+            this.btnXoaGV.TextColor = System.Drawing.Color.White;
+            this.btnXoaGV.UseVisualStyleBackColor = false;
+            this.btnXoaGV.Click += new System.EventHandler(this.btnXoaGV_Click);
+            // 
+            // btnTimKiemGV
+            // 
+            this.btnTimKiemGV.BackColor = System.Drawing.Color.Blue;
+            this.btnTimKiemGV.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnTimKiemGV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiemGV.BorderRadius = 8;
+            this.btnTimKiemGV.BorderSize = 0;
+            this.btnTimKiemGV.FlatAppearance.BorderSize = 0;
+            this.btnTimKiemGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTimKiemGV.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiemGV.Location = new System.Drawing.Point(1069, 533);
+            this.btnTimKiemGV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimKiemGV.Name = "btnTimKiemGV";
+            this.btnTimKiemGV.Size = new System.Drawing.Size(158, 39);
+            this.btnTimKiemGV.TabIndex = 17;
+            this.btnTimKiemGV.Text = "Tìm Kiếm";
+            this.btnTimKiemGV.TextColor = System.Drawing.Color.White;
+            this.btnTimKiemGV.UseVisualStyleBackColor = false;
+            // 
+            // btnTaiLenGV
+            // 
+            this.btnTaiLenGV.BackColor = System.Drawing.Color.Blue;
+            this.btnTaiLenGV.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnTaiLenGV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTaiLenGV.BorderRadius = 8;
+            this.btnTaiLenGV.BorderSize = 0;
+            this.btnTaiLenGV.FlatAppearance.BorderSize = 0;
+            this.btnTaiLenGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiLenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTaiLenGV.ForeColor = System.Drawing.Color.White;
+            this.btnTaiLenGV.Location = new System.Drawing.Point(400, 533);
+            this.btnTaiLenGV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTaiLenGV.Name = "btnTaiLenGV";
+            this.btnTaiLenGV.Size = new System.Drawing.Size(158, 39);
+            this.btnTaiLenGV.TabIndex = 18;
+            this.btnTaiLenGV.Text = "Tải Lên";
+            this.btnTaiLenGV.TextColor = System.Drawing.Color.White;
+            this.btnTaiLenGV.UseVisualStyleBackColor = false;
+            // 
+            // btnLuuTruGV
+            // 
+            this.btnLuuTruGV.BackColor = System.Drawing.Color.Blue;
+            this.btnLuuTruGV.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnLuuTruGV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLuuTruGV.BorderRadius = 8;
+            this.btnLuuTruGV.BorderSize = 0;
+            this.btnLuuTruGV.FlatAppearance.BorderSize = 0;
+            this.btnLuuTruGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuuTruGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLuuTruGV.ForeColor = System.Drawing.Color.White;
+            this.btnLuuTruGV.Location = new System.Drawing.Point(400, 480);
+            this.btnLuuTruGV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLuuTruGV.Name = "btnLuuTruGV";
+            this.btnLuuTruGV.Size = new System.Drawing.Size(158, 39);
+            this.btnLuuTruGV.TabIndex = 19;
+            this.btnLuuTruGV.Text = "Lưu Trữ";
+            this.btnLuuTruGV.TextColor = System.Drawing.Color.White;
+            this.btnLuuTruGV.UseVisualStyleBackColor = false;
+            this.btnLuuTruGV.Click += new System.EventHandler(this.btnLuuTruGV_Click);
+            // 
+            // btnSuaGV
+            // 
+            this.btnSuaGV.BackColor = System.Drawing.Color.Blue;
+            this.btnSuaGV.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnSuaGV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSuaGV.BorderRadius = 8;
+            this.btnSuaGV.BorderSize = 0;
+            this.btnSuaGV.FlatAppearance.BorderSize = 0;
+            this.btnSuaGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSuaGV.ForeColor = System.Drawing.Color.White;
+            this.btnSuaGV.Location = new System.Drawing.Point(128, 533);
+            this.btnSuaGV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSuaGV.Name = "btnSuaGV";
+            this.btnSuaGV.Size = new System.Drawing.Size(158, 39);
+            this.btnSuaGV.TabIndex = 20;
+            this.btnSuaGV.Text = "Cập nhật";
+            this.btnSuaGV.TextColor = System.Drawing.Color.White;
+            this.btnSuaGV.UseVisualStyleBackColor = false;
+            this.btnSuaGV.Click += new System.EventHandler(this.btnSuaGV_Click);
+            // 
+            // btnThemGV
+            // 
+            this.btnThemGV.BackColor = System.Drawing.Color.Blue;
+            this.btnThemGV.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnThemGV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThemGV.BorderRadius = 8;
+            this.btnThemGV.BorderSize = 0;
+            this.btnThemGV.FlatAppearance.BorderSize = 0;
+            this.btnThemGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThemGV.ForeColor = System.Drawing.Color.White;
+            this.btnThemGV.Location = new System.Drawing.Point(128, 480);
+            this.btnThemGV.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThemGV.Name = "btnThemGV";
+            this.btnThemGV.Size = new System.Drawing.Size(158, 39);
+            this.btnThemGV.TabIndex = 21;
+            this.btnThemGV.Text = "Thêm";
+            this.btnThemGV.TextColor = System.Drawing.Color.White;
+            this.btnThemGV.UseVisualStyleBackColor = false;
+            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
             // 
             // fQuanLy
             // 

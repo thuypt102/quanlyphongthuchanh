@@ -111,5 +111,13 @@ namespace QLPHONGTHUCHANH.DAL
 
             return result > 0;
         }
+
+        public bool luuTruLop(string id)
+        {
+            string query = string.Format("UPDATE LOP SET luuTru = 1 WHERE id = " + id);
+            int result = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }
