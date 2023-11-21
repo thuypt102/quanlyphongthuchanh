@@ -85,10 +85,11 @@ namespace QLPHONGTHUCHANH
                     int idGiangVien = Convert.ToInt32(giangVienInfo.Rows[0]["id"]);
                     DateTime thoiGianGui = DateTime.Now;
                     string tieuDe = "Báo cáo sự cố";
+                    
 
                     // Thêm thông báo vào bảng dbo.THONGBAO
-                    string query = "INSERT INTO THONGBAO (tieuDe, noiDung, idGiangVien, thoiGianGui) " +
-                                   "VALUES (N'" + tieuDe + "', N'" + noiDung + "', " + idGiangVien + ", '" + thoiGianGui + "')";
+                    string query = "INSERT INTO THONGBAO (tieuDe, noiDung, idGiangVien, thoiGianGui, trangThai) " +
+                                   "VALUES (N'" + tieuDe + "', N'" + noiDung + "', " + idGiangVien + ", '" + thoiGianGui + "', " + 0 + ")";
 
                     // Thực hiện truy vấn để thêm thông báo
                     int result = DataProvider.Khoitao.ExecuteNonQuery(query);

@@ -1,8 +1,11 @@
 ﻿using QLPHONGTHUCHANH.DAL;
 using QLPHONGTHUCHANH.DTO;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 
 namespace QLPHONGTHUCHANH
@@ -16,6 +19,7 @@ namespace QLPHONGTHUCHANH
             XemLop();
             XemPhong();
             XemGV();
+            XemTB();
 
             showLuuTruLop();
             showLuuTruPhong();
@@ -35,6 +39,19 @@ namespace QLPHONGTHUCHANH
         {
             dtaGV.DataSource = GVDALL.Khoitao.hienThiGV();
         }
+        void XemTB()
+        {
+            dtaTB.DataSource = ThongBaoDAL.Khoitao.hienThiThongBao();
+
+            // Điền ComboBox với các giá trị trạng thái
+            /*cbxLoc.Items.Add("Tất cả");
+            cbxLoc.Items.Add("Chưa xử lý");
+            cbxLoc.Items.Add("Đã xử lý");*/
+
+            // Thiết lập chỉ mục mặc định đã chọn
+            cbxLoc.SelectedIndex = 0;
+        }
+
 
         private void btnKhoLuuTruLop_Click(object sender, EventArgs e)
         {
@@ -378,6 +395,57 @@ namespace QLPHONGTHUCHANH
                     MessageBox.Show("Lưu trữ giảng viên không thành công!", "Thông báo");
                 }
             }
+        }
+
+        private void UpdateThongBaoData()
+        {
+            // Lấy trạng thái đã chọn từ ComboBox
+            string selectedStatus = cbxLoc.SelectedItem.ToString();
+
+            // Cập nhật DataGridView dựa trên trạng thái đã chọn
+            if (selectedStatus == "Tất cả")
+            {
+                dtaTB.DataSource = ThongBaoDAL.Khoitao.hienThiThongBao();
+            }
+            else if(selectedStatus == "Đã xử lý")
+            {
+                dtaTB.DataSource = ThongBaoDAL.Khoitao.hienThiThongBao_daxuly();
+            }
+            else
+                dtaTB.DataSource = ThongBaoDAL.Khoitao.hienThiThongBao_chuaxuly();
+
+        }
+            private void cbxLoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Gọi phương thức để cập nhật DataGridView dựa trên trạng thái đã chọn
+            UpdateThongBaoData();
+        }
+
+        private void btnXemChiTiet_Click_1(object sender, EventArgs e)
+        {
+            if (dtaTB.CurrentRow == null)
+            {
+                MessageBox.Show("Không có thông báo nào trong danh sách", "Thông báo");
+                return;
+            }
+
+            int i;
+            i = dtaTB.CurrentRow.Index;
+
+            string id = dtaTB.Rows[i].Cells[0].Value.ToString();
+            string tieude = dtaTB.Rows[i].Cells[1].Value.ToString();
+            string noidung = dtaTB.Rows[i].Cells[2].Value.ToString();
+            string idgv = dtaTB.Rows[i].Cells[3].Value.ToString();
+            string thoigiangui = dtaTB.Rows[i].Cells[4].Value.ToString();
+            //string trangthai = dtaTB.Rows[i].Cells[5].Value.ToString();
+
+            ThongBao a = new ThongBao(id, tieude, noidung, idgv, thoigiangui);
+
+            fThongBao ftb = new fThongBao(a);
+            this.Hide();
+            ftb.ShowDialog();
+            this.Show();
+            XemTB();
         }
     }
 }
