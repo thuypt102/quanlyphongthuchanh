@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using OfficeOpenXml;
 using QLPHONGTHUCHANH.DTO;
 
 namespace QLPHONGTHUCHANH.DAL
@@ -89,6 +92,73 @@ namespace QLPHONGTHUCHANH.DAL
             int result = DataProvider.Khoitao.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public bool kiemtraThongTinPhong(string id)
+        {
+            string query = "SELECT id FROM PHONGMAY WHERE id = '" + id + "'";
+            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
+
+        public void taiDSlenCSDL(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string loaiThucHanh)
+        {
+            string query = "INSERT INTO PHONGMAY(id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh)" +
+                " VALUES ('" + id + "', N'" + tenPhong + "', '" + tenKhuVuc + "', '" + soLuongMay + "', N'" + loaiThucHanh + "')";
+
+            DataProvider.Khoitao.ExecuteQuery(query);
+        }
+        public void taiLenPhong(string filePath)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0]; // Lấy trang tính đầu tiên
+
+                int rowCount = worksheet.Dimension.Rows;
+                int columnCount = worksheet.Dimension.Columns;
+
+                // Kiểm tra xem số cột trong file Excel có khớp với cấu trúc bảng PHONGMAY hay không
+                if (columnCount == 5)
+                {
+                    List<int> duplicateRows = new List<int>(); // Danh sách các dòng bị trùng
+
+                    // Bỏ qua dòng đầu tiên (tiêu đề)
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+                        string id = worksheet.Cells[row, 1].Value?.ToString();
+
+                        // Kiểm tra xem id có bị trùng trong SQL hay không
+                        if (kiemtraThongTinPhong(id))
+                        {
+                            duplicateRows.Add(row);
+                        }
+                        else
+                        {
+                            string tenPhong = worksheet.Cells[row, 2].Value?.ToString();
+                            string tenKhuVuc = worksheet.Cells[row, 3].Value?.ToString();
+                            int soLuongMay = Convert.ToInt32(worksheet.Cells[row, 4].Value);
+                            string loaiThucHanh = worksheet.Cells[row, 5].Value?.ToString();
+
+                            taiDSlenCSDL(id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh);
+                        }
+                    }
+
+                    if (duplicateRows.Count > 0)
+                    {
+                        string message = "Dữ liệu trùng lặp ở các dòng: ";
+                        foreach (int row in duplicateRows)
+                        {
+                            message += row.ToString() + ", ";
+                        }
+                        message = message.TrimEnd(',', ' ');
+
+                        // Hiển thị thông báo MessageBox
+                        MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }

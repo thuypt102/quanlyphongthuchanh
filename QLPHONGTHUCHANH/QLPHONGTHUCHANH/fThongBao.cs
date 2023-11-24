@@ -54,7 +54,7 @@ namespace QLPHONGTHUCHANH
             {
                 MessageBox.Show("Đã xử lý thông báo thành công!", "Thông báo");
                 //btnXuLy.Enabled = false; // Vô hiệu hóa nút khi đã xử lý thành công
-                //this.Close(); // Đóng form hiện tại sau khi xử lý thành công
+                this.Close(); // Đóng form hiện tại sau khi xử lý thành công
             }
             else
             {

@@ -447,5 +447,26 @@ namespace QLPHONGTHUCHANH
             this.Show();
             XemTB();
         }
+
+        private void btnTaiLenPhong_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Thiết lập các tùy chọn cho hộp thoại mở file
+            openFileDialog.Filter = "Excel Files|*.xlsx;*.xls";
+            openFileDialog.Title = "Chọn file Excel";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                // Gọi phương thức taiLenPhong từ PhongDAL để cập nhật dữ liệu vào CSDL
+                PhongDAL.Khoitao.taiLenPhong(filePath);
+
+                MessageBox.Show("Tải lên và cập nhật dữ liệu thành công!");
+
+                XemPhong();
+            }
+        }
     }
 }

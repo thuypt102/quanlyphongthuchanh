@@ -32,6 +32,11 @@
             this.btnXemChiTiet = new QLPHONGTHUCHANH.VBButton();
             this.grbTB = new System.Windows.Forms.GroupBox();
             this.dtaTB = new System.Windows.Forms.DataGridView();
+            this.idTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tieude = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noidungTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timesend = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxLoc = new System.Windows.Forms.ComboBox();
             this.lbLoc = new System.Windows.Forms.Label();
             this.tabQLGV = new System.Windows.Forms.TabPage();
@@ -88,11 +93,6 @@
             this.soLuongSinhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loaiThucHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tc = new System.Windows.Forms.TabControl();
-            this.idTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tieude = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noidungTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timesend = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabThongBao.SuspendLayout();
             this.grbTB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtaTB)).BeginInit();
@@ -175,13 +175,43 @@
             this.dtaTB.Size = new System.Drawing.Size(1171, 378);
             this.dtaTB.TabIndex = 23;
             // 
+            // idTB
+            // 
+            this.idTB.DataPropertyName = "id";
+            this.idTB.HeaderText = "Mã thông báo";
+            this.idTB.Name = "idTB";
+            // 
+            // tieude
+            // 
+            this.tieude.DataPropertyName = "tieuDe";
+            this.tieude.HeaderText = "Tiêu đề";
+            this.tieude.Name = "tieude";
+            // 
+            // noidungTB
+            // 
+            this.noidungTB.DataPropertyName = "noiDung";
+            this.noidungTB.HeaderText = "Nội dung";
+            this.noidungTB.Name = "noidungTB";
+            // 
+            // idGV
+            // 
+            this.idGV.DataPropertyName = "idGiangVien";
+            this.idGV.HeaderText = "Mã giảng viên";
+            this.idGV.Name = "idGV";
+            // 
+            // timesend
+            // 
+            this.timesend.DataPropertyName = "thoiGianGui";
+            this.timesend.HeaderText = "Thời gian gửi";
+            this.timesend.Name = "timesend";
+            // 
             // cbxLoc
             // 
             this.cbxLoc.FormattingEnabled = true;
             this.cbxLoc.Items.AddRange(new object[] {
+            "Chưa xử lý",
             "Tất cả",
-            "Đã xử lý",
-            "Chưa xử lý"});
+            "Đã xử lý"});
             this.cbxLoc.Location = new System.Drawing.Point(547, 24);
             this.cbxLoc.Name = "cbxLoc";
             this.cbxLoc.Size = new System.Drawing.Size(276, 29);
@@ -643,6 +673,7 @@
             this.btnTaiLenPhong.Text = "Tải Lên";
             this.btnTaiLenPhong.TextColor = System.Drawing.Color.White;
             this.btnTaiLenPhong.UseVisualStyleBackColor = false;
+            this.btnTaiLenPhong.Click += new System.EventHandler(this.btnTaiLenPhong_Click);
             // 
             // btnLuuTruPhong
             // 
@@ -981,36 +1012,6 @@
             this.tc.Size = new System.Drawing.Size(1380, 780);
             this.tc.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tc.TabIndex = 0;
-            // 
-            // idTB
-            // 
-            this.idTB.DataPropertyName = "id";
-            this.idTB.HeaderText = "Mã thông báo";
-            this.idTB.Name = "idTB";
-            // 
-            // tieude
-            // 
-            this.tieude.DataPropertyName = "tieuDe";
-            this.tieude.HeaderText = "Tiêu đề";
-            this.tieude.Name = "tieude";
-            // 
-            // noidungTB
-            // 
-            this.noidungTB.DataPropertyName = "noiDung";
-            this.noidungTB.HeaderText = "Nội dung";
-            this.noidungTB.Name = "noidungTB";
-            // 
-            // idGV
-            // 
-            this.idGV.DataPropertyName = "idGiangVien";
-            this.idGV.HeaderText = "Mã giảng viên";
-            this.idGV.Name = "idGV";
-            // 
-            // timesend
-            // 
-            this.timesend.DataPropertyName = "thoiGianGui";
-            this.timesend.HeaderText = "Thời gian gửi";
-            this.timesend.Name = "timesend";
             // 
             // fQuanLy
             // 
