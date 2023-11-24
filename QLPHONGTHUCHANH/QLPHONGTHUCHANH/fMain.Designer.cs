@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.mnsQuanLy = new System.Windows.Forms.MenuStrip();
             this.mniQuanLy = new System.Windows.Forms.ToolStripMenuItem();
-            this.mniThongTin = new System.Windows.Forms.ToolStripMenuItem();
             this.mniDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbNamHoc = new System.Windows.Forms.ComboBox();
@@ -54,6 +53,7 @@
             this.thu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.lbTieuDe = new System.Windows.Forms.Label();
+            this.mniThongTin = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsQuanLy.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,14 +82,6 @@
             this.mniQuanLy.Size = new System.Drawing.Size(76, 25);
             this.mniQuanLy.Text = "Quản lý";
             this.mniQuanLy.Click += new System.EventHandler(this.mniQuanLy_Click);
-            // 
-            // mniThongTin
-            // 
-            this.mniThongTin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mniThongTin.Name = "mniThongTin";
-            this.mniThongTin.Size = new System.Drawing.Size(146, 25);
-            this.mniThongTin.Text = "Thông tin cá nhân";
-            this.mniThongTin.Click += new System.EventHandler(this.mniThongTin_Click);
             // 
             // mniDangXuat
             // 
@@ -341,6 +333,14 @@
             this.lbTieuDe.Text = "HỆ THỐNG QUẢN LÝ PHÒNG \r\nTHỰC HÀNH TIN HỌC CỦA\r\nTRƯỜNG ĐẠI HỌC QUY NHƠN";
             this.lbTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // mniThongTin
+            // 
+            this.mniThongTin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mniThongTin.Name = "mniThongTin";
+            this.mniThongTin.Size = new System.Drawing.Size(146, 25);
+            this.mniThongTin.Text = "Thông tin cá nhân";
+            this.mniThongTin.Click += new System.EventHandler(this.mniThongTin_Click);
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,7 +371,6 @@
 
         private System.Windows.Forms.MenuStrip mnsQuanLy;
         private System.Windows.Forms.ToolStripMenuItem mniQuanLy;
-        private System.Windows.Forms.ToolStripMenuItem mniThongTin;
         private System.Windows.Forms.ToolStripMenuItem mniDangXuat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -394,5 +393,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kiHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn thu;
         private System.Windows.Forms.ComboBox cmbNamHoc;
+        private System.Windows.Forms.ToolStripMenuItem mniThongTin;
     }
 }
