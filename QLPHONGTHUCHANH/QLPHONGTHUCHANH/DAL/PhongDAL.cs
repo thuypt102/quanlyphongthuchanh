@@ -40,22 +40,35 @@ namespace QLPHONGTHUCHANH.DAL
         {
             return DataProvider.Khoitao.ExecuteQuery("Select id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh from PHONGMAY where luuTru = 0");
         }
-
+        public DataTable loadTheoMa(string id)
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh from PHONGMAY where id = '" + id + "'");
+        }
+        public DataTable loadTheoLoai(string loaiThucHanh)
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh from PHONGMAY where loaiThucHanh = N'" + loaiThucHanh + "'");
+        }
+        public DataTable loadTheoMaVaLoai(string idphong, string loaiPhong)
+        {
+            string query = "Select id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh from PHONGMAY  where id = '" + idphong + "'AND loaiThucHanh = N'" + loaiPhong + "'";
+            return DataProvider.Khoitao.ExecuteQuery(query);
+        }
         public bool themPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string loaiThucHanh)
         {
             bool luuTru = false;
 
-            string query = "INSERT INTO PHONGMAY VALUES ('" + id + "', '" + tenPhong + 
+            string query = "INSERT INTO PHONGMAY VALUES ('" + id + "', '" + tenPhong +
                 "', '" + tenKhuVuc + "', '" + soLuongMay + "', N'" + loaiThucHanh + "', '" + luuTru + "')";
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
-                return kq != null;
+            return kq != null;
         }
 
-        public bool capNhatPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string  loaiThucHanh)
+
+        public bool capNhatPhong(string id, string tenPhong, string tenKhuVuc, int soLuongMay, string loaiThucHanh)
         {
-            string query = "UPDATE PHONGMAY SET tenPhong = N'" + tenPhong + "', tenKhuVuc = '" + tenKhuVuc +
+            string query = "UPDATE PHONGMAY SET tenPhong = N'" + tenPhong + "', tenKhuVuc = N'" + tenKhuVuc +
                 "', soLuongMay = '" + soLuongMay + "', loaiThucHanh = N'"
  + loaiThucHanh + "' WHERE id = '" + id + "'";
 
@@ -72,6 +85,7 @@ namespace QLPHONGTHUCHANH.DAL
 
             return numberOfRowsDeleted > 0;
         }
+
 
 
         public DataTable getDSPhong()

@@ -31,7 +31,7 @@ namespace QLPHONGTHUCHANH
             
         }
 
-        private bool IsValidInput()
+        /*private bool IsValidInput()
         {
             // Kiểm tra giá trị trong TextBox
             if (string.IsNullOrWhiteSpace(txbIDTaiKhoan.Text))
@@ -50,40 +50,55 @@ namespace QLPHONGTHUCHANH
 
             // Giá trị nhập vào hợp lệ
             return true;
-        }
+        }*/
 
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (IsValidInput())
+            string maGV = txbMaGV.Text;
+            string tenGV = txbTenGV.Text;
+            string Khoa = txbKhoa.Text;
+            string SDT = txbSDT.Text;
+            string Email = txbEmail.Text;
+
+            int IDTaiKhoan = 0; // Khởi tạo giá trị mặc định là 0
+
+            if (!string.IsNullOrWhiteSpace(txbIDTaiKhoan.Text))
             {
-
-                string magv = txbMaGV.Text;
-                string tengv = txbTenGV.Text;
-                string tenKhoa = txbKhoa.Text;
-                string sdt = txbSDT.Text;
-                
-                int IDTaiKhoan = int.Parse(txbIDTaiKhoan.Text);
-
-                if (!TaiKhoanDAL.Khoitao.kiemTraID(IDTaiKhoan))
+                if (int.TryParse(txbIDTaiKhoan.Text, out int result))
                 {
-                    MessageBox.Show("Mã tài khoản giảng viên không tồn tại. Vui lòng nhập mã khác.");
-
-                }
-
-                else
-                {
-
-                    if (GVDALL.Khoitao.capNhatGV(magv, tengv, tenKhoa, sdt, IDTaiKhoan))
+                    IDTaiKhoan = result; // Gán giá trị nhập vào cho biến idTaiKhoan
+                    if (!TaiKhoanDAL.Khoitao.kiemTraID(IDTaiKhoan))
                     {
-                        MessageBox.Show("cập nhật thành công!", "Thông báo");
+                        MessageBox.Show("Mã tài khoản giảng viên không tồn tại. Vui lòng nhập mã khác.");
                     }
                     else
-                        MessageBox.Show("cập nhật không thành công!", "Thông báo");
+                    {
+                        if (GVDALL.Khoitao.capNhatGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
+                        {
+                            MessageBox.Show("cập nhật thành công!", "Thông báo");
+                        }
+                        else
+                            MessageBox.Show("cập nhật không thành công!", "Thông báo");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Giá trị nhập vào không hợp lệ.", "Lỗi");
                 }
             }
+            else
+            {
+                if (GVDALL.Khoitao.capNhatGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
+                {
+                    MessageBox.Show("cập nhật thành công!", "Thông báo");
+                }
+                else
+                    MessageBox.Show("cập nhật không thành công!", "Thông báo");
+            }
+
         }
 
-        
+
     }
 }

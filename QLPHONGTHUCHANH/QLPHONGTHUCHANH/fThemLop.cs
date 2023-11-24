@@ -31,11 +31,11 @@ namespace QLPHONGTHUCHANH
 
             // Kiểm tra điều kiện khác (tuỳ theo yêu cầu của bạn)
             // Ví dụ: Kiểm tra giá trị có phải là số hay không
-            if (!int.TryParse(txbIDGV.Text, out int IDGV))
+            /*if (!int.TryParse(txbIDGV.Text, out int IDGV))
             {
                 MessageBox.Show("Giá trị nhập vào không hợp lệ.", "Lỗi");
                 return false;
-            }
+            }*/
             //ca lý thuyết
             // Kiểm tra giá trị trong TextBox
             if (string.IsNullOrWhiteSpace(txbCaLT.Text))

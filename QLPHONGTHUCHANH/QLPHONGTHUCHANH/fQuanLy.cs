@@ -76,11 +76,25 @@ namespace QLPHONGTHUCHANH
 
         private void btnTimKiemLop_Click(object sender, EventArgs e)
         {
-
-            XemLop();
+            string malop = txbTimKiemLop.Text;
+            if (malop == "")
+            {
+                loadLich();
+            }
+            else
+            {
+                loadDSLop(malop);
+            }
         }
 
-        
+        void loadLich()
+        {
+            dtaLop.DataSource = LopDAL.Khoitao.hienThiLop();
+        }
+        void loadDSLop(string lop)
+        {
+            dtaLop.DataSource = LopDAL.Khoitao.ShowLopTheoMa(lop);
+        }
         private void btnSuaLop_Click(object sender, EventArgs e)
         {
             if (dtaLop.CurrentRow == null)
@@ -111,12 +125,13 @@ namespace QLPHONGTHUCHANH
 
 
 
-        
+
+
 
         private void btnXoaLop_Click(object sender, EventArgs e)
         {
-            
-                DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
 
             // Kiểm tra kết quả từ người dùng
             if (result == DialogResult.Yes)
@@ -125,6 +140,7 @@ namespace QLPHONGTHUCHANH
                 i = dtaLop.CurrentRow.Index;
 
                 string maLop = dtaLop.Rows[i].Cells[0].Value.ToString();
+                string maGV = dtaLop.Rows[i].Cells[3].Value.ToString();
 
                 if (LopDAL.Khoitao.xoaLop(maLop))
                 {
@@ -133,10 +149,8 @@ namespace QLPHONGTHUCHANH
                 else
                 {
                     MessageBox.Show("xóa không thành công!", "Thông báo");
-
+                    
                 }
-
-
             }
             else if (result == DialogResult.No)
             {
@@ -147,6 +161,7 @@ namespace QLPHONGTHUCHANH
             XemLop();
 
         }
+
 
         private void btnThemGV_Click(object sender, EventArgs e)
         {
@@ -181,7 +196,7 @@ namespace QLPHONGTHUCHANH
             string tenPhong = dtaPhong.Rows[i].Cells[1].Value.ToString();
             string tenKhuVuc = dtaPhong.Rows[i].Cells[2].Value.ToString();
             int soLuongMay = int.Parse(dtaPhong.Rows[i].Cells[3].Value.ToString());
-            string  loaiThucHanh = dtaPhong.Rows[i].Cells[4].Value.ToString();
+            string loaiThucHanh = dtaPhong.Rows[i].Cells[4].Value.ToString();
             //bool luuTru = bool.Parse(dtaPhong.Rows[i].Cells[5].Value.ToString());
 
             Phong Phong = new Phong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh/*, luuTru*/);
@@ -209,11 +224,25 @@ namespace QLPHONGTHUCHANH
             string Khoa = dtaGV.Rows[i].Cells[2].Value.ToString();
             string sdt = dtaGV.Rows[i].Cells[3].Value.ToString();
             string email = dtaGV.Rows[i].Cells[4].Value.ToString();
-            //string luuTru = dtaGV.Rows[i].Cells[5].Value.ToString();
-            int idtaikhoan = int.Parse(dtaGV.Rows[i].Cells[5].Value.ToString());
+            int? idtaikhoan;
+            if (dtaGV.Rows[i].Cells[5].Value == null)
+            {
+                idtaikhoan = null;
+            }
+            else
+            {
+                string cellValue = dtaGV.Rows[i].Cells[5].Value.ToString();
+                if (int.TryParse(cellValue, out int parsedValue))
+                {
+                    idtaikhoan = parsedValue;
+                }
+                else
+                {
+                    idtaikhoan = null; // Gán null nếu không thể chuyển đổi thành công
+                }
+            }
 
-
-            GV a = new GV(maGV, tenGV, Khoa, sdt,email, idtaikhoan/*, false*/);
+            GV a = new GV(maGV, tenGV, Khoa, sdt, email, idtaikhoan);
 
             fCapNhatGV f = new fCapNhatGV(a);
             this.Hide();
@@ -222,7 +251,7 @@ namespace QLPHONGTHUCHANH
             XemGV();
         }
 
-       
+
 
         private void btnXoaPhong_Click(object sender, EventArgs e)
         {
@@ -303,6 +332,7 @@ namespace QLPHONGTHUCHANH
             this.Hide();
             f.ShowDialog();
             this.Show();
+            loadDSAllGV();
         }
 
         public void showLuuTruLop()
@@ -397,7 +427,75 @@ namespace QLPHONGTHUCHANH
             }
         }
 
-        private void UpdateThongBaoData()
+        private void txbTimKiemLop_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnTimKiemGV_Click(object sender, EventArgs e)
+        {
+            string magv = txbTimKiemGV.Text;
+            if (magv == "")
+            {
+                loadDSAllGV();
+            }
+            else
+            {
+                loadDSGV(magv);
+            }
+        }
+        void loadDSAllGV()
+        {
+            dtaGV.DataSource = GVDALL.Khoitao.hienThiGV();
+        }
+        void loadDSGV(string magv)
+        {
+            dtaGV.DataSource = GVDALL.Khoitao.ShowGVTheoMa(magv);
+        }
+
+        private void btnTimKiemPhong_Click(object sender, EventArgs e)
+        {
+            string loaiphong = cbLoaiPhong.Text;
+            string maphong = txbTimKiemPhong.Text;
+            if (maphong == "" && loaiphong == "")// hiển thị tất cả
+            {
+                loadAllPhong();
+            }
+            if (maphong != "" && loaiphong == "")// tìm kiếm theo mã phòng
+            {
+                loadTheoMa(maphong);
+            }
+            if (maphong == "" && loaiphong != "")//tìm kiếm theo loại phòng
+            {
+                loadTheoLoai(loaiphong);
+            }
+            if (maphong != "" && loaiphong != "")//tìm kiếm theo loại phòng
+            {
+                loadTheoMaVaLoai(maphong, loaiphong);
+            }
+        }
+
+        void loadAllPhong()
+        {
+            dtaPhong.DataSource = PhongDAL.Khoitao.hienThiPhong();
+        }
+
+        void loadTheoMa(string maphong)
+        {
+            dtaPhong.DataSource = PhongDAL.Khoitao.loadTheoMa(maphong);
+        }
+        void loadTheoLoai(string loai)
+        {
+            dtaPhong.DataSource = PhongDAL.Khoitao.loadTheoLoai(loai);
+        }
+        void loadTheoMaVaLoai(string lop, string loai)
+        {
+            dtaPhong.DataSource = PhongDAL.Khoitao.loadTheoMaVaLoai(lop, loai);
+        }
+    
+
+    private void UpdateThongBaoData()
         {
             // Lấy trạng thái đã chọn từ ComboBox
             string selectedStatus = cbxLoc.SelectedItem.ToString();

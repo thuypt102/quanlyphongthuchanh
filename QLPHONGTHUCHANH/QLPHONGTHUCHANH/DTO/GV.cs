@@ -16,10 +16,10 @@ namespace QLPHONGTHUCHANH.DTO
         public string Sdt { get; set; }
         public string email { get; set; }
         public bool? LuuTru { get; set; }
-        public int IdTaiKhoan { get; set; }
+        public int? IdTaiKhoan { get; set; }
 
         // Constructor
-        public GV(string id, string tenGiangVien, string khoa, string sdt, string Email, int idTaiKhoan/*, bool? luuTru*/)
+        public GV(string id, string tenGiangVien, string khoa, string sdt, string Email, int? idTaiKhoan/*, bool? luuTru*/)
         {
             Id = id;
             TenGiangVien = tenGiangVien;

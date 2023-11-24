@@ -40,28 +40,30 @@ namespace QLPHONGTHUCHANH.DAL
         {
             return DataProvider.Khoitao.ExecuteQuery("Select id, tenGiangVien, khoa, sdt, email, idTaiKhoan from GIANGVIEN where luuTru = 0");
         }
-        
 
-
-        public bool themGV(string id, string tenGV, string tenKhoa ,string sdt,string email,int idTaiKhoan)
+        public DataTable ShowGVTheoMa(string idGV)
         {
-            
+            string query = "Select id, tenGiangVien, khoa, sdt, email, idTaiKhoan  from GIANGVIEN where id = '" + idGV + "' ";
+            return DataProvider.Khoitao.ExecuteQuery(query);
+        }
 
+        public bool themGV(string id, string tenGV, string tenKhoa, string sdt, string email, int idTaiKhoan)
+        {
             bool luuTru = false;
             string query = "";
-            if (idTaiKhoan != -1)
+            if (idTaiKhoan != 0)
             {
-                 query = "INSERT INTO GIANGVIEN values ('"+ id +"', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '" + email + "', '"
-                +   luuTru + "', '" + idTaiKhoan + "')";
+                query = "INSERT INTO GIANGVIEN values ('" + id + "', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '" + email + "', '"
+               + luuTru + "', '" + idTaiKhoan + "')";
             }
             else
             {
-                 query = "INSERT INTO GIANGVIEN values ('" + id + "', '" + tenGV + "', '" + tenKhoa + "', '" + sdt + "', '" + email + "', '"
-                + luuTru + "')";
+                query = "INSERT INTO GIANGVIEN VALUES ('" + id + "', N'" + tenGV + "', N'" +
+                    tenKhoa + "', '" + sdt + "', '" + email + "', '" + luuTru + "', NULL)";
             }
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
-            return kq!=null;
+            return kq != null;
         }
 
         public DataTable getDSgv()
@@ -69,12 +71,24 @@ namespace QLPHONGTHUCHANH.DAL
             return DataProvider.Khoitao.ExecuteQuery("Select id, tenGiangVien, khoa, sdt, email, idTaiKhoan from GIANGVIEN where luuTru = 1");
         }
 
-        public bool capNhatGV(string id, string tenGV, string tenKhoa, string sdt, int idTaiKhoan)
+        public bool capNhatGV(string id, string tenGV, string tenKhoa, string sdt, string email, int idTaiKhoan)
         {
 
-            string query = "UPDATE GIANGVIEN SET tenGiangVien = '" + tenGV + "', khoa = '" + tenKhoa +
-       "', sdt = '" + sdt + "', idTaiKhoan = '"+ idTaiKhoan +  "' WHERE id = " + id;
-
+            string query = "";
+            if (idTaiKhoan != 0)
+            {
+                query = "UPDATE GIANGVIEN SET tenGiangVien = N'" + tenGV +
+                    "', khoa = N'" + tenKhoa + "', sdt = '" + sdt +
+                    "', email = '" + email + "', idTaiKhoan = '" +
+                    idTaiKhoan + "' WHERE id = " + id;
+            }
+            else
+            {
+                query = "UPDATE GIANGVIEN SET tenGiangVien = N'" + tenGV +
+                    "', khoa = N'" + tenKhoa + "', sdt = '" + sdt +
+                    "', email = '" + email +
+                    "', idTaiKhoan = NULL WHERE id = '" + id + "'";
+            }
 
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
@@ -91,7 +105,7 @@ namespace QLPHONGTHUCHANH.DAL
 
                 return numberOfRowsDeleted > 0;
             }
-            
+
             catch (Exception ex)
             {
                 // Xử lý các ngoại lệ khác (nếu có)
@@ -99,7 +113,6 @@ namespace QLPHONGTHUCHANH.DAL
             }
 
         }
-
         public bool KTLienKet(string id)
         {
 
@@ -115,15 +128,15 @@ namespace QLPHONGTHUCHANH.DAL
             {
                 if (ex.Number == 547)
                 {
-                    return true;   
+                    return true;
                 }
                 else
                 {
                     return false;
                 }
             }
-
         }
+        
 
         public bool KTtenGV(string id)
         {
