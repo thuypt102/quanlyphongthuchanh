@@ -27,6 +27,7 @@ namespace QLPHONGTHUCHANH
             // Thực hiện truy vấn cơ sở dữ liệu để lấy thông tin giảng viên dựa trên thông tin đăng nhập
             TaiKhoanDAL taiKhoanDAL = TaiKhoanDAL.Khoitao;
             DataTable giangVienInfo = taiKhoanDAL.getGiangVienInfo(loggedInUsername, loggedInPassword);
+            
             if (giangVienInfo.Rows.Count > 0)
             {
                 // Hiển thị thông tin giảng viên lên các TextBox trên tabPThongTin

@@ -79,6 +79,7 @@ namespace QLPHONGTHUCHANH
         {
             dtgLich.DataSource = LichDAL.Khoitao.getLichPhong(p, nam);
         }
+
         void loadNamHoc()
         {
             List<Lich> nam = LichDAL.Khoitao.loadNamHoc();
