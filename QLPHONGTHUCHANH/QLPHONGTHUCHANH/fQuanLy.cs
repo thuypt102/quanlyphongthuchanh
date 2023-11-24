@@ -463,7 +463,7 @@ namespace QLPHONGTHUCHANH
                 // Gọi phương thức taiLenPhong từ PhongDAL để cập nhật dữ liệu vào CSDL
                 PhongDAL.Khoitao.taiLenPhong(filePath);
 
-                MessageBox.Show("Tải lên và cập nhật dữ liệu thành công!");
+                MessageBox.Show("Tải lên danh sách phòng thành công! \nLưu ý: Các phòng trùng ID sẽ bị bỏ qua.", "Thông báo");
 
                 XemPhong();
             }
