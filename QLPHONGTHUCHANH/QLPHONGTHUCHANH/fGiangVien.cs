@@ -87,11 +87,13 @@ namespace QLPHONGTHUCHANH
 
                     DateTime thoiGianGui = DateTime.Now;
                     string tieuDe = "Báo cáo sự cố";
-                    
+                    // định dạng lại kiểu datetime 
+                    string formattedThoiGianGui = thoiGianGui.ToString("yyyy-MM-dd HH:mm:ss");
 
+                    // sửa '" + idGiangVien + "', '" + formattedThoiGianGui +
                     // Thêm thông báo vào bảng dbo.THONGBAO
                     string query = "INSERT INTO THONGBAO (tieuDe, noiDung, idGiangVien, thoiGianGui, trangThai) " +
-                                   "VALUES (N'" + tieuDe + "', N'" + noiDung + "', " + idGiangVien + ", '" + thoiGianGui + "', " + 0 + ")";
+                                   "VALUES (N'" + tieuDe + "', N'" + noiDung + "', '" + idGiangVien + "', '" + formattedThoiGianGui + "', " + 0 + ")";
 
                     // Thực hiện truy vấn để thêm thông báo
                     int result = DataProvider.Khoitao.ExecuteNonQuery(query);

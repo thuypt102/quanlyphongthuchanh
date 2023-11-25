@@ -125,7 +125,7 @@ namespace QLPHONGTHUCHANH.DAL
         }
         public bool khoiPhucLop(string id)
         {
-            string query = string.Format("UPDATE LOP SET luuTru = 0 WHERE id = " + id);
+            string query = string.Format("UPDATE LOP SET luuTru = 0 WHERE id = '" + id + "'");
             int result = DataProvider.Khoitao.ExecuteNonQuery(query);
 
             return result > 0;
@@ -133,7 +133,7 @@ namespace QLPHONGTHUCHANH.DAL
 
         public bool luuTruLop(string id)
         {
-            string query = string.Format("UPDATE LOP SET luuTru = 1 WHERE id = " + id);
+            string query = string.Format("UPDATE LOP SET luuTru = 1 WHERE id =  '" + id + "'");
             int result = DataProvider.Khoitao.ExecuteNonQuery(query);
 
             return result > 0;
