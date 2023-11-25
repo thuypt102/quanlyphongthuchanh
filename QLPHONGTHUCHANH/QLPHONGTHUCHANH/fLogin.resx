@@ -2294,11 +2294,14 @@ TRƯỜNG ĐẠI HỌC QUY NHƠN</value>
   <data name="txbMatKhau.Location" type="System.Drawing.Point, System.Drawing">
     <value>416, 200</value>
   </data>
+  <data name="txbMatKhau.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
   <data name="txbMatKhau.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 20</value>
   </data>
   <data name="txbMatKhau.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txbMatKhau.Name" xml:space="preserve">
     <value>txbMatKhau</value>

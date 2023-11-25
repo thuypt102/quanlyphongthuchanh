@@ -565,5 +565,51 @@ namespace QLPHONGTHUCHANH
                 XemPhong();
             }
         }
+
+        private void btnTaiLenGV_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Thiết lập các tùy chọn cho hộp thoại mở file
+            openFileDialog.Filter = "Excel Files|*.xlsx;*.xls";
+            openFileDialog.Title = "Chọn file Excel";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                // Gọi phương thức taiLenPhong từ PhongDAL để cập nhật dữ liệu vào CSDL
+                GVDALL.Khoitao.taiLenGV(filePath);
+
+                MessageBox.Show("Tải lên danh sách giảng viên thành công! \nLưu ý: Các ID trùng sẽ bị bỏ qua.", "Thông báo");
+
+                XemGV();
+            }
+        }
+
+        private void btnTaiLenLop_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vui lòng đảm bảo đã thêm đầy đủ thông tin giảng viên để tránh xảy ra lỗi.", "Thông báo");
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Thiết lập các tùy chọn cho hộp thoại mở file
+            openFileDialog.Filter = "Excel Files|*.xlsx;*.xls";
+            openFileDialog.Title = "Chọn file Excel";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                // Gọi phương thức taiLenPhong từ PhongDAL để cập nhật dữ liệu vào CSDL
+                LopDAL.Khoitao.taiLenLop(filePath);
+
+                MessageBox.Show("Tải lên danh sách lớp thành công! \nLưu ý: Các ID trùng sẽ bị bỏ qua.", "Thông báo");
+
+                MessageBox.Show("Các lớp có thông tin không hợp lệ đã bị bỏ qua. \nVui lòng chỉnh sửa và thêm lại nếu cần thiết.", "Thông báo");
+
+                XemLop();
+            }
+        }
     }
 }

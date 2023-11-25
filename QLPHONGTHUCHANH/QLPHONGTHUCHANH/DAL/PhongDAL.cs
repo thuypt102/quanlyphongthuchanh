@@ -142,52 +142,53 @@ namespace QLPHONGTHUCHANH.DAL
 
             using (var package = new ExcelPackage(new FileInfo(filePath)))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[0]; // Lấy trang tính đầu tiên
+                List<string> duplicateIds = new List<string>(); // Danh sách các ID bị trùng
+                List<string> invalidIds = new List<string>(); // Danh sách các ID không hợp lệ
 
-                int rowCount = worksheet.Dimension.Rows;
-                int columnCount = worksheet.Dimension.Columns;
-
-                // Kiểm tra xem số cột trong file Excel có khớp với cấu trúc bảng PHONGMAY hay không
-                if (columnCount == 5)
+                foreach (ExcelWorksheet worksheet in package.Workbook.Worksheets)
                 {
-                    List<string> duplicateIds = new List<string>(); // Danh sách các ID bị trùng
-                    List<string> invalidIds = new List<string>(); // Danh sách các ID không hợp lệ
+                    int rowCount = worksheet.Dimension.Rows;
+                    int columnCount = worksheet.Dimension.Columns;
 
-                    // Bỏ qua dòng đầu tiên (tiêu đề)
-                    for (int row = 2; row <= rowCount; row++)
+                    // Kiểm tra xem số cột trong sheet có khớp với cấu trúc bảng PHONGMAY hay không
+                    if (columnCount == 5)
                     {
-                        string id = worksheet.Cells[row, 1].Value?.ToString();
-                        string loaiThucHanh = worksheet.Cells[row, 5].Value?.ToString();
-
-                        if (kiemtraThongTinPhong(id))
+                        // Bỏ qua dòng đầu tiên (tiêu đề)
+                        for (int row = 2; row <= rowCount; row++)
                         {
-                            duplicateIds.Add(id);
+                            string id = worksheet.Cells[row, 1].Value?.ToString();
+                            string loaiThucHanh = worksheet.Cells[row, 5].Value?.ToString();
+
+                            if (kiemtraThongTinPhong(id))
+                            {
+                                duplicateIds.Add(id);
+                            }
+                            else
+                            {
+                                string tenPhong = worksheet.Cells[row, 2].Value?.ToString();
+                                string tenKhuVuc = worksheet.Cells[row, 3].Value?.ToString();
+                                int soLuongMay = Convert.ToInt32(worksheet.Cells[row, 4].Value);
+
+                                // Kiểm tra giá trị của loaiThucHanh và gán giá trị mặc định nếu không hợp lệ
+                                loaiThucHanh = KiemTraLoaiPhong(loaiThucHanh, invalidIds, id);
+
+                                taiDSlenCSDL(id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh);
+                            }
                         }
-                        else
-                        {
-                            string tenPhong = worksheet.Cells[row, 2].Value?.ToString();
-                            string tenKhuVuc = worksheet.Cells[row, 3].Value?.ToString();
-                            int soLuongMay = Convert.ToInt32(worksheet.Cells[row, 4].Value);
-
-                            // Kiểm tra giá trị của loaiThucHanh và gán giá trị mặc định nếu không hợp lệ
-                            loaiThucHanh = KiemTraLoaiPhong(loaiThucHanh, invalidIds, id);
-
-                            taiDSlenCSDL(id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh);
-                        }
                     }
+                }
 
-                    if (duplicateIds.Count > 0)
-                    {
-                        string duplicateMessage = "Các ID bị trùng: " + string.Join(", ", duplicateIds);
-                        MessageBox.Show(duplicateMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                if (duplicateIds.Count > 0)
+                {
+                    string duplicateMessage = "Các ID bị trùng: " + string.Join(", ", duplicateIds);
+                    MessageBox.Show(duplicateMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-                    if (invalidIds.Count > 0)
-                    {
-                        string invalidMessage = "Các ID phòng có loại phòng không hợp lệ là: " + string.Join(", ", invalidIds)
-                            + "\nLoại phòng sẽ được đặt là \"Thực hành thông thường\"";
-                        MessageBox.Show(invalidMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                if (invalidIds.Count > 0)
+                {
+                    string invalidMessage = "Các ID phòng có loại phòng không hợp lệ là: " + string.Join(", ", invalidIds)
+                        + "\nLoại phòng sẽ được đặt là \"Thực hành thông thường\"";
+                    MessageBox.Show(invalidMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

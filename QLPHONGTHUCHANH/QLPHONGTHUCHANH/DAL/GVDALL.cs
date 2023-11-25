@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Drawing;
 using QLPHONGTHUCHANH.DTO;
 using System.Windows.Forms;
+using OfficeOpenXml;
+using System.IO;
 
 namespace QLPHONGTHUCHANH.DAL
 {
@@ -160,6 +162,67 @@ namespace QLPHONGTHUCHANH.DAL
             int result = DataProvider.Khoitao.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public bool kiemtraThongTinGV(string id)
+        {
+            string query = "SELECT id FROM GIANGVIEN WHERE id = '" + id + "'";
+            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
+
+        public void taiDSlenCSDL(string id, string tenGV, string khoa, string sdt, string email)
+        {
+            string query = "INSERT INTO GIANGVIEN(id, tenGiangVien, khoa, sdt, email)" +
+                " VALUES ('" + id + "', N'" + tenGV + "', N'" + khoa + "', '" + sdt + "', N'" + email + "')";
+
+            DataProvider.Khoitao.ExecuteQuery(query);
+        }
+
+        public void taiLenGV(string filePath)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                List<string> duplicateIds = new List<string>(); // Danh sách các ID bị trùng
+
+                foreach (ExcelWorksheet worksheet in package.Workbook.Worksheets)
+                {
+                    int rowCount = worksheet.Dimension.Rows;
+                    int columnCount = worksheet.Dimension.Columns;
+
+                    // Kiểm tra xem số cột trong sheet có khớp với cấu trúc bảng GIANGVIEN hay không
+                    if (columnCount == 5)
+                    {
+                        // Bỏ qua dòng đầu tiên (tiêu đề)
+                        for (int row = 2; row <= rowCount; row++)
+                        {
+                            string id = worksheet.Cells[row, 1].Value?.ToString();
+
+                            if (kiemtraThongTinGV(id))
+                            {
+                                duplicateIds.Add(id);
+                            }
+                            else
+                            {
+                                string tenGiangVien = worksheet.Cells[row, 2].Value?.ToString();
+                                string khoa = worksheet.Cells[row, 3].Value?.ToString();
+                                string sdt = worksheet.Cells[row, 4].Value.ToString();
+                                string email = worksheet.Cells[row, 5].Value?.ToString();
+
+                                taiDSlenCSDL(id, tenGiangVien, khoa, sdt, email);
+                            }
+                        }
+                    }
+                }
+
+                if (duplicateIds.Count > 0)
+                {
+                    string duplicateMessage = "Các ID bị trùng: " + string.Join(", ", duplicateIds);
+                    MessageBox.Show(duplicateMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
