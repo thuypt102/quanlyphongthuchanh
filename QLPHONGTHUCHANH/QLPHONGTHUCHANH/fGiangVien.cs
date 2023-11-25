@@ -82,7 +82,9 @@ namespace QLPHONGTHUCHANH
 
                 if (giangVienInfo.Rows.Count > 0)
                 {
-                    int idGiangVien = Convert.ToInt32(giangVienInfo.Rows[0]["id"]);
+                    //int idGiangVien = Convert.ToInt32(giangVienInfo.Rows[0]["id"]);
+                    string idGiangVien = giangVienInfo.Rows[0]["id"].ToString();
+
                     DateTime thoiGianGui = DateTime.Now;
                     string tieuDe = "Báo cáo sự cố";
                     

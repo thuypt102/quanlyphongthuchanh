@@ -59,10 +59,8 @@ namespace QLPHONGTHUCHANH
             this.Hide();
             f.ShowDialog();
             this.Show();
+            XemLop();
         }
-
-
-
 
         private void btnThemLop_Click(object sender, EventArgs e)
         {
@@ -324,6 +322,7 @@ namespace QLPHONGTHUCHANH
             this.Hide();
             f.ShowDialog();
             this.Show();
+            XemPhong();
         }
 
         private void btnKhoLuuTruGV_Click(object sender, EventArgs e)
