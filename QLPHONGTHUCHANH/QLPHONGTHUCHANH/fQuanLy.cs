@@ -512,7 +512,7 @@ namespace QLPHONGTHUCHANH
                 dtaTB.DataSource = ThongBaoDAL.Khoitao.hienThiThongBao_chuaxuly();
 
         }
-            private void cbxLoc_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxLoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Gọi phương thức để cập nhật DataGridView dựa trên trạng thái đã chọn
             UpdateThongBaoData();

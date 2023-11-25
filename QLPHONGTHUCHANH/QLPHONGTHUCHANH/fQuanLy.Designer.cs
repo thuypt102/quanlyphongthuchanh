@@ -112,10 +112,10 @@
             this.tabThongBao.Controls.Add(this.btnXemChiTiet);
             this.tabThongBao.Controls.Add(this.grbTB);
             this.tabThongBao.Location = new System.Drawing.Point(4, 29);
-            this.tabThongBao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabThongBao.Margin = new System.Windows.Forms.Padding(2);
             this.tabThongBao.Name = "tabThongBao";
-            this.tabThongBao.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabThongBao.Size = new System.Drawing.Size(1337, 402);
+            this.tabThongBao.Padding = new System.Windows.Forms.Padding(2);
+            this.tabThongBao.Size = new System.Drawing.Size(1708, 747);
             this.tabThongBao.TabIndex = 4;
             this.tabThongBao.Text = "Thông báo";
             this.tabThongBao.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             this.btnXemChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnXemChiTiet.ForeColor = System.Drawing.Color.White;
             this.btnXemChiTiet.Location = new System.Drawing.Point(614, 566);
-            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
             this.btnXemChiTiet.Size = new System.Drawing.Size(158, 39);
             this.btnXemChiTiet.TabIndex = 22;
@@ -247,9 +247,9 @@
             this.tabQLGV.Controls.Add(this.btnSuaGV);
             this.tabQLGV.Controls.Add(this.btnThemGV);
             this.tabQLGV.Location = new System.Drawing.Point(4, 29);
-            this.tabQLGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLGV.Margin = new System.Windows.Forms.Padding(2);
             this.tabQLGV.Name = "tabQLGV";
-            this.tabQLGV.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLGV.Padding = new System.Windows.Forms.Padding(2);
             this.tabQLGV.Size = new System.Drawing.Size(1708, 747);
             this.tabQLGV.TabIndex = 3;
             this.tabQLGV.Text = "Quản lý giảng viên";
@@ -269,7 +269,7 @@
             // txbTimKiemGV
             // 
             this.txbTimKiemGV.Location = new System.Drawing.Point(768, 539);
-            this.txbTimKiemGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTimKiemGV.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiemGV.Name = "txbTimKiemGV";
             this.txbTimKiemGV.Size = new System.Drawing.Size(234, 26);
             this.txbTimKiemGV.TabIndex = 22;
@@ -288,7 +288,7 @@
             this.email,
             this.idTaiKhoan});
             this.dtaGV.Location = new System.Drawing.Point(2, 2);
-            this.dtaGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtaGV.Margin = new System.Windows.Forms.Padding(2);
             this.dtaGV.Name = "dtaGV";
             this.dtaGV.RowHeadersWidth = 51;
             this.dtaGV.RowTemplate.Height = 24;
@@ -349,7 +349,7 @@
             this.btnKhoLuuTruGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnKhoLuuTruGV.ForeColor = System.Drawing.Color.White;
             this.btnKhoLuuTruGV.Location = new System.Drawing.Point(400, 587);
-            this.btnKhoLuuTruGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKhoLuuTruGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoLuuTruGV.Name = "btnKhoLuuTruGV";
             this.btnKhoLuuTruGV.Size = new System.Drawing.Size(158, 39);
             this.btnKhoLuuTruGV.TabIndex = 15;
@@ -370,7 +370,7 @@
             this.btnXoaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnXoaGV.ForeColor = System.Drawing.Color.White;
             this.btnXoaGV.Location = new System.Drawing.Point(128, 587);
-            this.btnXoaGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaGV.Name = "btnXoaGV";
             this.btnXoaGV.Size = new System.Drawing.Size(158, 39);
             this.btnXoaGV.TabIndex = 16;
@@ -391,7 +391,7 @@
             this.btnTimKiemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTimKiemGV.ForeColor = System.Drawing.Color.White;
             this.btnTimKiemGV.Location = new System.Drawing.Point(1069, 533);
-            this.btnTimKiemGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiemGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemGV.Name = "btnTimKiemGV";
             this.btnTimKiemGV.Size = new System.Drawing.Size(158, 39);
             this.btnTimKiemGV.TabIndex = 17;
@@ -412,13 +412,14 @@
             this.btnTaiLenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTaiLenGV.ForeColor = System.Drawing.Color.White;
             this.btnTaiLenGV.Location = new System.Drawing.Point(400, 533);
-            this.btnTaiLenGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaiLenGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaiLenGV.Name = "btnTaiLenGV";
             this.btnTaiLenGV.Size = new System.Drawing.Size(158, 39);
             this.btnTaiLenGV.TabIndex = 18;
             this.btnTaiLenGV.Text = "Tải Lên";
             this.btnTaiLenGV.TextColor = System.Drawing.Color.White;
             this.btnTaiLenGV.UseVisualStyleBackColor = false;
+            this.btnTaiLenGV.Click += new System.EventHandler(this.btnTaiLenGV_Click);
             // 
             // btnLuuTruGV
             // 
@@ -432,7 +433,7 @@
             this.btnLuuTruGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnLuuTruGV.ForeColor = System.Drawing.Color.White;
             this.btnLuuTruGV.Location = new System.Drawing.Point(400, 480);
-            this.btnLuuTruGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuuTruGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuuTruGV.Name = "btnLuuTruGV";
             this.btnLuuTruGV.Size = new System.Drawing.Size(158, 39);
             this.btnLuuTruGV.TabIndex = 19;
@@ -453,7 +454,7 @@
             this.btnSuaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSuaGV.ForeColor = System.Drawing.Color.White;
             this.btnSuaGV.Location = new System.Drawing.Point(128, 533);
-            this.btnSuaGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaGV.Name = "btnSuaGV";
             this.btnSuaGV.Size = new System.Drawing.Size(158, 39);
             this.btnSuaGV.TabIndex = 20;
@@ -474,7 +475,7 @@
             this.btnThemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnThemGV.ForeColor = System.Drawing.Color.White;
             this.btnThemGV.Location = new System.Drawing.Point(128, 480);
-            this.btnThemGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemGV.Name = "btnThemGV";
             this.btnThemGV.Size = new System.Drawing.Size(158, 39);
             this.btnThemGV.TabIndex = 21;
@@ -498,9 +499,9 @@
             this.tabQLPhong.Controls.Add(this.btnSuaPhong);
             this.tabQLPhong.Controls.Add(this.btnThemPhong);
             this.tabQLPhong.Location = new System.Drawing.Point(4, 29);
-            this.tabQLPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLPhong.Margin = new System.Windows.Forms.Padding(2);
             this.tabQLPhong.Name = "tabQLPhong";
-            this.tabQLPhong.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLPhong.Padding = new System.Windows.Forms.Padding(2);
             this.tabQLPhong.Size = new System.Drawing.Size(1708, 747);
             this.tabQLPhong.TabIndex = 2;
             this.tabQLPhong.Text = "Quản lý phòng";
@@ -514,7 +515,7 @@
             "Thực hành lắp ráp",
             "Thực hành mạng"});
             this.cbLoaiPhong.Location = new System.Drawing.Point(866, 574);
-            this.cbLoaiPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
             this.cbLoaiPhong.Size = new System.Drawing.Size(136, 28);
             this.cbLoaiPhong.TabIndex = 25;
@@ -543,7 +544,7 @@
             // txbTimKiemPhong
             // 
             this.txbTimKiemPhong.Location = new System.Drawing.Point(768, 539);
-            this.txbTimKiemPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTimKiemPhong.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiemPhong.Name = "txbTimKiemPhong";
             this.txbTimKiemPhong.Size = new System.Drawing.Size(234, 26);
             this.txbTimKiemPhong.TabIndex = 22;
@@ -561,7 +562,7 @@
             this.soLuongMay,
             this.loaiThucHanhPhong});
             this.dtaPhong.Location = new System.Drawing.Point(6, 5);
-            this.dtaPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtaPhong.Margin = new System.Windows.Forms.Padding(2);
             this.dtaPhong.Name = "dtaPhong";
             this.dtaPhong.RowHeadersWidth = 51;
             this.dtaPhong.RowTemplate.Height = 24;
@@ -615,7 +616,7 @@
             this.btnKhoLuuTruPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnKhoLuuTruPhong.ForeColor = System.Drawing.Color.White;
             this.btnKhoLuuTruPhong.Location = new System.Drawing.Point(400, 587);
-            this.btnKhoLuuTruPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKhoLuuTruPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoLuuTruPhong.Name = "btnKhoLuuTruPhong";
             this.btnKhoLuuTruPhong.Size = new System.Drawing.Size(158, 39);
             this.btnKhoLuuTruPhong.TabIndex = 15;
@@ -636,7 +637,7 @@
             this.btnXoaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnXoaPhong.ForeColor = System.Drawing.Color.White;
             this.btnXoaPhong.Location = new System.Drawing.Point(128, 587);
-            this.btnXoaPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaPhong.Name = "btnXoaPhong";
             this.btnXoaPhong.Size = new System.Drawing.Size(158, 39);
             this.btnXoaPhong.TabIndex = 16;
@@ -657,7 +658,7 @@
             this.btnTimKiemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTimKiemPhong.ForeColor = System.Drawing.Color.White;
             this.btnTimKiemPhong.Location = new System.Drawing.Point(1069, 533);
-            this.btnTimKiemPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiemPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemPhong.Name = "btnTimKiemPhong";
             this.btnTimKiemPhong.Size = new System.Drawing.Size(158, 39);
             this.btnTimKiemPhong.TabIndex = 17;
@@ -678,7 +679,7 @@
             this.btnTaiLenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTaiLenPhong.ForeColor = System.Drawing.Color.White;
             this.btnTaiLenPhong.Location = new System.Drawing.Point(400, 533);
-            this.btnTaiLenPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaiLenPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaiLenPhong.Name = "btnTaiLenPhong";
             this.btnTaiLenPhong.Size = new System.Drawing.Size(158, 39);
             this.btnTaiLenPhong.TabIndex = 18;
@@ -699,7 +700,7 @@
             this.btnLuuTruPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnLuuTruPhong.ForeColor = System.Drawing.Color.White;
             this.btnLuuTruPhong.Location = new System.Drawing.Point(400, 480);
-            this.btnLuuTruPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuuTruPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuuTruPhong.Name = "btnLuuTruPhong";
             this.btnLuuTruPhong.Size = new System.Drawing.Size(158, 39);
             this.btnLuuTruPhong.TabIndex = 19;
@@ -720,7 +721,7 @@
             this.btnSuaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSuaPhong.ForeColor = System.Drawing.Color.White;
             this.btnSuaPhong.Location = new System.Drawing.Point(128, 533);
-            this.btnSuaPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaPhong.Name = "btnSuaPhong";
             this.btnSuaPhong.Size = new System.Drawing.Size(158, 39);
             this.btnSuaPhong.TabIndex = 20;
@@ -741,7 +742,7 @@
             this.btnThemPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnThemPhong.ForeColor = System.Drawing.Color.White;
             this.btnThemPhong.Location = new System.Drawing.Point(128, 480);
-            this.btnThemPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemPhong.Name = "btnThemPhong";
             this.btnThemPhong.Size = new System.Drawing.Size(158, 39);
             this.btnThemPhong.TabIndex = 21;
@@ -763,9 +764,9 @@
             this.tabQLLop.Controls.Add(this.btnThemLop);
             this.tabQLLop.Controls.Add(this.dtaLop);
             this.tabQLLop.Location = new System.Drawing.Point(4, 29);
-            this.tabQLLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLLop.Margin = new System.Windows.Forms.Padding(2);
             this.tabQLLop.Name = "tabQLLop";
-            this.tabQLLop.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabQLLop.Padding = new System.Windows.Forms.Padding(2);
             this.tabQLLop.Size = new System.Drawing.Size(1708, 747);
             this.tabQLLop.TabIndex = 1;
             this.tabQLLop.Text = "Quản lý lớp";
@@ -785,7 +786,7 @@
             // txbTimKiemLop
             // 
             this.txbTimKiemLop.Location = new System.Drawing.Point(768, 539);
-            this.txbTimKiemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTimKiemLop.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiemLop.Name = "txbTimKiemLop";
             this.txbTimKiemLop.Size = new System.Drawing.Size(251, 26);
             this.txbTimKiemLop.TabIndex = 12;
@@ -802,7 +803,7 @@
             this.btnKhoLuuTruLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnKhoLuuTruLop.ForeColor = System.Drawing.Color.White;
             this.btnKhoLuuTruLop.Location = new System.Drawing.Point(400, 587);
-            this.btnKhoLuuTruLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKhoLuuTruLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoLuuTruLop.Name = "btnKhoLuuTruLop";
             this.btnKhoLuuTruLop.Size = new System.Drawing.Size(158, 39);
             this.btnKhoLuuTruLop.TabIndex = 5;
@@ -823,7 +824,7 @@
             this.btnXoaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnXoaLop.ForeColor = System.Drawing.Color.White;
             this.btnXoaLop.Location = new System.Drawing.Point(128, 587);
-            this.btnXoaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoaLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoaLop.Name = "btnXoaLop";
             this.btnXoaLop.Size = new System.Drawing.Size(158, 39);
             this.btnXoaLop.TabIndex = 6;
@@ -844,7 +845,7 @@
             this.btnTimKiemLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTimKiemLop.ForeColor = System.Drawing.Color.White;
             this.btnTimKiemLop.Location = new System.Drawing.Point(1069, 533);
-            this.btnTimKiemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiemLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemLop.Name = "btnTimKiemLop";
             this.btnTimKiemLop.Size = new System.Drawing.Size(158, 39);
             this.btnTimKiemLop.TabIndex = 7;
@@ -865,13 +866,14 @@
             this.btnTaiLenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTaiLenLop.ForeColor = System.Drawing.Color.White;
             this.btnTaiLenLop.Location = new System.Drawing.Point(400, 533);
-            this.btnTaiLenLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaiLenLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaiLenLop.Name = "btnTaiLenLop";
             this.btnTaiLenLop.Size = new System.Drawing.Size(158, 39);
             this.btnTaiLenLop.TabIndex = 8;
             this.btnTaiLenLop.Text = "Tải Lên";
             this.btnTaiLenLop.TextColor = System.Drawing.Color.White;
             this.btnTaiLenLop.UseVisualStyleBackColor = false;
+            this.btnTaiLenLop.Click += new System.EventHandler(this.btnTaiLenLop_Click);
             // 
             // btnLuuTruLop
             // 
@@ -885,7 +887,7 @@
             this.btnLuuTruLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnLuuTruLop.ForeColor = System.Drawing.Color.White;
             this.btnLuuTruLop.Location = new System.Drawing.Point(400, 480);
-            this.btnLuuTruLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuuTruLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuuTruLop.Name = "btnLuuTruLop";
             this.btnLuuTruLop.Size = new System.Drawing.Size(158, 39);
             this.btnLuuTruLop.TabIndex = 9;
@@ -906,7 +908,7 @@
             this.btnSuaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnSuaLop.ForeColor = System.Drawing.Color.White;
             this.btnSuaLop.Location = new System.Drawing.Point(128, 533);
-            this.btnSuaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSuaLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnSuaLop.Name = "btnSuaLop";
             this.btnSuaLop.Size = new System.Drawing.Size(158, 39);
             this.btnSuaLop.TabIndex = 10;
@@ -927,7 +929,7 @@
             this.btnThemLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemLop.ForeColor = System.Drawing.Color.White;
             this.btnThemLop.Location = new System.Drawing.Point(128, 480);
-            this.btnThemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemLop.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(158, 39);
             this.btnThemLop.TabIndex = 11;
@@ -952,7 +954,7 @@
             this.soLuongSinhVien,
             this.loaiThucHanh});
             this.dtaLop.Location = new System.Drawing.Point(4, 0);
-            this.dtaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtaLop.Margin = new System.Windows.Forms.Padding(2);
             this.dtaLop.Name = "dtaLop";
             this.dtaLop.RowHeadersWidth = 51;
             this.dtaLop.RowTemplate.Height = 24;
@@ -1018,7 +1020,7 @@
             this.tc.Controls.Add(this.tabThongBao);
             this.tc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tc.Location = new System.Drawing.Point(1, 0);
-            this.tc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tc.Margin = new System.Windows.Forms.Padding(2);
             this.tc.Name = "tc";
             this.tc.SelectedIndex = 0;
             this.tc.Size = new System.Drawing.Size(1716, 780);
