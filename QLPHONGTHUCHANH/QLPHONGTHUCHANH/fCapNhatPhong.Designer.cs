@@ -65,6 +65,8 @@
             // 
             this.cmbLoai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbLoai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbLoai.DisplayMember = "Thực hành thông thường";
+            this.cmbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
             "Thực hành thông thường",
@@ -181,7 +183,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fCapNhatPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cập nhật thông tin phòng";
             this.ResumeLayout(false);
             this.PerformLayout();
 

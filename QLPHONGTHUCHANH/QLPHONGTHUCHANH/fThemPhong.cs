@@ -28,6 +28,11 @@ namespace QLPHONGTHUCHANH
             //string loaiThucHanh = cmbLoai.SelectedItem.ToString();
             string loaiThucHanh = cmbLoai.Text;
 
+            if (loaiThucHanh == "")
+            {
+                loaiThucHanh = "Thực hành thông thường";
+            }
+
             if (PhongDAL.Khoitao.timKiem(maPhong))
             {
                 MessageBox.Show("Mã phòng đã tồn tại. Vui lòng nhập mã khác.");

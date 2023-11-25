@@ -40,7 +40,10 @@ namespace QLPHONGTHUCHANH
             int soLuongMay = int.Parse(txbSLPM.Text);
             
             string loaiThucHanh = cmbLoai.Text;
-
+            if (loaiThucHanh == "")
+            {
+                loaiThucHanh = "Thực hành thông thường";
+            }
             if (PhongDAL.Khoitao.capNhatPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
             {
                 MessageBox.Show("Cập nhật phòng máy thành công!", "Thông báo");

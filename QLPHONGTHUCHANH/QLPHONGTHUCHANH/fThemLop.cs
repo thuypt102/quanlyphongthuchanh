@@ -80,7 +80,10 @@ namespace QLPHONGTHUCHANH
                 string caLT = txbCaLT.Text;
                 int SLSV = int.Parse(txbSlSV.Text);
                 string Loai = cmbLoai.Text;
-
+                if (Loai == "")
+                {
+                    Loai = "Thực hành thông thường";
+                }
                 if (LopDAL.Khoitao.timKiem(maLop))
                 {
                     MessageBox.Show("Mã lớp đã tồn tại. Vui lòng nhập mã khác.");

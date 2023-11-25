@@ -94,7 +94,10 @@ namespace QLPHONGTHUCHANH
                 string caLT = int.Parse(txbCaLT.Text).ToString();
                 int SLSV = int.Parse(txbSlSV.Text);
                 string Loai = cmbLoai.Text;
-
+                if (Loai == "")
+                {
+                    Loai = "Thực hành thông thường";
+                }
                 if (GVDALL.Khoitao.timKiem(IDGV))
                 {
                     if (LopDAL.Khoitao.capNhatLop(maLop, tenLop, tenKhoa, IDGV, caLT, SLSV, Loai))
