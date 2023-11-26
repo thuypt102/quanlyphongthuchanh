@@ -58,9 +58,9 @@ namespace QLPHONGTHUCHANH.DTO
             get { return thu; }
             set { thu = value; }
         }
-        public Lich(int id, int idcath, string idlop, string idphong, string idgv, string namhoc, int kihoc, string thu)
+        public Lich(/*int id,*/ int idcath, string idlop, string idphong, string idgv, string namhoc, int kihoc, string thu)
         {
-            this.id = id;
+            //this.id = id;
             this.idCaThucHanh = idcath;
             this.idLop = idlop;
             this.idPhong = idphong;

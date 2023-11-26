@@ -30,6 +30,16 @@ namespace QLPHONGTHUCHANH.DAL
             return DataProvider.Khoitao.ExecuteQuery("Select * from LICHTHUCHANH");
         }
 
+        public bool ThemLich(int idCaThucHanh, string idLop, string idPhong, string idGiangVien, string namHoc, int kiHoc, string thu)
+        {
+            string query = "INSERT INTO LICHTHUCHANH (idCaThucHanh, idLop, idPhong, idGiangVien, namHoc, kiHoc, thu) VALUES (" + idCaThucHanh + ", '" + idLop + "', '" + idPhong + "', '" + idGiangVien + "', '" + namHoc + "', " + kiHoc + ", '" + thu + "')";
+            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+
+            return kq != null;
+        }
+
+
+
         public DataTable getLichLop(string lop, string nam)
         {
             string query = "SELECT * FROM LICHTHUCHANH WHERE idLop = '" + lop + "' AND namHoc = '" + nam + "'";
@@ -95,6 +105,34 @@ namespace QLPHONGTHUCHANH.DAL
                 list.Add(nam);
             }
             return list;
+        }
+        public List<Lich> loadkiHoc()
+        {
+            List<Lich> list = new List<Lich>();
+            string query = "SELECT * FROM LICHTHUCHANH WHERE kiHoc IN (SELECT DISTINCT kiHoc FROM LICHTHUCHANH)";
+            DataTable dta = DataProvider.Khoitao.ExecuteQuery(query);
+
+            foreach (DataRow item in dta.Rows)
+            {
+                Lich ki = new Lich(item);
+                list.Add(ki);
+            }
+            return list;
+        }
+
+        public List<string> GetPhongChuaCoTrongLichTH(int caThucHanh, string lop, string giangVien, int kiHoc, string thu)
+        {
+            List<string> danhSachPhong = new List<string>();
+            string query = $"SELECT DISTINCT id FROM PHONGMAY WHERE id NOT IN (SELECT DISTINCT idPhong FROM LICHTHUCHANH WHERE idCaThucHanh = {caThucHanh} AND idLop = '{lop}' AND idGiangVien = '{giangVien}' AND kiHoc = {kiHoc} AND thu = '{thu}')";
+            DataTable dataTable = DataProvider.Khoitao.ExecuteQuery(query);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                string phongRow = row["id"].ToString();
+                danhSachPhong.Add(phongRow);
+            }
+
+            return danhSachPhong;
         }
     }
 }

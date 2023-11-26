@@ -6,6 +6,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -51,15 +53,141 @@ namespace QLPHONGTHUCHANH
             }
         }
 
+        string loadNamHoc()
+        {
+            List<string> nam = LichDAL.Khoitao.loadNamHoc().Select(l => l.NamHoc).ToList();
+
+            if (nam.Count > 0)
+            {
+                string maxNamHoc = nam.Max(); // Lấy năm học có giá trị lớn nhất
+
+                nam.Clear(); // Xóa tất cả các năm học hiện có
+
+                nam.Add(maxNamHoc);
+            }
+
+            return nam.First();
+        }
+
+        
+        int loadHocKi()
+        {
+            List<int> ki = LichDAL.Khoitao.loadkiHoc().Select(l => l.KiHoc).ToList();
+
+            if (ki.Count > 0)
+            {
+                int maxKi = ki.Max(); // Lấy học kì có giá trị lớn nhất
+
+                ki.Clear(); // Xóa tất cả các học kì hiện có
+
+                ki.Add(maxKi);
+            }
+
+            return ki.First();
+        }
+        private bool IsValidInput()
+        {
+            // id giảng viên
+            // Kiểm tra giá trị trong TextBox
+            if (string.IsNullOrWhiteSpace(tbThu.Text))
+            {
+                MessageBox.Show("Vui lòng nhập giá trị vào.", "Lỗi");
+                return false;
+            }
+
+            // id ca thực hành
+            // Kiểm tra giá trị trong TextBox
+            if (string.IsNullOrWhiteSpace(cbxCaThucHanh.Text))
+            {
+                MessageBox.Show("Vui lòng nhập giá trị vào.", "Lỗi");
+                return false;
+            }
+
+            // id lớp
+            // Kiểm tra giá trị trong TextBox
+            if (string.IsNullOrWhiteSpace(txbTenLop.Text))
+            {
+                MessageBox.Show("Vui lòng nhập giá trị vào.", "Lỗi");
+                return false;
+            }
+
+            string idlop = LopDAL.Khoitao.GetIdLop(txbTenLop.Text);
+
+            if (idlop == null)
+            {
+                // Id lớp không tồn tại
+                MessageBox.Show("Không tìm thấy lớp.");
+                return false;
+            }
+
+            // Giá trị nhập vào hợp lệ
+            return true;
+        }
         private void btnDangKyLBS_Click(object sender, EventArgs e)
         {
-            // Lấy thông tin từ giao diện người dùng
-            string loaiPhong = cbxLoaiPhong.SelectedItem.ToString();
-            string caThucHanh = cbxCaThucHanh.SelectedItem.ToString();
-            string tenLop = txbTenLop.Text;
+            if (IsValidInput())
+            {
+                // Lấy thông tin từ giao diện người dùng
+                string loaiPhong = cbxLoaiPhong.SelectedItem.ToString();
+                string tenCa = cbxCaThucHanh.SelectedItem.ToString();
+                System.Data.DataTable result = CaDAL.Khoitao.GetCaId(tenCa);
+                int caThucHanh = 1;
+                if (result.Rows.Count > 0)
+                {
+                   caThucHanh = Convert.ToInt32(result.Rows[0]["id"]);
+                    
+                }
 
-            
+
+                //System.Data.DataTable idlop = LopDAL.Khoitao.GetCaId(txbTenLop.Text);
+
+                string tenLop = LopDAL.Khoitao.GetIdLop(txbTenLop.Text);
+
+
+
+                string thu = tbThu.Text;
+
+                // Lấy idGiangVien tương ứng với id trong bảng dbo.TAIKHOAN đăng nhập hiện tại
+                string loggedInUsername = fLogin.LoggedInUsername;
+                string loggedInPassword = fLogin.LoggedInPassword;
+                TaiKhoanDAL taiKhoanDAL = TaiKhoanDAL.Khoitao;
+                DataTable giangVienInfo = taiKhoanDAL.getGiangVienInfo(loggedInUsername, loggedInPassword);
+
+                string namHoc = loadNamHoc();
+                int kiHoc = loadHocKi();
+
+                if (giangVienInfo.Rows.Count > 0)
+                {
+                    string idGiangVien = giangVienInfo.Rows[0]["id"].ToString();
+                    string idPhong;
+                    List<string> danhSachPhong = LichDAL.Khoitao.GetPhongChuaCoTrongLichTH(caThucHanh, tenLop, idGiangVien, kiHoc, thu);
+                    
+
+                    if (danhSachPhong.Count > 0)
+                    {
+                        // Có phòng chưa có trong LICHTHUCHANH
+                        idPhong = danhSachPhong.First();
+                        
+                        if (LichDAL.Khoitao.ThemLich(caThucHanh, tenLop, idPhong, idGiangVien, namHoc, kiHoc, thu))
+                        {
+
+                            MessageBox.Show("Đăng kí thành công!", "Thông báo");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đăng kí không thành công!", "Thông báo");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã hết phòng trống!", "Thông báo");
+
+                    }
+                }
+            }
         }
+
+
 
         private void txtBCSC_Click(object sender, EventArgs e)
         {
@@ -118,5 +246,7 @@ namespace QLPHONGTHUCHANH
                 MessageBox.Show("Vui lòng nhập nội dung báo cáo sự cố trước khi gửi.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        
     }
 }

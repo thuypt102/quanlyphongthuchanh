@@ -103,6 +103,22 @@ namespace QLPHONGTHUCHANH.DAL
             }
 
         }
+
+        public string GetIdLop(string tenLop)
+        {
+            string query = "SELECT * FROM LOP WHERE tenLop = '" + tenLop + "'";
+            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+
+            if (result.Rows.Count > 0)
+            {
+                string idLop = result.Rows[0]["id"].ToString();
+                return idLop;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public bool xoaLop(string id)
         {
             //try
