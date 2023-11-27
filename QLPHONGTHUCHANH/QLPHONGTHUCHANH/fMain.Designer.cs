@@ -34,6 +34,7 @@
             this.mniThongTin = new System.Windows.Forms.ToolStripMenuItem();
             this.mniDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPhanLich = new QLPHONGTHUCHANH.VBButton();
             this.cmbNamHoc = new System.Windows.Forms.ComboBox();
             this.btnDoiPhong = new QLPHONGTHUCHANH.VBButton();
             this.btnTimKiem = new QLPHONGTHUCHANH.VBButton();
@@ -54,7 +55,6 @@
             this.thu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.lbTieuDe = new System.Windows.Forms.Label();
-            this.btnPhanLich = new QLPHONGTHUCHANH.VBButton();
             this.mnsQuanLy.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -117,6 +117,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1370, 89);
             this.panel1.TabIndex = 1;
+            // 
+            // btnPhanLich
+            // 
+            this.btnPhanLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnPhanLich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
+            this.btnPhanLich.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPhanLich.BorderRadius = 8;
+            this.btnPhanLich.BorderSize = 0;
+            this.btnPhanLich.FlatAppearance.BorderSize = 0;
+            this.btnPhanLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhanLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanLich.ForeColor = System.Drawing.Color.White;
+            this.btnPhanLich.Location = new System.Drawing.Point(1199, 17);
+            this.btnPhanLich.Name = "btnPhanLich";
+            this.btnPhanLich.Size = new System.Drawing.Size(115, 38);
+            this.btnPhanLich.TabIndex = 11;
+            this.btnPhanLich.Text = "Phân lịch";
+            this.btnPhanLich.TextColor = System.Drawing.Color.White;
+            this.btnPhanLich.UseVisualStyleBackColor = false;
+            this.btnPhanLich.Click += new System.EventHandler(this.btnPhanLich_Click);
             // 
             // cmbNamHoc
             // 
@@ -343,25 +363,6 @@
             this.lbTieuDe.TabIndex = 4;
             this.lbTieuDe.Text = "HỆ THỐNG QUẢN LÝ PHÒNG \r\nTHỰC HÀNH TIN HỌC CỦA\r\nTRƯỜNG ĐẠI HỌC QUY NHƠN";
             this.lbTieuDe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnPhanLich
-            // 
-            this.btnPhanLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnPhanLich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
-            this.btnPhanLich.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPhanLich.BorderRadius = 8;
-            this.btnPhanLich.BorderSize = 0;
-            this.btnPhanLich.FlatAppearance.BorderSize = 0;
-            this.btnPhanLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhanLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanLich.ForeColor = System.Drawing.Color.White;
-            this.btnPhanLich.Location = new System.Drawing.Point(1199, 17);
-            this.btnPhanLich.Name = "btnPhanLich";
-            this.btnPhanLich.Size = new System.Drawing.Size(115, 38);
-            this.btnPhanLich.TabIndex = 11;
-            this.btnPhanLich.Text = "Phân lịch";
-            this.btnPhanLich.TextColor = System.Drawing.Color.White;
-            this.btnPhanLich.UseVisualStyleBackColor = false;
             // 
             // fMain
             // 

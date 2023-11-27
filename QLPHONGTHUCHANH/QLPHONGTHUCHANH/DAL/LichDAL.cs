@@ -38,7 +38,14 @@ namespace QLPHONGTHUCHANH.DAL
             return kq != null;
         }
 
+        public bool ThemLich2(int idCaThucHanh, string idLop, string idPhong, string idGiangVien, string namHoc, int kiHoc, int thu)
+        {
+            string query = "INSERT INTO LICHTHUCHANH (idCaThucHanh, idLop, idPhong, idGiangVien, namHoc, kiHoc, thu) " +
+                "VALUES (" + idCaThucHanh + ", '" + idLop + "', '" + idPhong + "', '" + idGiangVien + "', '" + namHoc + "', " + kiHoc + ", " + thu + ")";
+            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
+            return kq != null;
+        }
 
         public DataTable getLichLop(string lop, string nam)
         {
@@ -93,17 +100,18 @@ namespace QLPHONGTHUCHANH.DAL
             return uniqueNamHoc;
         }
 
-        public List<Lich> loadNamHoc()
+        public List<string> loadNamHoc()
         {
-            List<Lich> list = new List<Lich>();
-            string query = "SELECT * FROM LICHTHUCHANH WHERE namHoc IN (SELECT DISTINCT namHoc FROM LICHTHUCHANH)";
-            DataTable dta = DataProvider.Khoitao.ExecuteQuery(query);
+            List<string> list = new List<string>();
+            string query = "SELECT DISTINCT namHoc FROM LICHTHUCHANH";
+            DataTable dataTable = DataProvider.Khoitao.ExecuteQuery(query);
 
-            foreach (DataRow item in dta.Rows)
+            foreach (DataRow row in dataTable.Rows)
             {
-                Lich nam = new Lich(item);
-                list.Add(nam);
+                string namHoc = row["namHoc"].ToString();
+                list.Add(namHoc);
             }
+
             return list;
         }
         public List<Lich> loadkiHoc()
@@ -133,6 +141,22 @@ namespace QLPHONGTHUCHANH.DAL
             }
 
             return danhSachPhong;
+        }
+
+        public bool KiemTraPhongTrong(string idPhong, int caThucHanh, int thu, string namHoc, int kiHoc)
+        {
+            string query = "SELECT * FROM LICHTHUCHANH WHERE idPhong = '" + idPhong + "' AND idCaThucHanh = " + caThucHanh + " AND thu = " + thu + " AND namHoc = '" + namHoc + "' AND kiHoc = " + kiHoc;
+            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+
+            return kq.Rows.Count == 0; // Trả về true nếu không có lịch thực hành tương ứng, ngược lại trả về false
+        }
+
+        public bool KiemTraLopBan(int caThucHanh, int thu, string namHoc, int kiHoc)
+        {
+            string query = "SELECT * FROM LICHTHUCHANH WHERE idCaThucHanh = " + caThucHanh + " AND thu = " + thu + " AND namHoc = '" + namHoc + "' AND kiHoc = " + kiHoc;
+            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+
+            return kq.Rows.Count == 0; // Trả về true nếu lớp kh bận
         }
     }
 }

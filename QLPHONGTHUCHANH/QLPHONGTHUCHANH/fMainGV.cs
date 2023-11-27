@@ -82,7 +82,7 @@ namespace QLPHONGTHUCHANH
 
         void loadNamHoc()
         {
-            List<Lich> nam = LichDAL.Khoitao.loadNamHoc();
+            List<string> nam = LichDAL.Khoitao.loadNamHoc();
             cmbNamHoc.DataSource = nam;
             cmbNamHoc.DisplayMember = "namHoc";
         }

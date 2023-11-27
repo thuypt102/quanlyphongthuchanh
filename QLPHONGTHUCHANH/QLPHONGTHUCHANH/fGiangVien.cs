@@ -55,8 +55,7 @@ namespace QLPHONGTHUCHANH
 
         string loadNamHoc()
         {
-            List<string> nam = LichDAL.Khoitao.loadNamHoc().Select(l => l.NamHoc).ToList();
-
+            List<string> nam = LichDAL.Khoitao.loadNamHoc();
             if (nam.Count > 0)
             {
                 string maxNamHoc = nam.Max(); // Lấy năm học có giá trị lớn nhất

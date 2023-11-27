@@ -70,7 +70,7 @@
             this.lbTenLop.AutoSize = true;
             this.lbTenLop.BackColor = System.Drawing.Color.Transparent;
             this.lbTenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenLop.Location = new System.Drawing.Point(161, 215);
+            this.lbTenLop.Location = new System.Drawing.Point(161, 210);
             this.lbTenLop.Name = "lbTenLop";
             this.lbTenLop.Size = new System.Drawing.Size(80, 29);
             this.lbTenLop.TabIndex = 24;
@@ -102,7 +102,7 @@
             "1",
             "2",
             "3"});
-            this.cmbKiHoc.Location = new System.Drawing.Point(328, 211);
+            this.cmbKiHoc.Location = new System.Drawing.Point(328, 206);
             this.cmbKiHoc.Name = "cmbKiHoc";
             this.cmbKiHoc.Size = new System.Drawing.Size(257, 33);
             this.cmbKiHoc.TabIndex = 29;
@@ -113,19 +113,20 @@
             this.btnPhanLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
             this.btnPhanLich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(255)))));
             this.btnPhanLich.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPhanLich.BorderRadius = 20;
+            this.btnPhanLich.BorderRadius = 8;
             this.btnPhanLich.BorderSize = 0;
             this.btnPhanLich.FlatAppearance.BorderSize = 0;
             this.btnPhanLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhanLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhanLich.ForeColor = System.Drawing.Color.White;
-            this.btnPhanLich.Location = new System.Drawing.Point(301, 283);
+            this.btnPhanLich.Location = new System.Drawing.Point(301, 278);
             this.btnPhanLich.Name = "btnPhanLich";
             this.btnPhanLich.Size = new System.Drawing.Size(178, 40);
             this.btnPhanLich.TabIndex = 25;
             this.btnPhanLich.Text = "Phân lịch";
             this.btnPhanLich.TextColor = System.Drawing.Color.White;
             this.btnPhanLich.UseVisualStyleBackColor = false;
+            this.btnPhanLich.Click += new System.EventHandler(this.btnPhanLich_Click);
             // 
             // fThongTinPhanLich
             // 

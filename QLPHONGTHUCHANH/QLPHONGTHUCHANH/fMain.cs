@@ -80,7 +80,8 @@ namespace QLPHONGTHUCHANH
         }
         void loadNamHoc()
         {
-            List<Lich> nam = LichDAL.Khoitao.loadNamHoc();
+            //List<Lich> nam = LichDAL.Khoitao.loadNamHoc();
+            List<string> nam = LichDAL.Khoitao.loadNamHoc();
             cmbNamHoc.DataSource = nam;
             cmbNamHoc.DisplayMember = "namHoc";
         }
@@ -141,6 +142,15 @@ namespace QLPHONGTHUCHANH
             this.Hide();
             fTTQL.ShowDialog();
             this.Show();
+        }
+
+        private void btnPhanLich_Click(object sender, EventArgs e)
+        {
+            fThongTinPhanLich f = new fThongTinPhanLich();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            loadLich();
         }
     }
 }

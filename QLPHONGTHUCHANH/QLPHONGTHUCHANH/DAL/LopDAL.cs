@@ -141,6 +141,11 @@ namespace QLPHONGTHUCHANH.DAL
         {
             return DataProvider.Khoitao.ExecuteQuery("Select id, tenLop, tenKhoa, idGiangVienPhuTrach, caLyThuyet, soLuongSinhVien, loaiThucHanh from LOP where luuTru = 1");
         }
+
+        public DataTable getDSLop0()
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenLop, tenKhoa, idGiangVienPhuTrach, caLyThuyet, soLuongSinhVien, loaiThucHanh from LOP where luuTru = 0");
+        }
         public bool khoiPhucLop(string id)
         {
             string query = string.Format("UPDATE LOP SET luuTru = 0 WHERE id = '" + id + "'");
@@ -311,6 +316,19 @@ namespace QLPHONGTHUCHANH.DAL
                     MessageBox.Show(invalidCaThucHanhMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        public int GetSoNhomThucHanh(int siso)
+        {
+            int nhom = 0;
+            nhom = siso / 20;
+
+            if (siso % 20 < 9)
+            {
+                return nhom;
+            }
+            else
+                return nhom + 1;
         }
     }
 }

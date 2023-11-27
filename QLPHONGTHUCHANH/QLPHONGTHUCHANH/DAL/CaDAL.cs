@@ -47,5 +47,17 @@ namespace QLPHONGTHUCHANH.DAL
             return result;
         }
 
+        public int demSoCa()
+        {
+            string query = "SELECT COUNT(*) FROM CATHUCHANH";
+            object result = DataProvider.Khoitao.ExecuteScalar(query);
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToInt32(result);
+            }
+
+            return 0;
+        }
     }
 }

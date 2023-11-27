@@ -92,6 +92,11 @@ namespace QLPHONGTHUCHANH.DAL
         {
             return DataProvider.Khoitao.ExecuteQuery("Select id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh from PHONGMAY where luuTru = 1");
         }
+
+        public DataTable getDSPhong0()
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select id, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh from PHONGMAY where luuTru = 0");
+        }
         public bool khoiPhucPhong(string id)
         {
             string query = string.Format("UPDATE PHONGMAY SET luuTru = 0 WHERE id = '" + id + "'");
