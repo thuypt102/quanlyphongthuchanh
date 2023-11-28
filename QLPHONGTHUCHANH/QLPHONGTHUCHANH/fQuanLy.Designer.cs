@@ -537,16 +537,16 @@
             "Thực hành thông thường",
             "Thực hành lắp ráp",
             "Thực hành mạng"});
-            this.cbLoaiPhong.Location = new System.Drawing.Point(866, 574);
+            this.cbLoaiPhong.Location = new System.Drawing.Point(800, 574);
             this.cbLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(136, 28);
+            this.cbLoaiPhong.Size = new System.Drawing.Size(202, 28);
             this.cbLoaiPhong.TabIndex = 25;
             // 
             // lbLoaiPhong
             // 
             this.lbLoaiPhong.AutoSize = true;
-            this.lbLoaiPhong.Location = new System.Drawing.Point(796, 577);
+            this.lbLoaiPhong.Location = new System.Drawing.Point(747, 577);
             this.lbLoaiPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLoaiPhong.Name = "lbLoaiPhong";
             this.lbLoaiPhong.Size = new System.Drawing.Size(43, 20);
@@ -566,10 +566,10 @@
             // 
             // txbTimKiemPhong
             // 
-            this.txbTimKiemPhong.Location = new System.Drawing.Point(768, 539);
+            this.txbTimKiemPhong.Location = new System.Drawing.Point(749, 539);
             this.txbTimKiemPhong.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiemPhong.Name = "txbTimKiemPhong";
-            this.txbTimKiemPhong.Size = new System.Drawing.Size(234, 26);
+            this.txbTimKiemPhong.Size = new System.Drawing.Size(253, 26);
             this.txbTimKiemPhong.TabIndex = 22;
             // 
             // dtaPhong
