@@ -40,6 +40,7 @@
             this.cbxLoc = new System.Windows.Forms.ComboBox();
             this.lbLoc = new System.Windows.Forms.Label();
             this.tabQLGV = new System.Windows.Forms.TabPage();
+            this.btnTaoTK = new QLPHONGTHUCHANH.VBButton();
             this.lbDienGV = new System.Windows.Forms.Label();
             this.txbTimKiemGV = new System.Windows.Forms.TextBox();
             this.dtaGV = new System.Windows.Forms.DataGridView();
@@ -236,6 +237,7 @@
             // 
             // tabQLGV
             // 
+            this.tabQLGV.Controls.Add(this.btnTaoTK);
             this.tabQLGV.Controls.Add(this.lbDienGV);
             this.tabQLGV.Controls.Add(this.txbTimKiemGV);
             this.tabQLGV.Controls.Add(this.dtaGV);
@@ -255,11 +257,32 @@
             this.tabQLGV.Text = "Quản lý giảng viên";
             this.tabQLGV.UseVisualStyleBackColor = true;
             // 
+            // btnTaoTK
+            // 
+            this.btnTaoTK.BackColor = System.Drawing.Color.Blue;
+            this.btnTaoTK.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnTaoTK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTaoTK.BorderRadius = 8;
+            this.btnTaoTK.BorderSize = 0;
+            this.btnTaoTK.FlatAppearance.BorderSize = 0;
+            this.btnTaoTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTaoTK.ForeColor = System.Drawing.Color.White;
+            this.btnTaoTK.Location = new System.Drawing.Point(1069, 552);
+            this.btnTaoTK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTaoTK.Name = "btnTaoTK";
+            this.btnTaoTK.Size = new System.Drawing.Size(158, 39);
+            this.btnTaoTK.TabIndex = 24;
+            this.btnTaoTK.Text = "Tạo tài khoản";
+            this.btnTaoTK.TextColor = System.Drawing.Color.White;
+            this.btnTaoTK.UseVisualStyleBackColor = false;
+            this.btnTaoTK.Click += new System.EventHandler(this.btnTaoTK_Click);
+            // 
             // lbDienGV
             // 
             this.lbDienGV.AutoSize = true;
             this.lbDienGV.ForeColor = System.Drawing.Color.Red;
-            this.lbDienGV.Location = new System.Drawing.Point(784, 510);
+            this.lbDienGV.Location = new System.Drawing.Point(784, 474);
             this.lbDienGV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDienGV.Name = "lbDienGV";
             this.lbDienGV.Size = new System.Drawing.Size(207, 20);
@@ -268,7 +291,7 @@
             // 
             // txbTimKiemGV
             // 
-            this.txbTimKiemGV.Location = new System.Drawing.Point(768, 539);
+            this.txbTimKiemGV.Location = new System.Drawing.Point(768, 503);
             this.txbTimKiemGV.Margin = new System.Windows.Forms.Padding(2);
             this.txbTimKiemGV.Name = "txbTimKiemGV";
             this.txbTimKiemGV.Size = new System.Drawing.Size(234, 26);
@@ -390,7 +413,7 @@
             this.btnTimKiemGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiemGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTimKiemGV.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiemGV.Location = new System.Drawing.Point(1069, 533);
+            this.btnTimKiemGV.Location = new System.Drawing.Point(1069, 497);
             this.btnTimKiemGV.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemGV.Name = "btnTimKiemGV";
             this.btnTimKiemGV.Size = new System.Drawing.Size(158, 39);
@@ -1121,5 +1144,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn noidungTB;
         private System.Windows.Forms.DataGridViewTextBoxColumn idGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn timesend;
+        private VBButton btnTaoTK;
     }
 }

@@ -179,6 +179,22 @@ namespace QLPHONGTHUCHANH.DAL
             DataProvider.Khoitao.ExecuteQuery(query);
         }
 
+        public void capNhatIdTaiKhoan(string idGiangVien, int idTaiKhoan)
+        {
+            string query = "UPDATE GIANGVIEN SET idTaiKhoan = " + idTaiKhoan + " WHERE id = '" + idGiangVien + "'";
+            DataProvider.Khoitao.ExecuteNonQuery(query);
+        }
+        /*public void capNhatIdTaiKhoan(string idGiangVien)
+        {
+            // Lấy id tài khoản mới được thêm vào
+            string queryGetNewId = "SELECT MAX(id) FROM TAIKHOAN";
+            int idTaiKhoanMoi = Convert.ToInt32(DataProvider.Khoitao.ExecuteScalar(queryGetNewId));
+
+            // Cập nhật idTaiKhoan cho giảng viên trong bảng dbo.GIANGVIEN
+            string queryUpdate = "UPDATE GIANGVIEN SET idTaiKhoan = " + idTaiKhoanMoi + " WHERE id = '" + idGiangVien + "'";
+            DataProvider.Khoitao.ExecuteNonQuery(queryUpdate);
+        }*/
+
         public void taiLenGV(string filePath)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;

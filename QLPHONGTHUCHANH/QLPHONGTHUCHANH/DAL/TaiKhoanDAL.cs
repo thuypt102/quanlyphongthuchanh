@@ -71,6 +71,13 @@ namespace QLPHONGTHUCHANH.DAL
             DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
             return kq.Rows.Count > 0;
         }
+        public int themTaiKhoan(string tenDangNhap, string matKhau, int loaiTaiKhoan)
+        {
+            string query = "INSERT INTO TAIKHOAN (tenDangNhap, matKhau, loaiTaiKhoan) OUTPUT INSERTED.id VALUES (N'" + tenDangNhap + "', N'" + matKhau + "', " + loaiTaiKhoan + ")";
+            return Convert.ToInt32(DataProvider.Khoitao.ExecuteScalar(query));
+        }
+
+
     }
 }
 

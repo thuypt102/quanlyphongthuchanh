@@ -2,6 +2,7 @@
 using QLPHONGTHUCHANH.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
@@ -29,7 +30,7 @@ namespace QLPHONGTHUCHANH
         void XemLop()
         {
             dtaLop.DataSource = LopDAL.Khoitao.hienThiLop();
-            
+
         }
         void XemPhong()
         {
@@ -147,7 +148,7 @@ namespace QLPHONGTHUCHANH
                 else
                 {
                     MessageBox.Show("xóa không thành công!", "Thông báo");
-                    
+
                 }
             }
             else if (result == DialogResult.No)
@@ -492,9 +493,9 @@ namespace QLPHONGTHUCHANH
         {
             dtaPhong.DataSource = PhongDAL.Khoitao.loadTheoMaVaLoai(lop, loai);
         }
-    
 
-    private void UpdateThongBaoData()
+
+        private void UpdateThongBaoData()
         {
             // Lấy trạng thái đã chọn từ ComboBox
             string selectedStatus = cbxLoc.SelectedItem.ToString();
@@ -504,7 +505,7 @@ namespace QLPHONGTHUCHANH
             {
                 dtaTB.DataSource = ThongBaoDAL.Khoitao.hienThiThongBao();
             }
-            else if(selectedStatus == "Đã xử lý")
+            else if (selectedStatus == "Đã xử lý")
             {
                 dtaTB.DataSource = ThongBaoDAL.Khoitao.hienThiThongBao_daxuly();
             }
@@ -610,6 +611,52 @@ namespace QLPHONGTHUCHANH
 
                 XemLop();
             }
+        }
+
+        private void btnTaoTK_Click(object sender, EventArgs e)
+        {
+            // Hiển thị hộp thoại xác nhận
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn tạo tài khoản cho giảng viên không?", "Xác nhận", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                // Duyệt qua danh sách giảng viên
+                DataTable dtGiangVien = GVDALL.Khoitao.hienThiGV();
+                int idTaiKhoanMoi = 0;
+                foreach (DataRow row in dtGiangVien.Rows)
+                {
+                    string idGiangVien = row["id"].ToString();
+                    int? idTaiKhoan = row["idTaiKhoan"] as int?;
+
+                    // Nếu giảng viên chưa có tài khoản
+                    if (!idTaiKhoan.HasValue)
+                    {
+                        // Tạo tài khoản ngẫu nhiên
+                        string tenDangNhap = idGiangVien;
+                        string matKhau = GenerateRandomPassword();
+                        int loaiTaiKhoan = 0; // Giảng viên
+
+                        // Thêm vào bảng dbo.TAIKHOAN
+                        idTaiKhoanMoi = TaiKhoanDAL.Khoitao.themTaiKhoan(tenDangNhap, matKhau, loaiTaiKhoan);
+
+                        // Cập nhật idTaiKhoan cho giảng viên trong bảng dbo.GIANGVIEN
+                        GVDALL.Khoitao.capNhatIdTaiKhoan(idGiangVien,idTaiKhoanMoi);
+                    }
+                }
+
+                MessageBox.Show("Đã tạo tài khoản cho tất cả giảng viên chưa có tài khoản!", "Thông báo");
+
+                // Cập nhật lại danh sách giảng viên sau khi tạo tài khoản
+                XemGV();
+            }
+        }
+        // Hàm tạo mật khẩu ngẫu nhiên
+        private string GenerateRandomPassword()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            Random random = new Random();
+            return new string(Enumerable.Repeat(chars, 8)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }
