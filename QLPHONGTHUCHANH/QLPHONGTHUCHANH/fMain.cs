@@ -1,4 +1,5 @@
-﻿using QLPHONGTHUCHANH.DAL;
+﻿using OfficeOpenXml;
+using QLPHONGTHUCHANH.DAL;
 using QLPHONGTHUCHANH.DTO;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-using Excel = Microsoft.Office.Interop.Excel;
+//using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
 
 namespace QLPHONGTHUCHANH
 {
@@ -150,31 +152,35 @@ namespace QLPHONGTHUCHANH
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    Excel.Application excelApp = new Excel.Application();
-                    Excel.Workbook workbook = excelApp.Workbooks.Add();
-                    Excel.Worksheet worksheet = workbook.ActiveSheet;
+                    // Thiết lập LicenseContext trước khi sử dụng ExcelPackage
+                    OfficeOpenXml.LicenseContext licenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+                    ExcelPackage.LicenseContext = licenseContext;
 
-                    // Lưu tiêu đề cột
-                    for (int column = 0; column < dtgLich.Columns.Count; column++)
+                    using (ExcelPackage excelPackage = new ExcelPackage())
                     {
-                        worksheet.Cells[1, column + 1] = dtgLich.Columns[column].HeaderText;
-                    }
+                        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Lịch");
 
-                    // Lưu dữ liệu từ DataGridView
-                    for (int row = 0; row < dtgLich.Rows.Count; row++)
-                    {
+                        // Lưu tiêu đề cột
                         for (int column = 0; column < dtgLich.Columns.Count; column++)
                         {
-                            worksheet.Cells[row + 2, column + 1] = dtgLich.Rows[row].Cells[column].Value;
+                            worksheet.Cells[1, column + 1].Value = dtgLich.Columns[column].HeaderText;
                         }
+
+                        // Lưu dữ liệu từ DataGridView
+                        for (int row = 0; row < dtgLich.Rows.Count; row++)
+                        {
+                            for (int column = 0; column < dtgLich.Columns.Count; column++)
+                            {
+                                worksheet.Cells[row + 2, column + 1].Value = dtgLich.Rows[row].Cells[column].Value;
+                            }
+                        }
+
+                        // Lưu file Excel
+                        byte[] excelData = excelPackage.GetAsByteArray();
+                        File.WriteAllBytes(saveFileDialog.FileName, excelData);
+
+                        MessageBox.Show("Lưu file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
-                    // Lưu file Excel
-                    workbook.SaveAs(saveFileDialog.FileName);
-                    workbook.Close();
-                    excelApp.Quit();
-
-                    MessageBox.Show("Lưu file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
