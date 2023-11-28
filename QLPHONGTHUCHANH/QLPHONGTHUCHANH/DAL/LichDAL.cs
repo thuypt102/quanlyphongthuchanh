@@ -1,5 +1,6 @@
 ﻿using QLPHONGTHUCHANH.DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -86,6 +87,48 @@ namespace QLPHONGTHUCHANH.DAL
 
             return result;
         }
+
+        public DataTable getLichNam(string nam)
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select * from LICHTHUCHANH where namHoc = '" + nam + "'");
+        }
+
+        public DataTable getLichGVall(string gv)
+        {
+            string query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN GIANGVIEN ON LICHTHUCHANH.idGiangVien = GIANGVIEN.id WHERE GIANGVIEN.id = N'" + gv + "'";
+            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            if (result.Rows.Count == 0)
+            {
+                query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN GIANGVIEN ON LICHTHUCHANH.idGiangVien = GIANGVIEN.id WHERE GIANGVIEN.tenGiangVien = N'" + gv + "'";
+                result = DataProvider.Khoitao.ExecuteQuery(query);
+            }
+            return result;
+        }
+
+        public DataTable getLichLOPall(string lop)
+        {
+            string query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN LOP ON LICHTHUCHANH.idLop = LOP.id WHERE LOP.id = N'" + lop + "'";
+            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            if (result.Rows.Count == 0)
+            {
+                query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN LOP ON LICHTHUCHANH.idLop = LOP.id WHERE LOP.tenLop = N'" + lop + "'";
+                result = DataProvider.Khoitao.ExecuteQuery(query);
+            }
+            return result;
+        }
+
+        public DataTable getLichPHONGall(string phong)
+        {
+            string query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN PHONGMAY ON LICHTHUCHANH.idPhong = PHONGMAY.id WHERE PHONGMAY.id = N'" + phong + "'";
+            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            if (result.Rows.Count == 0)
+            {
+                query = query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN PHONGMAY ON LICHTHUCHANH.idPhong = PHONGMAY.id WHERE PHONGMAY.tenPhong = N'" + phong + "'";
+                result = DataProvider.Khoitao.ExecuteQuery(query);
+            }
+            return result;
+        }
+
         public List<string> loadNamHoc2()
         {
             List<string> uniqueNamHoc = new List<string>();

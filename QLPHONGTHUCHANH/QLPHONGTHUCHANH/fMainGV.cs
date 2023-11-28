@@ -33,25 +33,47 @@ namespace QLPHONGTHUCHANH
             string nam = cmbNamHoc.Text.ToString();
             if (tukhoa == "" && selectedValue != "Tất cả")
             {
-                MessageBox.Show("Vui lòng nhập từ khóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng nhập từ khóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (nam == "Năm học")
+            {
+                if (selectedValue == "Tất cả")
+                {
+                    loadLich();
+                }
+                else
+                {
+                    //MessageBox.Show("Vui lòng chọn năm học!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (selectedValue == "Lớp")
+                    {
+                        loadLichALLlop(tukhoa);
+                    }
+                    else if (selectedValue == "Giảng viên")
+                    {
+                        loadLichALLgv(tukhoa);
+                    }
+                    else if (selectedValue == "Phòng")
+                    {
+                        loadLichAllPhong(tukhoa);
+                    }
+                }
+            }
+            else if (selectedValue == "Lớp")
+            {
+                loadLichTheoLop(tukhoa, nam);
+            }
+            else if (selectedValue == "Giảng viên")
+            {
+                loadLichTheoGV(tukhoa, nam);
+            }
+            else if (selectedValue == "Phòng")
+            {
+                loadLichTheoPhong(tukhoa, nam);
             }
             else
             {
-                if (selectedValue == "Lớp")
-                {
-                    loadLichTheoLop(tukhoa, nam);
-                }
-                else if (selectedValue == "Giảng viên")
-                {
-                    loadLichTheoGV(tukhoa, nam);
-                }
-                else if(selectedValue == "Phòng")
-                {
-                    loadLichTheoPhong(tukhoa, nam);
-                }    
-                else
-                    loadLich();
-            }    
+                loadLich();
+            }
         }
 
         private void mniDangXuat_Click(object sender, EventArgs e)
@@ -78,6 +100,20 @@ namespace QLPHONGTHUCHANH
         void loadLichTheoPhong(string p, string nam)
         {
             dtgLich.DataSource = LichDAL.Khoitao.getLichPhong(p, nam);
+        }
+
+        //load ALL
+        void loadLichALLlop(string lop)
+        {
+            dtgLich.DataSource = LichDAL.Khoitao.getLichLOPall(lop);
+        }
+        void loadLichALLgv(string gv)
+        {
+            dtgLich.DataSource = LichDAL.Khoitao.getLichGVall(gv);
+        }
+        void loadLichAllPhong(string p)
+        {
+            dtgLich.DataSource = LichDAL.Khoitao.getLichPHONGall(p);
         }
 
         void loadNamHoc()

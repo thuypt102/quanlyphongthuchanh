@@ -142,10 +142,13 @@
             // 
             this.cmbNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNamHoc.FormattingEnabled = true;
+            this.cmbNamHoc.Items.AddRange(new object[] {
+            "Năm học"});
             this.cmbNamHoc.Location = new System.Drawing.Point(243, 27);
             this.cmbNamHoc.Name = "cmbNamHoc";
             this.cmbNamHoc.Size = new System.Drawing.Size(166, 28);
             this.cmbNamHoc.TabIndex = 10;
+            this.cmbNamHoc.Text = "Năm học";
             // 
             // btnDoiPhong
             // 

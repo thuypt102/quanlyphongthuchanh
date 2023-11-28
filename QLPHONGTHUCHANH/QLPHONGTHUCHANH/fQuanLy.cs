@@ -8,6 +8,8 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
+using OfficeOpenXml;
+using System.IO;
 
 namespace QLPHONGTHUCHANH
 {
@@ -613,6 +615,52 @@ namespace QLPHONGTHUCHANH
             }
         }
 
+        public void TaiXuongTatCaTaiKhoan()
+        {
+            // Set the LicenseContext before using the EPPlus library
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            DataTable dtTaiKhoan = TaiKhoanDAL.Khoitao.dsTaiKhoanGV();
+
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Danh sách tài khoản");
+
+                // Tạo tiêu đề cho danh sách tài khoản
+                worksheet.Cells[1, 1].Value = "Tên đăng nhập";
+                worksheet.Cells[1, 2].Value = "Mật khẩu";
+
+                int rowIndex = 2;
+
+                foreach (DataRow row in dtTaiKhoan.Rows)
+                {
+                    string tenDangNhap = row["tenDangNhap"].ToString();
+                    string matKhau = row["matKhau"].ToString();
+
+                    // Thêm tài khoản vào danh sách Excel
+                    worksheet.Cells[rowIndex, 1].Value = tenDangNhap;
+                    worksheet.Cells[rowIndex, 2].Value = matKhau;
+
+                    rowIndex++;
+                }
+
+                // Hiển thị hộp thoại lưu tệp Excel
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Chọn vị trí lưu tệp Excel";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+
+                    // Lưu tệp Excel vào đường dẫn do người dùng chọn
+                    File.WriteAllBytes(filePath, excelPackage.GetAsByteArray());
+
+                    // Mở thư mục chứa tệp Excel sau khi lưu thành công
+                    System.Diagnostics.Process.Start("explorer.exe", "/select, " + filePath);
+                }
+            }
+        }
         private void btnTaoTK_Click(object sender, EventArgs e)
         {
             // Hiển thị hộp thoại xác nhận
@@ -645,7 +693,9 @@ namespace QLPHONGTHUCHANH
                 }
 
                 MessageBox.Show("Đã tạo tài khoản cho tất cả giảng viên chưa có tài khoản!", "Thông báo");
-
+                //Tải xuống tất cả tài khoản
+                TaiXuongTatCaTaiKhoan();
+                MessageBox.Show("Đã tải xuống thông tin tài khoản giảng viên!", "Thông báo");
                 // Cập nhật lại danh sách giảng viên sau khi tạo tài khoản
                 XemGV();
             }

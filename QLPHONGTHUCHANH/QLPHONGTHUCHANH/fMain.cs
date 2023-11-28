@@ -30,27 +30,50 @@ namespace QLPHONGTHUCHANH
             string selectedValue = cmbLoai.SelectedItem.ToString();
             string tukhoa = txbTimKiem.Text;
             string nam = cmbNamHoc.Text.ToString();
+
             if (tukhoa == "" && selectedValue != "Tất cả")
             {
                 MessageBox.Show("Vui lòng nhập từ khóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if (nam == "Năm học")
+            {
+                if (selectedValue == "Tất cả")
+                {
+                    loadLich();
+                }
+                else
+                {
+                    //MessageBox.Show("Vui lòng chọn năm học!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (selectedValue == "Lớp")
+                    {
+                        loadLichALLlop(tukhoa);
+                    }
+                    else if (selectedValue == "Giảng viên")
+                    {
+                        loadLichALLgv(tukhoa);
+                    }
+                    else if (selectedValue == "Phòng")
+                    {
+                        loadLichAllPhong(tukhoa);
+                    }
+                }
+            }
+            else if (selectedValue == "Lớp")
+            {
+                loadLichTheoLop(tukhoa, nam);
+            }
+            else if (selectedValue == "Giảng viên")
+            {
+                loadLichTheoGV(tukhoa, nam);
+            }
+            else if (selectedValue == "Phòng")
+            {
+                loadLichTheoPhong(tukhoa, nam);
+            }
             else
             {
-                if (selectedValue == "Lớp")
-                {
-                    loadLichTheoLop(tukhoa, nam);
-                }
-                else if (selectedValue == "Giảng viên")
-                {
-                    loadLichTheoGV(tukhoa, nam);
-                }
-                else if(selectedValue == "Phòng")
-                {
-                    loadLichTheoPhong(tukhoa, nam);
-                }    
-                else
-                    loadLich();
-            }    
+                loadLichNam(nam);
+            }
         }
 
         private void mniDangXuat_Click(object sender, EventArgs e)
@@ -78,12 +101,41 @@ namespace QLPHONGTHUCHANH
         {
             dtgLich.DataSource = LichDAL.Khoitao.getLichPhong(p, nam);
         }
+
+        void loadLichALLlop(string lop)
+        {
+            dtgLich.DataSource = LichDAL.Khoitao.getLichLOPall(lop);
+        }
+        void loadLichALLgv(string gv)
+        {
+            dtgLich.DataSource = LichDAL.Khoitao.getLichGVall(gv);
+        }
+        void loadLichAllPhong(string p)
+        {
+            dtgLich.DataSource = LichDAL.Khoitao.getLichPHONGall(p);
+        }
+
+        void loadLichNam(string nam)
+        {
+            dtgLich.DataSource = LichDAL.Khoitao.getLichNam(nam);
+        }
         void loadNamHoc()
         {
+            // Lấy danh sách năm học từ cơ sở dữ liệu
+            List<string> namHocList = LichDAL.Khoitao.loadNamHoc();
+
+            // Thêm item mặc định vào danh sách năm học
+            namHocList.Insert(0, "Năm học");
+
+            // Gán danh sách năm học cho ComboBox
+            cmbNamHoc.DataSource = namHocList;
+            /*
             //List<Lich> nam = LichDAL.Khoitao.loadNamHoc();
             List<string> nam = LichDAL.Khoitao.loadNamHoc();
             cmbNamHoc.DataSource = nam;
             cmbNamHoc.DisplayMember = "namHoc";
+            nam.Insert(0, "Năm học");
+            */
         }
 
         private void btnXuatLich_Click(object sender, EventArgs e)

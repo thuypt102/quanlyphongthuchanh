@@ -77,7 +77,11 @@ namespace QLPHONGTHUCHANH.DAL
             return Convert.ToInt32(DataProvider.Khoitao.ExecuteScalar(query));
         }
 
-
+        public DataTable dsTaiKhoanGV()
+        {
+            string query = "SELECT * FROM TAIKHOAN where loaiTaiKhoan = 0";
+            return DataProvider.Khoitao.ExecuteQuery(query);
+        }
     }
 }
 
