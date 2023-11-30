@@ -157,10 +157,12 @@ namespace QLPHONGTHUCHANH.DAL
 
             return list;
         }
-        public List<Lich> loadkiHoc()
+        public List<Lich> loadkiHoc(string nam)
         {
             List<Lich> list = new List<Lich>();
-            string query = "SELECT * FROM LICHTHUCHANH WHERE kiHoc IN (SELECT DISTINCT kiHoc FROM LICHTHUCHANH)";
+            //string query = "SELECT * FROM LICHTHUCHANH WHERE kiHoc IN (SELECT DISTINCT kiHoc FROM LICHTHUCHANH)";
+            string query = "SELECT* FROM LICHTHUCHANH WHERE kiHoc = ( " +
+                "SELECT MAX(kiHoc) FROM LICHTHUCHANH WHERE namHoc = '"+nam+"') AND namHoc = '"+nam+"'";
             DataTable dta = DataProvider.Khoitao.ExecuteQuery(query);
 
             foreach (DataRow item in dta.Rows)

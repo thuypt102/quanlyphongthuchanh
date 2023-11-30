@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPDKLBS = new System.Windows.Forms.TabPage();
+            this.tbThu = new System.Windows.Forms.ComboBox();
+            this.lbThu = new System.Windows.Forms.Label();
             this.txbTenLop = new System.Windows.Forms.TextBox();
             this.cbxCaThucHanh = new System.Windows.Forms.ComboBox();
             this.cbxLoaiPhong = new System.Windows.Forms.ComboBox();
@@ -55,8 +57,6 @@
             this.lbTenGV = new System.Windows.Forms.Label();
             this.lbMaGV = new System.Windows.Forms.Label();
             this.lbTieuDeThongTinGV = new System.Windows.Forms.Label();
-            this.tbThu = new System.Windows.Forms.TextBox();
-            this.lbThu = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPDKLBS.SuspendLayout();
             this.tabPBCSC.SuspendLayout();
@@ -71,7 +71,7 @@
             this.tabControl1.Controls.Add(this.tabPThongTin);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tabControl1.Location = new System.Drawing.Point(-1, -1);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1831, 923);
@@ -93,35 +93,67 @@
             this.tabPDKLBS.Controls.Add(this.lbLoaiPhong);
             this.tabPDKLBS.Controls.Add(this.lbTieuĐeangKyLBS);
             this.tabPDKLBS.Location = new System.Drawing.Point(4, 34);
-            this.tabPDKLBS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPDKLBS.Margin = new System.Windows.Forms.Padding(4);
             this.tabPDKLBS.Name = "tabPDKLBS";
-            this.tabPDKLBS.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPDKLBS.Padding = new System.Windows.Forms.Padding(4);
             this.tabPDKLBS.Size = new System.Drawing.Size(1823, 885);
             this.tabPDKLBS.TabIndex = 0;
             this.tabPDKLBS.Text = "Đăng ký lịch bổ sung";
             this.tabPDKLBS.UseVisualStyleBackColor = true;
             // 
+            // tbThu
+            // 
+            this.tbThu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbThu.FormattingEnabled = true;
+            this.tbThu.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.tbThu.Location = new System.Drawing.Point(791, 559);
+            this.tbThu.Margin = new System.Windows.Forms.Padding(4);
+            this.tbThu.Name = "tbThu";
+            this.tbThu.Size = new System.Drawing.Size(436, 38);
+            this.tbThu.TabIndex = 17;
+            // 
+            // lbThu
+            // 
+            this.lbThu.AutoSize = true;
+            this.lbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThu.Location = new System.Drawing.Point(544, 561);
+            this.lbThu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbThu.Name = "lbThu";
+            this.lbThu.Size = new System.Drawing.Size(67, 36);
+            this.lbThu.TabIndex = 15;
+            this.lbThu.Text = "Thứ";
+            // 
             // txbTenLop
             // 
             this.txbTenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTenLop.Location = new System.Drawing.Point(791, 444);
-            this.txbTenLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbTenLop.Margin = new System.Windows.Forms.Padding(4);
             this.txbTenLop.Name = "txbTenLop";
             this.txbTenLop.Size = new System.Drawing.Size(436, 37);
             this.txbTenLop.TabIndex = 14;
             // 
             // cbxCaThucHanh
             // 
+            this.cbxCaThucHanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCaThucHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCaThucHanh.FormattingEnabled = true;
             this.cbxCaThucHanh.Location = new System.Drawing.Point(791, 315);
-            this.cbxCaThucHanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCaThucHanh.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCaThucHanh.Name = "cbxCaThucHanh";
             this.cbxCaThucHanh.Size = new System.Drawing.Size(436, 38);
             this.cbxCaThucHanh.TabIndex = 13;
             // 
             // cbxLoaiPhong
             // 
+            this.cbxLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxLoaiPhong.FormattingEnabled = true;
             this.cbxLoaiPhong.Items.AddRange(new object[] {
@@ -129,11 +161,10 @@
             "Thực hành lắp ráp",
             "Thực hành mạng"});
             this.cbxLoaiPhong.Location = new System.Drawing.Point(791, 199);
-            this.cbxLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.cbxLoaiPhong.Name = "cbxLoaiPhong";
             this.cbxLoaiPhong.Size = new System.Drawing.Size(436, 38);
             this.cbxLoaiPhong.TabIndex = 12;
-            this.cbxLoaiPhong.Text = "Thực hành thông thường";
             // 
             // btnDangKyLBS
             // 
@@ -147,7 +178,7 @@
             this.btnDangKyLBS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyLBS.ForeColor = System.Drawing.Color.White;
             this.btnDangKyLBS.Location = new System.Drawing.Point(858, 676);
-            this.btnDangKyLBS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangKyLBS.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangKyLBS.Name = "btnDangKyLBS";
             this.btnDangKyLBS.Size = new System.Drawing.Size(279, 49);
             this.btnDangKyLBS.TabIndex = 11;
@@ -209,9 +240,9 @@
             this.tabPBCSC.Controls.Add(this.grbBCSC);
             this.tabPBCSC.Controls.Add(this.label1);
             this.tabPBCSC.Location = new System.Drawing.Point(4, 34);
-            this.tabPBCSC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPBCSC.Margin = new System.Windows.Forms.Padding(4);
             this.tabPBCSC.Name = "tabPBCSC";
-            this.tabPBCSC.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPBCSC.Padding = new System.Windows.Forms.Padding(4);
             this.tabPBCSC.Size = new System.Drawing.Size(1823, 885);
             this.tabPBCSC.TabIndex = 1;
             this.tabPBCSC.Text = "Báo cáo sự cố";
@@ -229,7 +260,7 @@
             this.btnGuiBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuiBaoCao.ForeColor = System.Drawing.Color.White;
             this.btnGuiBaoCao.Location = new System.Drawing.Point(781, 683);
-            this.btnGuiBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuiBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuiBaoCao.Name = "btnGuiBaoCao";
             this.btnGuiBaoCao.Size = new System.Drawing.Size(284, 57);
             this.btnGuiBaoCao.TabIndex = 3;
@@ -243,9 +274,9 @@
             this.grbBCSC.Controls.Add(this.txtBCSC);
             this.grbBCSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbBCSC.Location = new System.Drawing.Point(387, 194);
-            this.grbBCSC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbBCSC.Margin = new System.Windows.Forms.Padding(4);
             this.grbBCSC.Name = "grbBCSC";
-            this.grbBCSC.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbBCSC.Padding = new System.Windows.Forms.Padding(4);
             this.grbBCSC.Size = new System.Drawing.Size(995, 450);
             this.grbBCSC.TabIndex = 2;
             this.grbBCSC.TabStop = false;
@@ -256,7 +287,7 @@
             this.txtBCSC.AcceptsReturn = true;
             this.txtBCSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBCSC.Location = new System.Drawing.Point(51, 69);
-            this.txtBCSC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBCSC.Margin = new System.Windows.Forms.Padding(4);
             this.txtBCSC.Multiline = true;
             this.txtBCSC.Name = "txtBCSC";
             this.txtBCSC.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -291,9 +322,9 @@
             this.tabPThongTin.Controls.Add(this.lbMaGV);
             this.tabPThongTin.Controls.Add(this.lbTieuDeThongTinGV);
             this.tabPThongTin.Location = new System.Drawing.Point(4, 34);
-            this.tabPThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPThongTin.Margin = new System.Windows.Forms.Padding(4);
             this.tabPThongTin.Name = "tabPThongTin";
-            this.tabPThongTin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPThongTin.Padding = new System.Windows.Forms.Padding(4);
             this.tabPThongTin.Size = new System.Drawing.Size(1823, 885);
             this.tabPThongTin.TabIndex = 2;
             this.tabPThongTin.Text = "Thông tin";
@@ -303,7 +334,7 @@
             // 
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txbEmail.Location = new System.Drawing.Point(853, 580);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.ReadOnly = true;
             this.txbEmail.Size = new System.Drawing.Size(435, 37);
@@ -313,7 +344,7 @@
             // 
             this.txbSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txbSDT.Location = new System.Drawing.Point(853, 489);
-            this.txbSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txbSDT.Name = "txbSDT";
             this.txbSDT.ReadOnly = true;
             this.txbSDT.Size = new System.Drawing.Size(435, 37);
@@ -323,7 +354,7 @@
             // 
             this.txbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txbKhoa.Location = new System.Drawing.Point(853, 399);
-            this.txbKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txbKhoa.Name = "txbKhoa";
             this.txbKhoa.ReadOnly = true;
             this.txbKhoa.Size = new System.Drawing.Size(435, 37);
@@ -333,17 +364,17 @@
             // 
             this.txbTenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txbTenGV.Location = new System.Drawing.Point(853, 304);
-            this.txbTenGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbTenGV.Margin = new System.Windows.Forms.Padding(4);
             this.txbTenGV.Name = "txbTenGV";
             this.txbTenGV.ReadOnly = true;
             this.txbTenGV.Size = new System.Drawing.Size(435, 37);
             this.txbTenGV.TabIndex = 17;
-             
+            // 
             // txbMaGV
             // 
             this.txbMaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txbMaGV.Location = new System.Drawing.Point(853, 215);
-            this.txbMaGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaGV.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaGV.Name = "txbMaGV";
             this.txbMaGV.ReadOnly = true;
             this.txbMaGV.Size = new System.Drawing.Size(435, 37);
@@ -415,26 +446,6 @@
             this.lbTieuDeThongTinGV.TabIndex = 1;
             this.lbTieuDeThongTinGV.Text = "Thông tin giảng viên";
             // 
-            // tbThu
-            // 
-            this.tbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbThu.Location = new System.Drawing.Point(791, 558);
-            this.tbThu.Margin = new System.Windows.Forms.Padding(4);
-            this.tbThu.Name = "tbThu";
-            this.tbThu.Size = new System.Drawing.Size(436, 37);
-            this.tbThu.TabIndex = 16;
-            // 
-            // lbThu
-            // 
-            this.lbThu.AutoSize = true;
-            this.lbThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThu.Location = new System.Drawing.Point(544, 561);
-            this.lbThu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbThu.Name = "lbThu";
-            this.lbThu.Size = new System.Drawing.Size(67, 36);
-            this.lbThu.TabIndex = 15;
-            this.lbThu.Text = "Thứ";
-            // 
             // fGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -443,7 +454,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fGiangVien";
             this.Text = "Màn hình chính giảng viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -489,7 +500,7 @@
         private VBButton btnGuiBaoCao;
         private System.Windows.Forms.GroupBox grbBCSC;
         private System.Windows.Forms.TextBox txtBCSC;
-        private System.Windows.Forms.TextBox tbThu;
         private System.Windows.Forms.Label lbThu;
+        private System.Windows.Forms.ComboBox tbThu;
     }
 }

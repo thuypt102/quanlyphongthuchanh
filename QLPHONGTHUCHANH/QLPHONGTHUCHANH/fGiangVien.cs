@@ -69,9 +69,9 @@ namespace QLPHONGTHUCHANH
         }
 
         
-        int loadHocKi()
+        int loadHocKi(string nam)
         {
-            List<int> ki = LichDAL.Khoitao.loadkiHoc().Select(l => l.KiHoc).ToList();
+            List<int> ki = LichDAL.Khoitao.loadkiHoc(nam).Select(l => l.KiHoc).ToList();
 
             if (ki.Count > 0)
             {
@@ -86,6 +86,12 @@ namespace QLPHONGTHUCHANH
         }
         private bool IsValidInput()
         {
+            if (string.IsNullOrWhiteSpace(cbxLoaiPhong.Text))
+            {
+                MessageBox.Show("Vui lòng chọn loại phòng.", "Lỗi");
+                return false;
+            }
+            
             // id giảng viên
             // Kiểm tra giá trị trong TextBox
             if (string.IsNullOrWhiteSpace(tbThu.Text))
@@ -128,23 +134,14 @@ namespace QLPHONGTHUCHANH
             {
                 // Lấy thông tin từ giao diện người dùng
                 string loaiPhong = cbxLoaiPhong.SelectedItem.ToString();
-                string tenCa = cbxCaThucHanh.SelectedItem.ToString();
-                System.Data.DataTable result = CaDAL.Khoitao.GetCaId(tenCa);
-                int caThucHanh = 1;
-                if (result.Rows.Count > 0)
-                {
-                   caThucHanh = Convert.ToInt32(result.Rows[0]["id"]);
-                    
-                }
-
-
-                //System.Data.DataTable idlop = LopDAL.Khoitao.GetCaId(txbTenLop.Text);
-
+                string tenCa = cbxCaThucHanh.Text;
+                int caThucHanh = CaDAL.Khoitao.GetCaId(tenCa);
+                
                 string tenLop = LopDAL.Khoitao.GetIdLop(txbTenLop.Text);
 
 
 
-                string thu = tbThu.Text;
+                string thu = tbThu.Text + caThucHanh.ToString();
 
                 // Lấy idGiangVien tương ứng với id trong bảng dbo.TAIKHOAN đăng nhập hiện tại
                 string loggedInUsername = fLogin.LoggedInUsername;
@@ -153,7 +150,7 @@ namespace QLPHONGTHUCHANH
                 DataTable giangVienInfo = taiKhoanDAL.getGiangVienInfo(loggedInUsername, loggedInPassword);
 
                 string namHoc = loadNamHoc();
-                int kiHoc = loadHocKi();
+                int kiHoc = loadHocKi(namHoc);
 
                 if (giangVienInfo.Rows.Count > 0)
                 {
@@ -169,8 +166,9 @@ namespace QLPHONGTHUCHANH
                         
                         if (LichDAL.Khoitao.ThemLich(caThucHanh, tenLop, idPhong, idGiangVien, namHoc, kiHoc, thu))
                         {
+                            string thongBao = string.Format("Đăng kí thành công! Phòng: {0}", idPhong);
+                            MessageBox.Show(thongBao, "Thông báo");
 
-                            MessageBox.Show("Đăng kí thành công!", "Thông báo");
                         }
                         else
                         {
@@ -217,7 +215,6 @@ namespace QLPHONGTHUCHANH
                     // định dạng lại kiểu datetime 
                     string formattedThoiGianGui = thoiGianGui.ToString("yyyy-MM-dd HH:mm:ss");
 
-                    // sửa '" + idGiangVien + "', '" + formattedThoiGianGui +
                     // Thêm thông báo vào bảng dbo.THONGBAO
                     string query = "INSERT INTO THONGBAO (tieuDe, noiDung, idGiangVien, thoiGianGui, trangThai) " +
                                    "VALUES (N'" + tieuDe + "', N'" + noiDung + "', '" + idGiangVien + "', '" + formattedThoiGianGui + "', " + 0 + ")";

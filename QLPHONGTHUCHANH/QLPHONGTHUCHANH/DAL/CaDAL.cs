@@ -39,13 +39,22 @@ namespace QLPHONGTHUCHANH.DAL
             }
             return list;
         }
+
+
         
-        public System.Data.DataTable GetCaId(string tenCa)
+        public int GetCaId(string tenCa)
         {
-            string query = "SELECT * FROM CATHUCHANH WHERE tenCaThucHanh = '" + tenCa + "'";
-            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
-            return result;
+            string query = "SELECT TOP 1 id FROM CATHUCHANH WHERE tenCaThucHanh =N'" + tenCa + "'";
+            object result = DataProvider.Khoitao.ExecuteScalar(query);
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToInt32(result);
+            }
+
+            return 0;
         }
+
 
         public int demSoCa()
         {

@@ -106,7 +106,7 @@ namespace QLPHONGTHUCHANH.DAL
 
         public string GetIdLop(string tenLop)
         {
-            string query = "SELECT * FROM LOP WHERE tenLop = '" + tenLop + "'";
+            string query = "SELECT * FROM LOP WHERE tenLop = N'" + tenLop + "'";
             DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
 
             if (result.Rows.Count > 0)
