@@ -210,5 +210,13 @@ namespace QLPHONGTHUCHANH
             this.Show();
             loadLich();
         }
+
+        private void btnDoiPhong_Click(object sender, EventArgs e)
+        {
+            fDoiPhongMay fdpm = new fDoiPhongMay();
+            this.Hide();
+            fdpm.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -168,6 +168,7 @@
             this.btnDoiPhong.Text = "Đổi phòng máy";
             this.btnDoiPhong.TextColor = System.Drawing.Color.White;
             this.btnDoiPhong.UseVisualStyleBackColor = false;
+            this.btnDoiPhong.Click += new System.EventHandler(this.btnDoiPhong_Click);
             // 
             // btnTimKiem
             // 
