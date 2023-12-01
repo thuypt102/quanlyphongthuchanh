@@ -1,11 +1,16 @@
-﻿using QLPHONGTHUCHANH.DTO;
+﻿using Microsoft.Office.Interop.Excel;
+using Microsoft.SqlServer.Server;
+using QLPHONGTHUCHANH.DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QLPHONGTHUCHANH.DAL
 {
@@ -26,7 +31,7 @@ namespace QLPHONGTHUCHANH.DAL
 
         private LichDAL() { }
 
-        public DataTable getLichThucHanh()
+        public System.Data.DataTable getLichThucHanh()
         {
             return DataProvider.Khoitao.ExecuteQuery("Select * from LICHTHUCHANH");
         }
@@ -34,7 +39,15 @@ namespace QLPHONGTHUCHANH.DAL
         public bool ThemLich(int idCaThucHanh, string idLop, string idPhong, string idGiangVien, string namHoc, int kiHoc, string thu)
         {
             string query = "INSERT INTO LICHTHUCHANH (idCaThucHanh, idLop, idPhong, idGiangVien, namHoc, kiHoc, thu) VALUES (" + idCaThucHanh + ", '" + idLop + "', '" + idPhong + "', '" + idGiangVien + "', '" + namHoc + "', " + kiHoc + ", '" + thu + "')";
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+
+            return kq != null;
+        }
+
+        public bool CapNhatPhong(int idlich, string idPhongMoi)
+        {
+            string query = "UPDATE LICHTHUCHANH SET idPhong = '" + idPhongMoi + "' WHERE id = " + idlich;
+            System.Data.DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
             return kq != null;
         }
@@ -43,15 +56,26 @@ namespace QLPHONGTHUCHANH.DAL
         {
             string query = "INSERT INTO LICHTHUCHANH (idCaThucHanh, idLop, idPhong, idGiangVien, namHoc, kiHoc, thu) " +
                 "VALUES (" + idCaThucHanh + ", '" + idLop + "', '" + idPhong + "', '" + idGiangVien + "', '" + namHoc + "', " + kiHoc + ", " + thu + ")";
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
             return kq != null;
         }
+        
+        public bool KiemTraIdPhongTrong(int cath ,string idPhong ,/*string lop,*/ string nam,int kiHoc , string thu )
+        {
+            string query = "SELECT id FROM LICHTHUCHANH WHERE idCaThucHanh = '"+cath+"' AND idPhong= '" + idPhong+ /*"' AND idLop = '"+ lop +*/ "' AND namHoc = '" + nam  + "' AND kiHoc =" + kiHoc + "  AND thu = '"+ thu + "'";
+            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            if (result.Rows.Count == 0)
+            {
+                return false;
+            }
 
-        public DataTable getLichLop(string lop, string nam)
+            return true;
+        }
+        public System.Data.DataTable getLichLop(string lop, string nam)
         {
             string query = "SELECT * FROM LICHTHUCHANH WHERE idLop = '" + lop + "' AND namHoc = '" + nam + "'";
-            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
 
             if (result.Rows.Count == 0)
             {
@@ -61,10 +85,10 @@ namespace QLPHONGTHUCHANH.DAL
 
             return result;
         }
-        public DataTable getLichGV(string gv, string nam)
+        public System.Data.DataTable getLichGV(string gv, string nam)
         {
             string query = "SELECT * FROM LICHTHUCHANH WHERE idGiangVien = '" + gv + "' AND namHoc = '" + nam + "'";
-            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
 
             if (result.Rows.Count == 0)
             {
@@ -74,10 +98,10 @@ namespace QLPHONGTHUCHANH.DAL
 
             return result;
         }
-        public DataTable getLichPhong(string phong, string nam)
+        public System.Data.DataTable getLichPhong(string phong, string nam)
         {
             string query = "SELECT * FROM LICHTHUCHANH WHERE idPhong = '" + phong + "' AND namHoc = '" + nam + "'";
-            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
 
             if (result.Rows.Count == 0)
             {
@@ -88,15 +112,15 @@ namespace QLPHONGTHUCHANH.DAL
             return result;
         }
 
-        public DataTable getLichNam(string nam)
+        public System.Data.DataTable getLichNam(string nam)
         {
             return DataProvider.Khoitao.ExecuteQuery("Select * from LICHTHUCHANH where namHoc = '" + nam + "'");
         }
 
-        public DataTable getLichGVall(string gv)
+        public System.Data.DataTable getLichGVall(string gv)
         {
             string query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN GIANGVIEN ON LICHTHUCHANH.idGiangVien = GIANGVIEN.id WHERE GIANGVIEN.id = N'" + gv + "'";
-            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
             if (result.Rows.Count == 0)
             {
                 query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN GIANGVIEN ON LICHTHUCHANH.idGiangVien = GIANGVIEN.id WHERE GIANGVIEN.tenGiangVien = N'" + gv + "'";
@@ -105,10 +129,10 @@ namespace QLPHONGTHUCHANH.DAL
             return result;
         }
 
-        public DataTable getLichLOPall(string lop)
+        public System.Data.DataTable getLichLOPall(string lop)
         {
             string query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN LOP ON LICHTHUCHANH.idLop = LOP.id WHERE LOP.id = N'" + lop + "'";
-            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
             if (result.Rows.Count == 0)
             {
                 query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN LOP ON LICHTHUCHANH.idLop = LOP.id WHERE LOP.tenLop = N'" + lop + "'";
@@ -117,10 +141,10 @@ namespace QLPHONGTHUCHANH.DAL
             return result;
         }
 
-        public DataTable getLichPHONGall(string phong)
+        public System.Data.DataTable getLichPHONGall(string phong)
         {
             string query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN PHONGMAY ON LICHTHUCHANH.idPhong = PHONGMAY.id WHERE PHONGMAY.id = N'" + phong + "'";
-            DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable result = DataProvider.Khoitao.ExecuteQuery(query);
             if (result.Rows.Count == 0)
             {
                 query = query = "SELECT LICHTHUCHANH.* FROM LICHTHUCHANH JOIN PHONGMAY ON LICHTHUCHANH.idPhong = PHONGMAY.id WHERE PHONGMAY.tenPhong = N'" + phong + "'";
@@ -133,7 +157,7 @@ namespace QLPHONGTHUCHANH.DAL
         {
             List<string> uniqueNamHoc = new List<string>();
             string query = "SELECT DISTINCT namHoc FROM LICHTHUCHANH";
-            DataTable dta = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable dta = DataProvider.Khoitao.ExecuteQuery(query);
 
             foreach (DataRow item in dta.Rows)
             {
@@ -147,7 +171,7 @@ namespace QLPHONGTHUCHANH.DAL
         {
             List<string> list = new List<string>();
             string query = "SELECT DISTINCT namHoc FROM LICHTHUCHANH";
-            DataTable dataTable = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable dataTable = DataProvider.Khoitao.ExecuteQuery(query);
 
             foreach (DataRow row in dataTable.Rows)
             {
@@ -163,7 +187,7 @@ namespace QLPHONGTHUCHANH.DAL
             //string query = "SELECT * FROM LICHTHUCHANH WHERE kiHoc IN (SELECT DISTINCT kiHoc FROM LICHTHUCHANH)";
             string query = "SELECT* FROM LICHTHUCHANH WHERE kiHoc = ( " +
                 "SELECT MAX(kiHoc) FROM LICHTHUCHANH WHERE namHoc = '"+nam+"') AND namHoc = '"+nam+"'";
-            DataTable dta = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable dta = DataProvider.Khoitao.ExecuteQuery(query);
 
             foreach (DataRow item in dta.Rows)
             {
@@ -177,7 +201,7 @@ namespace QLPHONGTHUCHANH.DAL
         {
             List<string> danhSachPhong = new List<string>();
             string query = $"SELECT DISTINCT id FROM PHONGMAY WHERE id NOT IN (SELECT DISTINCT idPhong FROM LICHTHUCHANH WHERE idCaThucHanh = {caThucHanh} AND idLop = '{lop}' AND idGiangVien = '{giangVien}' AND kiHoc = {kiHoc} AND thu = '{thu}')";
-            DataTable dataTable = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable dataTable = DataProvider.Khoitao.ExecuteQuery(query);
 
             foreach (DataRow row in dataTable.Rows)
             {
@@ -191,7 +215,7 @@ namespace QLPHONGTHUCHANH.DAL
         public bool KiemTraPhongTrong(string idPhong, int caThucHanh, int thu, string namHoc, int kiHoc)
         {
             string query = "SELECT * FROM LICHTHUCHANH WHERE idPhong = '" + idPhong + "' AND idCaThucHanh = " + caThucHanh + " AND thu = " + thu + " AND namHoc = '" + namHoc + "' AND kiHoc = " + kiHoc;
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
             return kq.Rows.Count == 0; // Trả về true nếu không có lịch thực hành tương ứng, ngược lại trả về false
         }
@@ -199,7 +223,7 @@ namespace QLPHONGTHUCHANH.DAL
         public bool KiemTraLopBan(int caThucHanh, int thu, string namHoc, int kiHoc)
         {
             string query = "SELECT * FROM LICHTHUCHANH WHERE idCaThucHanh = " + caThucHanh + " AND thu = " + thu + " AND namHoc = '" + namHoc + "' AND kiHoc = " + kiHoc;
-            DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
+            System.Data.DataTable kq = DataProvider.Khoitao.ExecuteQuery(query);
 
             return kq.Rows.Count == 0; // Trả về true nếu lớp kh bận
         }
