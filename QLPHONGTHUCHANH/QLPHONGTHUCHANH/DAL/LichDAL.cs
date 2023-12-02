@@ -36,6 +36,18 @@ namespace QLPHONGTHUCHANH.DAL
             return DataProvider.Khoitao.ExecuteQuery("Select * from LICHTHUCHANH");
         }
 
+        public System.Data.DataTable getLichThucHanhAD()
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select * from LICHTHUCHANH where " +
+                "namHoc = (SELECT MAX(namHoc) FROM LICHTHUCHANH) and kiHoc = (SELECT MAX(kiHoc) FROM LICHTHUCHANH)");
+        }
+
+        public System.Data.DataTable getLichThucHanhGV(string id)
+        {
+            return DataProvider.Khoitao.ExecuteQuery("Select * from LICHTHUCHANH where idGiangVien = '" + id 
+                + "' and namHoc = (SELECT MAX(namHoc) FROM LICHTHUCHANH) and kiHoc = (SELECT MAX(kiHoc) FROM LICHTHUCHANH)");
+        }
+
         public bool ThemLich(int idCaThucHanh, string idLop, string idPhong, string idGiangVien, string namHoc, int kiHoc, string thu)
         {
             string query = "INSERT INTO LICHTHUCHANH (idCaThucHanh, idLop, idPhong, idGiangVien, namHoc, kiHoc, thu) VALUES (" + idCaThucHanh + ", '" + idLop + "', '" + idPhong + "', '" + idGiangVien + "', '" + namHoc + "', " + kiHoc + ", '" + thu + "')";

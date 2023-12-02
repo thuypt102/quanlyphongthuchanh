@@ -115,6 +115,15 @@ namespace QLPHONGTHUCHANH.DAL
             }
 
         }
+
+        public bool xoaTK(string id)
+        {           
+            string query = "DELETE FROM TAIKHOAN WHERE id = (SELECT idTaiKhoan FROM GIANGVIEN WHERE id = " + id;
+            int numberOfRowsDeleted = DataProvider.Khoitao.ExecuteNonQuery(query);
+
+            return numberOfRowsDeleted > 0;
+        }
+
         public bool KTLienKet(string id)
         {
 

@@ -143,14 +143,17 @@ namespace QLPHONGTHUCHANH
                 string maLop = dtaLop.Rows[i].Cells[0].Value.ToString();
                 string maGV = dtaLop.Rows[i].Cells[3].Value.ToString();
 
-                if (LopDAL.Khoitao.xoaLop(maLop))
+                try
                 {
-                    MessageBox.Show("xóa thành công!", "Thông báo");
+                    if (LopDAL.Khoitao.xoaLop(maLop))
+                    {
+                        MessageBox.Show("Xóa thành công!", "Thông báo");
+                    }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("xóa không thành công!", "Thông báo");
-
+                    MessageBox.Show("Không thể xoá lớp này vì sẽ mất thông tin! " +
+                        "\nHãy lưu trữ nếu không muốn chia lịch lớp này nữa.", "Thông báo");
                 }
             }
             else if (result == DialogResult.No)
@@ -252,8 +255,6 @@ namespace QLPHONGTHUCHANH
             XemGV();
         }
 
-
-
         private void btnXoaPhong_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
@@ -265,14 +266,18 @@ namespace QLPHONGTHUCHANH
                 i = dtaPhong.CurrentRow.Index;
 
                 string maPhong = dtaPhong.Rows[i].Cells[0].Value.ToString();
-
-                if (PhongDAL.Khoitao.xoaPhong(maPhong))
+                try
                 {
-                    MessageBox.Show("xóa thành công!", "Thông báo");
+                    if (PhongDAL.Khoitao.xoaPhong(maPhong))
+                    {
+                        MessageBox.Show("Xóa phòng thành công!", "Thông báo");
+                    }
                 }
-                else
-                    MessageBox.Show("xóa không thành công!", "Thông báo");
-
+                catch
+                {
+                    MessageBox.Show("Không thể xoá phòng này vì sẽ mất thông tin! " +
+                        "\nHãy lưu trữ nếu không muốn chia lịch phòng này nữa.", "Thông báo");
+                }
             }
             else if (result == DialogResult.No)
             {
@@ -297,16 +302,19 @@ namespace QLPHONGTHUCHANH
 
                 if (GVDALL.Khoitao.xoaGV(maGV))
                 {
-                    MessageBox.Show("xóa thành công!", "Thông báo");
+                    MessageBox.Show("Xóa giảng viên thành công!", "Thông báo");
+                    GVDALL.Khoitao.xoaTK(maGV);
                 }
                 else
                 {
                     if (GVDALL.Khoitao.KTLienKet(maGV))
                     {
-                        MessageBox.Show("Không thể xóa vì có liên quan đến các bảng khác.", "Thông báo");
+                        //MessageBox.Show("Không thể xóa vì có liên quan đến các bảng khác.", "Thông báo");
+                        MessageBox.Show("Không thể xoá giáo viên này vì sẽ mất thông tin! " +
+                        "\nHãy lưu trữ nếu không muốn chia lịch giáo viên này nữa.", "Thông báo");
                     }
                     else
-                        MessageBox.Show("xóa không thành công!", "Thông báo");
+                        MessageBox.Show("Xóa không thành công!", "Thông báo");
 
                 }
 

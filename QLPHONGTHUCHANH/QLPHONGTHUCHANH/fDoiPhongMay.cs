@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPHONGTHUCHANH.DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLPHONGTHUCHANH
 {
@@ -21,10 +22,28 @@ namespace QLPHONGTHUCHANH
         }
         void loadLich()
         {
+            string username = fLogin.LoggedInUsername;
+            string pass = fLogin.LoggedInPassword;
+
+            bool isAd = getType(username, pass); // Kiểm tra loại tài khoản
+
+            if (isAd)
+            {
+                dtaDoiPM.DataSource = LichDAL.Khoitao.getLichThucHanhAD();
+            }
+            else
+            {
+                dtaDoiPM.DataSource = LichDAL.Khoitao.getLichThucHanhGV(username);
+            }
+
             //dsTaiKhoan.DataSource = TaiKhoanBUS.Khoitao.layDStaikhoan();
-            dtaDoiPM.DataSource = LichDAL.Khoitao.getLichThucHanh();
+            
         }
-        
+
+        bool getType(string user, string pass)
+        {
+            return TaiKhoanDAL.Khoitao.getType(user, pass);
+        }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
