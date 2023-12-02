@@ -15,6 +15,10 @@ với:
 	Ví dụ: A5.01 là 50010
 	4T.101.1 là 41011
 
+Kết nối csdl với ADO.NET:
+	Mở file DataProvider.cs
+và tìm dòng private string connstr = @"bỏ connect string vào đây";
+
 Để test các chức năng tải lên/xuống file excel cần thực hiện:
 Bước 1: Mở Visual Studio và mở dự án của bạn.
 Bước 2: Nhấp chuột phải vào dự án trong Khả năng xây dựng (Solution Explorer) và chọn "Manage NuGet Packages" (Quản lý gói NuGet).
