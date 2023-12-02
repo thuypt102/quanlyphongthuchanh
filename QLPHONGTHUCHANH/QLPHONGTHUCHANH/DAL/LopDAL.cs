@@ -213,7 +213,7 @@ namespace QLPHONGTHUCHANH.DAL
             }
 
             char chuc = caThucHanh[0];
-            if (chuc < '2' || chuc > '7')
+            if (chuc < '2' || chuc > '8')
             {
                 return false;
             }

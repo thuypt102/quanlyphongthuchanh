@@ -1,0 +1,27 @@
+CHÚ THÍCH
+
+Năm học có dạng như 2000-2002, là char(9) tức 9 ký tự.
+
+Kì học là 1 số nguyên trong ba số 1, 2, 3.
+
+Các thứ sẽ là 2345678 tương ứng thứ 2 -> chủ nhật.
+Ca lý thuyết sẽ là xy char(2), với x sẽ là thứ, y sẽ là mã ca.
+
+Mã khu có dạng: abcde
+với:
+	a là số khu
+	bcd là tên số phòng
+	e là nhánh phòng
+	Ví dụ: A5.01 là 50010
+	4T.101.1 là 41011
+
+Để test các chức năng tải lên/xuống file excel cần thực hiện:
+Bước 1: Mở Visual Studio và mở dự án của bạn.
+Bước 2: Nhấp chuột phải vào dự án trong Khả năng xây dựng (Solution Explorer) và chọn "Manage NuGet Packages" (Quản lý gói NuGet).
+Bước 3: Trong cửa sổ Quản lý gói NuGet, chọn tab "Browse" (Duyệt).
+Bước 4: Tìm kiếm "EPPlus" và chọn gói NuGet "EPPlus" trong kết quả tìm kiếm.
+Bước 5: Nhấp vào nút "Install" (Cài đặt) và chờ quá trình cài đặt hoàn tất.
+
+Các file giangvien.xlsx, lop.xlsx, phong.xlsx để test chức năng tải lên tương ứng.
+
+Còn cập nhật...
