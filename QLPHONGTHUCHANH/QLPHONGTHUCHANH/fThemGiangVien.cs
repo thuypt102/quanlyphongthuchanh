@@ -48,10 +48,13 @@ namespace QLPHONGTHUCHANH
             string SDT = txbSDT.Text;
             string Email = txbEmail.Text;
 
-            if (GVDALL.Khoitao.timKiem(maGV))
+            if (string.IsNullOrEmpty(maGV) || string.IsNullOrEmpty(tenGV))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin giảng viên.", "Thông báo");
+            }
+            else if (GVDALL.Khoitao.timKiem(maGV))
             {
                 MessageBox.Show("Mã giảng viên đã tồn tại. Vui lòng nhập mã khác.");
-
             }
             else
             {
@@ -63,12 +66,12 @@ namespace QLPHONGTHUCHANH
                         if (!TaiKhoanDAL.Khoitao.kiemTraID(IDTaiKhoan))
                         {
                             MessageBox.Show("Mã tài khoản giảng viên không tồn tại. Vui lòng nhập mã khác.");
-                        }
+                        }      
                         else
                         {
                             if (GVDALL.Khoitao.themGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
                             {
-                                MessageBox.Show("thêm thành công!", "Thông báo");
+                                MessageBox.Show("Thêm giảng viên thành công!", "Thông báo");
                             }
                             else
                                 MessageBox.Show("thêm không thành công!", "Thông báo");
@@ -84,7 +87,7 @@ namespace QLPHONGTHUCHANH
                     IDTaiKhoan = 0;
                     if (GVDALL.Khoitao.themGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
                     {
-                        MessageBox.Show("thêm thành công!", "Thông báo");
+                        MessageBox.Show("Thêm giảng viên thành công!", "Thông báo");
                     }
                     else
                         MessageBox.Show("thêm không thành công!", "Thông báo");

@@ -34,7 +34,7 @@ namespace QLPHONGTHUCHANH
         }
         private void btnKhoiPhuc_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn khôi phục lớp?", "Thông báo",
+            if (MessageBox.Show("Bạn có chắc chắn muốn khôi phục thông tin lớp này không?", "Thông báo",
                 MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 int i;
@@ -44,7 +44,7 @@ namespace QLPHONGTHUCHANH
 
                 if (LopDAL.Khoitao.khoiPhucLop(maL))
                 {
-                    MessageBox.Show("Khôi phục lớp thành công!", "Thông báo");
+                    MessageBox.Show("Đã khôi phục thông tin lớp!", "Thông báo");
                     loadDSLop();
                     showKhoiPhuc();
                 }

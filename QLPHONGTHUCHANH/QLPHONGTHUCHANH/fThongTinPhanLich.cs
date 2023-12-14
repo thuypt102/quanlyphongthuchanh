@@ -122,7 +122,8 @@ namespace QLPHONGTHUCHANH
             catch (Exception ex)
             {
                 // Xử lý lỗi nếu có
-                MessageBox.Show("Đã xảy ra lỗi trong quá trình phân lịch: " + ex.Message);
+                //MessageBox.Show("Đã xảy ra lỗi trong quá trình phân lịch: " + ex.Message);
+                MessageBox.Show("Đã xảy ra lỗi trong quá trình phân lịch. Vui lòng đảm bảo năm học và kì học chính xác.", "Thông báo");
             }
         }
     }

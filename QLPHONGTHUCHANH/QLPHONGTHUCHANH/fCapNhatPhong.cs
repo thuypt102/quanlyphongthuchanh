@@ -37,20 +37,29 @@ namespace QLPHONGTHUCHANH
             string maPhong = txbMaPhong.Text;
             string tenPhong = txbTenPhong.Text;
             string tenKhuVuc = txbKhuVuc.Text;
-            int soLuongMay = int.Parse(txbSLPM.Text);
-            
-            string loaiThucHanh = cmbLoai.Text;
-            if (loaiThucHanh == "")
+            string soLuongMayText = txbSLPM.Text;
+            int soLuongMay;
+
+            if (!int.TryParse(soLuongMayText, out soLuongMay))
             {
-                loaiThucHanh = "Thực hành thông thường";
-            }
-            if (PhongDAL.Khoitao.capNhatPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
-            {
-                MessageBox.Show("Cập nhật phòng máy thành công!", "Thông báo");
+                // Xử lý khi chuỗi không phải là số
+                MessageBox.Show("Số lượng máy không hợp lệ!", "Lỗi");
             }
             else
             {
-                MessageBox.Show("Cập nhật phòng máy không thành công!", "Thông báo");
+                string loaiThucHanh = cmbLoai.Text;
+                if (loaiThucHanh == "")
+                {
+                    loaiThucHanh = "Thực hành thông thường";
+                }
+                if (PhongDAL.Khoitao.capNhatPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
+                {
+                    MessageBox.Show("Cập nhật phòng máy thành công!", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật phòng máy không thành công!", "Thông báo");
+                }
             }
         }
         

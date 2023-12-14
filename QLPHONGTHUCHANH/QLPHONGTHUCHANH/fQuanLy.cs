@@ -132,7 +132,7 @@ namespace QLPHONGTHUCHANH
         private void btnXoaLop_Click(object sender, EventArgs e)
         {
 
-            DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá thông tin lớp này không?", "Xác nhận", MessageBoxButtons.YesNo);
 
             // Kiểm tra kết quả từ người dùng
             if (result == DialogResult.Yes)
@@ -147,7 +147,7 @@ namespace QLPHONGTHUCHANH
                 {
                     if (LopDAL.Khoitao.xoaLop(maLop))
                     {
-                        MessageBox.Show("Xóa thành công!", "Thông báo");
+                        MessageBox.Show("Xóa lớp thành công!", "Thông báo");
                     }
                 }
                 catch
@@ -257,7 +257,7 @@ namespace QLPHONGTHUCHANH
 
         private void btnXoaPhong_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá thông tin phòng máy này không?", "Xác nhận", MessageBoxButtons.YesNo);
 
             // Kiểm tra kết quả từ người dùng
             if (result == DialogResult.Yes)
@@ -290,7 +290,7 @@ namespace QLPHONGTHUCHANH
 
         private void btnXoaGV_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá thông tin giảng viên này không?", "Xác nhận", MessageBoxButtons.YesNo);
 
             // Kiểm tra kết quả từ người dùng
             if (result == DialogResult.Yes)
@@ -310,7 +310,7 @@ namespace QLPHONGTHUCHANH
                     if (GVDALL.Khoitao.KTLienKet(maGV))
                     {
                         //MessageBox.Show("Không thể xóa vì có liên quan đến các bảng khác.", "Thông báo");
-                        MessageBox.Show("Không thể xoá giáo viên này vì sẽ mất thông tin! " +
+                        MessageBox.Show("Không thể xoá giảng viên này vì sẽ mất thông tin! " +
                         "\nHãy lưu trữ nếu không muốn chia lịch giáo viên này nữa.", "Thông báo");
                     }
                     else
@@ -370,7 +370,7 @@ namespace QLPHONGTHUCHANH
         }
         private void btnLuuTruLop_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn lưu trữ lớp?", "Thông báo",
+            if (MessageBox.Show("Bạn có chắc chắn muốn lưu trữ thông tin lớp này không?", "Thông báo",
                 MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 int i;
@@ -380,7 +380,7 @@ namespace QLPHONGTHUCHANH
 
                 if (LopDAL.Khoitao.luuTruLop(maL))
                 {
-                    MessageBox.Show("Lưu trữ lớp thành công!", "Thông báo");
+                    MessageBox.Show("Đã chuyển thông tin vào mục Kho lưu trữ!", "Thông báo");
                     XemLop();
                     showLuuTruLop();
                 }
@@ -426,7 +426,7 @@ namespace QLPHONGTHUCHANH
 
                 if (GVDALL.Khoitao.luuTruGiangVien(maGV))
                 {
-                    MessageBox.Show("Lưu trữ giảng viên thành công!", "Thông báo");
+                    MessageBox.Show("Đã chuyển thông tin giảng viên vào mục Kho lưu trữ!", "Thông báo");
                     XemGV();
                     showLuuTruGV();
                 }

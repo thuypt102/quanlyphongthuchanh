@@ -51,7 +51,7 @@
             this.txbCaLT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbCaLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbCaLT.Location = new System.Drawing.Point(425, 299);
-            this.txbCaLT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbCaLT.Margin = new System.Windows.Forms.Padding(2);
             this.txbCaLT.MaxLength = 2;
             this.txbCaLT.Name = "txbCaLT";
             this.txbCaLT.Size = new System.Drawing.Size(216, 24);
@@ -62,7 +62,7 @@
             this.txbIDGV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbIDGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbIDGV.Location = new System.Drawing.Point(425, 253);
-            this.txbIDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbIDGV.Margin = new System.Windows.Forms.Padding(2);
             this.txbIDGV.MaxLength = 10;
             this.txbIDGV.Name = "txbIDGV";
             this.txbIDGV.Size = new System.Drawing.Size(216, 24);
@@ -73,7 +73,7 @@
             this.txbKhoa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbKhoa.Location = new System.Drawing.Point(425, 208);
-            this.txbKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.txbKhoa.Name = "txbKhoa";
             this.txbKhoa.Size = new System.Drawing.Size(216, 24);
             this.txbKhoa.TabIndex = 3;
@@ -83,7 +83,7 @@
             this.txbTenLop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbTenLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbTenLop.Location = new System.Drawing.Point(425, 161);
-            this.txbTenLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTenLop.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenLop.Name = "txbTenLop";
             this.txbTenLop.Size = new System.Drawing.Size(216, 24);
             this.txbTenLop.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.txbMaLop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbMaLop.Location = new System.Drawing.Point(425, 114);
-            this.txbMaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbMaLop.Margin = new System.Windows.Forms.Padding(2);
             this.txbMaLop.Name = "txbMaLop";
             this.txbMaLop.ReadOnly = true;
             this.txbMaLop.Size = new System.Drawing.Size(216, 24);
@@ -112,7 +112,7 @@
             this.vbButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.vbButton1.ForeColor = System.Drawing.Color.White;
             this.vbButton1.Location = new System.Drawing.Point(359, 463);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.vbButton1.Margin = new System.Windows.Forms.Padding(2);
             this.vbButton1.Name = "vbButton1";
             this.vbButton1.Size = new System.Drawing.Size(252, 45);
             this.vbButton1.TabIndex = 10;
@@ -212,7 +212,7 @@
             "Thực hành lắp ráp",
             "Thực hành mạng"});
             this.cmbLoai.Location = new System.Drawing.Point(425, 394);
-            this.cmbLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLoai.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(216, 24);
             this.cmbLoai.TabIndex = 7;
@@ -235,7 +235,7 @@
             this.txbSlSV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbSlSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbSlSV.Location = new System.Drawing.Point(425, 346);
-            this.txbSlSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSlSV.Margin = new System.Windows.Forms.Padding(2);
             this.txbSlSV.Name = "txbSlSV";
             this.txbSlSV.Size = new System.Drawing.Size(216, 24);
             this.txbSlSV.TabIndex = 6;
@@ -249,9 +249,9 @@
             this.lbSlSV.Location = new System.Drawing.Point(217, 346);
             this.lbSlSV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSlSV.Name = "lbSlSV";
-            this.lbSlSV.Size = new System.Drawing.Size(131, 24);
+            this.lbSlSV.Size = new System.Drawing.Size(166, 24);
             this.lbSlSV.TabIndex = 7;
-            this.lbSlSV.Text = "Số lượng sinh ";
+            this.lbSlSV.Text = "Số lượng sinh viên";
             // 
             // fCapNhatLop
             // 
@@ -278,7 +278,6 @@
             this.Name = "fCapNhatLop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật thông tin lớp";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -74,12 +74,21 @@ namespace QLPHONGTHUCHANH
                     }
                     else
                     {
-                        if (GVDALL.Khoitao.capNhatGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
+                        try
                         {
-                            MessageBox.Show("cập nhật thành công!", "Thông báo");
+                            if (GVDALL.Khoitao.capNhatGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
+                            {
+                                MessageBox.Show("Cập nhật thông tin giảng viên này thành công!", "Thông báo");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Cập nhật thông tin giảng viên này không thành công!", "Thông báo");
+                            }
                         }
-                        else
-                            MessageBox.Show("cập nhật không thành công!", "Thông báo");
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Đã xảy ra lỗi. Kiểm tra lại thông tin", "Cảnh báo");
+                        }
                     }
                 }
                 else
@@ -91,7 +100,7 @@ namespace QLPHONGTHUCHANH
             {
                 if (GVDALL.Khoitao.capNhatGV(maGV, tenGV, Khoa, SDT, Email, IDTaiKhoan))
                 {
-                    MessageBox.Show("cập nhật thành công!", "Thông báo");
+                    MessageBox.Show("Cập nhật thông tin giảng viên này thành công!", "Thông báo");
                 }
                 else
                     MessageBox.Show("cập nhật không thành công!", "Thông báo");

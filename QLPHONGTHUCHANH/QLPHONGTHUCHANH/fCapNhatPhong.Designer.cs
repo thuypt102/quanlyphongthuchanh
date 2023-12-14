@@ -55,7 +55,7 @@
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
             this.btnCapNhat.Location = new System.Drawing.Point(359, 463);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(252, 45);
             this.btnCapNhat.TabIndex = 6;
@@ -78,7 +78,7 @@
             "Thực hành lắp ráp",
             "Thực hành mạng"});
             this.cmbLoai.Location = new System.Drawing.Point(403, 388);
-            this.cmbLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLoai.Margin = new System.Windows.Forms.Padding(2);
             this.cmbLoai.Name = "cmbLoai";
             this.cmbLoai.Size = new System.Drawing.Size(276, 24);
             this.cmbLoai.TabIndex = 5;
@@ -88,7 +88,7 @@
             this.txbSLPM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbSLPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbSLPM.Location = new System.Drawing.Point(403, 319);
-            this.txbSLPM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSLPM.Margin = new System.Windows.Forms.Padding(2);
             this.txbSLPM.Name = "txbSLPM";
             this.txbSLPM.Size = new System.Drawing.Size(276, 24);
             this.txbSLPM.TabIndex = 4;
@@ -98,7 +98,7 @@
             this.txbKhuVuc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbKhuVuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbKhuVuc.Location = new System.Drawing.Point(403, 258);
-            this.txbKhuVuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbKhuVuc.Margin = new System.Windows.Forms.Padding(2);
             this.txbKhuVuc.Name = "txbKhuVuc";
             this.txbKhuVuc.Size = new System.Drawing.Size(276, 24);
             this.txbKhuVuc.TabIndex = 3;
@@ -108,7 +108,7 @@
             this.txbTenPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbTenPhong.Location = new System.Drawing.Point(403, 197);
-            this.txbTenPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTenPhong.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenPhong.Name = "txbTenPhong";
             this.txbTenPhong.Size = new System.Drawing.Size(276, 24);
             this.txbTenPhong.TabIndex = 2;
@@ -118,7 +118,7 @@
             this.txbMaPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbMaPhong.Location = new System.Drawing.Point(403, 136);
-            this.txbMaPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbMaPhong.Margin = new System.Windows.Forms.Padding(2);
             this.txbMaPhong.MaxLength = 5;
             this.txbMaPhong.Name = "txbMaPhong";
             this.txbMaPhong.ReadOnly = true;
@@ -147,9 +147,9 @@
             this.lbSLPM.Location = new System.Drawing.Point(190, 319);
             this.lbSLPM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSLPM.Name = "lbSLPM";
-            this.lbSLPM.Size = new System.Drawing.Size(186, 24);
+            this.lbSLPM.Size = new System.Drawing.Size(126, 24);
             this.lbSLPM.TabIndex = 23;
-            this.lbSLPM.Text = "Số lượng phòng máy";
+            this.lbSLPM.Text = "Số lượng máy";
             // 
             // lbKhuVuc
             // 
@@ -223,7 +223,6 @@
             this.Controls.Add(this.lbTieuDe);
             this.Name = "fCapNhatPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

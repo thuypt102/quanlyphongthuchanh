@@ -47,7 +47,7 @@ namespace QLPHONGTHUCHANH
             if (LichDAL.Khoitao.KiemTraIdPhongTrong(idcath, idPhong, nam, kiHoc, thu))
             {
                 // Id lớp không tồn tại
-                MessageBox.Show("Đã có lớp đăng kí.");
+                MessageBox.Show("Phòng đã có lớp học.", "Thông báo");
                 return false;
             }
             // Giá trị nhập vào hợp lệ

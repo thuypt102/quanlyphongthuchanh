@@ -34,11 +34,11 @@
             this.lbMatKhau = new System.Windows.Forms.Label();
             this.txbMatKhau = new System.Windows.Forms.TextBox();
             this.lbTenDangNhap = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.chuaLogo = new System.Windows.Forms.Panel();
             this.btnLogin = new QLPHONGTHUCHANH.VBButton();
             this.txbTenDangNhap = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.chuaLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -73,17 +73,17 @@
             this.lbTenDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lbTenDangNhap.Name = "lbTenDangNhap";
             // 
-            // panel1
+            // chuaLogo
             // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lbTenDangNhap);
-            this.panel1.Controls.Add(this.txbMatKhau);
-            this.panel1.Controls.Add(this.txbTenDangNhap);
-            this.panel1.Controls.Add(this.lbMatKhau);
-            this.panel1.Name = "panel1";
+            resources.ApplyResources(this.chuaLogo, "chuaLogo");
+            this.chuaLogo.BackColor = System.Drawing.Color.Transparent;
+            this.chuaLogo.Controls.Add(this.btnLogin);
+            this.chuaLogo.Controls.Add(this.pictureBox1);
+            this.chuaLogo.Controls.Add(this.lbTenDangNhap);
+            this.chuaLogo.Controls.Add(this.txbMatKhau);
+            this.chuaLogo.Controls.Add(this.txbTenDangNhap);
+            this.chuaLogo.Controls.Add(this.lbMatKhau);
+            this.chuaLogo.Name = "chuaLogo";
             // 
             // btnLogin
             // 
@@ -110,12 +110,12 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.chuaLogo);
             this.Name = "fLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.chuaLogo.ResumeLayout(false);
+            this.chuaLogo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +127,7 @@
         private System.Windows.Forms.Label lbMatKhau;
         private System.Windows.Forms.TextBox txbMatKhau;
         private System.Windows.Forms.Label lbTenDangNhap;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel chuaLogo;
         private System.Windows.Forms.TextBox txbTenDangNhap;
         private VBButton btnLogin;
     }

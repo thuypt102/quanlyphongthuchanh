@@ -50,7 +50,7 @@
             this.txbIDTaiKhoan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbIDTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbIDTaiKhoan.Location = new System.Drawing.Point(371, 393);
-            this.txbIDTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbIDTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.txbIDTaiKhoan.Name = "txbIDTaiKhoan";
             this.txbIDTaiKhoan.Size = new System.Drawing.Size(276, 24);
             this.txbIDTaiKhoan.TabIndex = 5;
@@ -60,7 +60,7 @@
             this.txbSDT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbSDT.Location = new System.Drawing.Point(371, 281);
-            this.txbSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txbSDT.MaxLength = 10;
             this.txbSDT.Name = "txbSDT";
             this.txbSDT.Size = new System.Drawing.Size(276, 24);
@@ -71,7 +71,7 @@
             this.txbKhoa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbKhoa.Location = new System.Drawing.Point(371, 225);
-            this.txbKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.txbKhoa.Name = "txbKhoa";
             this.txbKhoa.Size = new System.Drawing.Size(276, 24);
             this.txbKhoa.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.txbTenGV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbTenGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbTenGV.Location = new System.Drawing.Point(371, 171);
-            this.txbTenGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTenGV.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenGV.Name = "txbTenGV";
             this.txbTenGV.Size = new System.Drawing.Size(276, 24);
             this.txbTenGV.TabIndex = 2;
@@ -91,7 +91,7 @@
             this.txbMaGV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbMaGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbMaGV.Location = new System.Drawing.Point(371, 116);
-            this.txbMaGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbMaGV.Margin = new System.Windows.Forms.Padding(2);
             this.txbMaGV.MaxLength = 10;
             this.txbMaGV.Name = "txbMaGV";
             this.txbMaGV.Size = new System.Drawing.Size(276, 24);
@@ -188,7 +188,7 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(359, 457);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(150, 42);
             this.btnThem.TabIndex = 10;
@@ -215,7 +215,7 @@
             this.txbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.txbEmail.Location = new System.Drawing.Point(371, 337);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(276, 24);
             this.txbEmail.TabIndex = 5;
@@ -243,7 +243,6 @@
             this.Name = "fThemGiangVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm thông tin giảng viên";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

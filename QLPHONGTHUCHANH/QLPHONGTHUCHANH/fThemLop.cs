@@ -25,7 +25,7 @@ namespace QLPHONGTHUCHANH
             // Kiểm tra giá trị trong TextBox
             if (string.IsNullOrWhiteSpace(txbIDGV.Text))
             {
-                MessageBox.Show("Vui lòng nhập giá trị vào .", "Lỗi");
+                MessageBox.Show("Vui lòng nhập mã giảng viên.", "Lỗi");
                 return false;
             }
 
@@ -40,7 +40,7 @@ namespace QLPHONGTHUCHANH
             // Kiểm tra giá trị trong TextBox
             if (string.IsNullOrWhiteSpace(txbCaLT.Text))
             {
-                MessageBox.Show("Vui lòng nhập giá trị vào .", "Lỗi");
+                MessageBox.Show("Vui lòng nhập thông tin ca lý thuyết.", "Lỗi");
                 return false;
             }
 
@@ -54,7 +54,7 @@ namespace QLPHONGTHUCHANH
             //số lượng sinh viên
             if (string.IsNullOrWhiteSpace(txbSlSV.Text))
             {
-                MessageBox.Show("Vui lòng nhập giá trị vào .", "Lỗi");
+                MessageBox.Show("Vui lòng nhập giá trị vào.", "Lỗi");
                 return false;
             }
 
@@ -102,7 +102,7 @@ namespace QLPHONGTHUCHANH
 
                         if (LopDAL.Khoitao.themLop(maLop, tenLop, tenKhoa, IDGV, caLT, SLSV, Loai))
                         {
-                            MessageBox.Show("thêm thành công!", "Thông báo");
+                            MessageBox.Show("Thêm lớp thành công!", "Thông báo");
                         }
                         else
                             MessageBox.Show("thêm không thành công!", "Thông báo");

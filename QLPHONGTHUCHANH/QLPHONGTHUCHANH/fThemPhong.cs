@@ -21,33 +21,52 @@ namespace QLPHONGTHUCHANH
         
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string maPhong = txbMaPhong.Text;
-            string tenPhong = txbTenPhong.Text;
-            string tenKhuVuc = txbKhuVuc.Text;
-            int soLuongMay = int.Parse(txbSLPM.Text);
-            //string loaiThucHanh = cmbLoai.SelectedItem.ToString();
-            string loaiThucHanh = cmbLoai.Text;
-
-            if (loaiThucHanh == "")
+            if (string.IsNullOrEmpty(txbMaPhong.Text) || string.IsNullOrEmpty(txbTenPhong.Text) || string.IsNullOrEmpty(txbKhuVuc.Text) || string.IsNullOrEmpty(cmbLoai.Text) || string.IsNullOrEmpty(txbSLPM.Text))
             {
-                loaiThucHanh = "Thực hành thông thường";
+                MessageBox.Show("Nhập đủ thông tin để tiếp tục!", "Thông báo");
             }
 
-            if (PhongDAL.Khoitao.timKiem(maPhong))
-            {
-                MessageBox.Show("Mã phòng đã tồn tại. Vui lòng nhập mã khác.");
-
-            }
             else
             {
-                if (PhongDAL.Khoitao.themPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
+                string maPhong = txbMaPhong.Text;
+                string tenPhong = txbTenPhong.Text;
+                string tenKhuVuc = txbKhuVuc.Text;
+                //int soLuongMay = int.Parse(txbSLPM.Text);
+
+                string soLuongMayText = txbSLPM.Text;
+                int soLuongMay;
+
+                if (!int.TryParse(soLuongMayText, out soLuongMay))
                 {
-                    MessageBox.Show("Thêm phòng máy thành công!", "Thông báo");
+                    // Xử lý khi chuỗi không phải là số
+                    MessageBox.Show("Số lượng máy không hợp lệ!", "Lỗi");
                 }
                 else
                 {
-                    MessageBox.Show("Thêm phòng máy không thành công!", "Thông báo");
-                    
+                    //string loaiThucHanh = cmbLoai.SelectedItem.ToString();
+                    string loaiThucHanh = cmbLoai.Text;
+                    /*
+                    if (loaiThucHanh == "")
+                    {
+                        loaiThucHanh = "Thực hành thông thường";
+                    }
+                    */
+                    if (PhongDAL.Khoitao.timKiem(maPhong))
+                    {
+                        MessageBox.Show("Mã phòng đã tồn tại. Vui lòng nhập mã khác.");
+                    }
+                    else
+                    {
+                        if (PhongDAL.Khoitao.themPhong(maPhong, tenPhong, tenKhuVuc, soLuongMay, loaiThucHanh))
+                        {
+                            MessageBox.Show("Thêm phòng máy thành công!", "Thông báo");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm phòng máy không thành công!", "Thông báo");
+
+                        }
+                    }
                 }
             }
         }
